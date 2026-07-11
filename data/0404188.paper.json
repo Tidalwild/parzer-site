@@ -1,0 +1,201 @@
+{
+ "arxivId": "0404188",
+ "attribution": {
+  "arxivId": "0404188",
+  "arxivUrl": "https://arxiv.org/abs/0404188",
+  "authors": [
+   "Ben Green",
+   "Terence Tao"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "arxiv_nonexclusive_unverified",
+  "title": "The primes contain arbitrarily long arithmetic progressions"
+ },
+ "audit": null,
+ "authors": [
+  "Ben Green",
+  "Terence Tao"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "mainthm",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_mainthm",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "sz_primes",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_sz_primes",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "sz_original",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_sz_original",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_mainthm",
+  "thm_sz_original",
+  "thm_sz_primes"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 3,
+  "classA": 0,
+  "classB": 3,
+  "classC": 0,
+  "curated": 3,
+  "customLemmas": 0,
+  "declarations": 3,
+  "skipped": 0
+ },
+ "id": "0404188",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 3,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "arxiv_nonexclusive_unverified — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "arxiv_nonexclusive_unverified",
+ "nodes": [
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_sz_original"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_sz_original",
+   "kind": "theorem",
+   "label": "thm_sz_original",
+   "lean": "theorem thm_sz_original : ∀ (δ : ℝ), 0 < δ → ∀ (k : ℕ), 3 ≤ k → ∃ (N0 : ℕ), ∀ (N : ℕ), N0 ≤ N → ∀ (A : Finset (ZMod N)), (δ * (N : ℝ)) ≤ (A.card : ℝ) → ∃ (a d : ZMod N), d ≠ 0 ∧ ∀ (i : ℕ), i < k → a + (i : ZMod N) * d ∈ A := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_sz_primes"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_sz_primes",
+   "kind": "theorem",
+   "label": "thm_sz_primes",
+   "lean": "theorem thm_sz_primes : ∀ (A : Set ℕ), (∀ n ∈ A, Nat.Prime n) → 0 < Filter.limsup (fun N : ℕ => (Set.ncard (A ∩ Set.Iic N) : ℝ) / (Nat.primeCounting N : ℝ)) Filter.atTop → ∀ (k M : ℕ), ∃ (a d : ℕ), M < a ∧ 0 < d ∧ ∀ (i : ℕ), i < k → (a + i * d) ∈ A := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_mainthm"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_mainthm",
+   "kind": "theorem",
+   "label": "thm_mainthm",
+   "lean": "theorem thm_mainthm : ∀ (k M : ℕ), ∃ (a d : ℕ), M < a ∧ 0 < d ∧ ∀ (i : ℕ), i < k → Nat.Prime (a + i * d) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "f134ec47f0fc6d80",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "The primes contain arbitrarily long arithmetic progressions",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 3,
+  "nClassC": 0,
+  "nDeclarations": 3,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

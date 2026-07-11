@@ -1,0 +1,271 @@
+{
+ "arxivId": "2505.08560",
+ "attribution": {
+  "arxivId": "2505.08560",
+  "arxivUrl": "https://arxiv.org/abs/2505.08560",
+  "authors": [],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "unknown",
+  "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
+ },
+ "audit": null,
+ "authors": [],
+ "blocksStub": [
+  {
+   "blockId": "lem_sylvester",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_lem_sylvester",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "a"
+  },
+  {
+   "blockId": "frob_8_32_59",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_frob_8_32_59",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "a"
+  },
+  {
+   "blockId": "prop_selmer_fails",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_prop_selmer_fails",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "a"
+  },
+  {
+   "blockId": "lem_no_subquad_n2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_no_subquad_n2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_no_subquad",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_no_subquad",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_lem_no_subquad_n2",
+  "thm_thm_no_subquad"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 3,
+  "blocksTotal": 5,
+  "classA": 3,
+  "classB": 2,
+  "classC": 0,
+  "curated": 5,
+  "customLemmas": 0,
+  "declarations": 5,
+  "skipped": 0
+ },
+ "id": "2505_08560",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 5,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "unknown — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "unknown",
+ "nodes": [
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 0,
+   "conditions": [],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_lem_sylvester",
+   "kind": "theorem",
+   "label": "thm_lem_sylvester",
+   "lean": "theorem thm_lem_sylvester : ∀ (a b : ℕ), 1 < a → 1 < b → Nat.Coprime a b → FrobeniusNumber (a * b - a - b) {a, b} := by\n  intro a b ha hb hcop; exact frobeniusNumber_pair hcop ha hb",
+   "source": null,
+   "status": "kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "a"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 0,
+   "conditions": [],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_frob_8_32_59",
+   "kind": "theorem",
+   "label": "thm_frob_8_32_59",
+   "lean": "theorem thm_frob_8_32_59 : FrobeniusNumber 405 {8, 32, 59} := by\n  have hpair : FrobeniusNumber 405 {8, 59} := (by have h := frobeniusNumber_pair (by decide : Nat.Coprime 8 59) (by norm_num : (1 : ℕ) < 8) (by norm_num : (1 : ℕ) < 59); norm_num at h; exact h); have h8 : (8 : ℕ) ∈ AddSubmonoid.closure ({8, 59} : Set ℕ) := AddSubmonoid.subset_closure (by simp); have hcl : AddSubmonoid.closure ({8, 32, 59} : Set ℕ) = AddSubmonoid.closure ({8, 59} : Set ℕ) := le_antisymm (AddSubmonoid.closure_le.mpr (by intro z hz; simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz; rcases hz with rfl | rfl | rfl; exact AddSubmonoid.subset_closure (by simp); rw [(by norm_num : (32 : ℕ) = 8 + 8 + 8 + 8)]; exact add_mem (add_mem (add_mem h8 h8) h8) h8; exact AddSubmonoid.subset_closure (by simp))) (AddSubmonoid.closure_mono (by intro z hz; simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz ⊢; tauto)); unfold FrobeniusNumber at hpair ⊢; simp only [hcl]; exact hpair",
+   "source": null,
+   "status": "kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "a"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "citation": null,
+   "closure": [
+    "thm_frob_8_32_59"
+   ],
+   "conditionCount": 0,
+   "conditions": [],
+   "demoted": false,
+   "dependsOn": [
+    "thm_frob_8_32_59"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_prop_selmer_fails",
+   "kind": "theorem",
+   "label": "thm_prop_selmer_fails",
+   "lean": "theorem thm_prop_selmer_fails : ∃ (a b c F : ℕ), (0 < a ∧ a ≤ b ∧ b ≤ c) ∧ Nat.gcd a (Nat.gcd b c) = 1 ∧ ¬ (Nat.gcd a b = 1 ∧ Nat.gcd a c = 1 ∧ Nat.gcd b c = 1) ∧ FrobeniusNumber F {a, b, c} ∧ ¬ (F ≤ 2 * c * (a / 3) - a) := by\n  exact ⟨8, 32, 59, 405, by decide, by decide, by decide, thm_frob_8_32_59, by decide⟩",
+   "source": null,
+   "status": "kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "a"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_no_subquad_n2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_no_subquad_n2",
+   "kind": "theorem",
+   "label": "thm_lem_no_subquad_n2",
+   "lean": "theorem thm_lem_no_subquad_n2 : ∀ (ε : ℝ), 0 < ε → ¬ ∃ (C : ℝ), 0 < C ∧ ∀ (a b F : ℕ), 0 < a → a ≤ b → Nat.Coprime a b → FrobeniusNumber F {a, b} → (F : ℝ) ≤ C * ((a : ℝ) * (b : ℝ)) ^ (1 - ε) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_no_subquad"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_no_subquad",
+   "kind": "theorem",
+   "label": "thm_thm_no_subquad",
+   "lean": "theorem thm_thm_no_subquad : ∀ (n : ℕ), ∀ (ε : ℝ), 0 < ε → ¬ ∃ (C : ℝ), 0 < C ∧ ∀ (a : Fin (n + 2) → ℕ) (F : ℕ), (∀ i, 0 < a i) → Monotone a → Finset.univ.gcd a = 1 → FrobeniusNumber F (Set.range a) → (F : ℝ) ≤ C * ((a 0 : ℝ) * (a (Fin.last (n + 1)) : ℝ)) ^ (1 - ε) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "62b492708f6a0f15",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.4,
+ "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number",
+ "verdict": {
+  "nClassA": 3,
+  "nClassB": 2,
+  "nClassC": 0,
+  "nDeclarations": 5,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 2
+ }
+}

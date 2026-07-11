@@ -1,0 +1,272 @@
+{
+ "arxivId": "1311.4600",
+ "attribution": {
+  "arxivId": "1311.4600",
+  "arxivUrl": "https://arxiv.org/abs/1311.4600",
+  "authors": [
+   "James Maynard"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "arxiv-nonexclusive-unverified",
+  "title": "Small gaps between primes"
+ },
+ "audit": null,
+ "authors": [
+  "James Maynard"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_manyprimes",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_manyprimes",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_ktuples",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_ktuples",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_unconditional",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_unconditional",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_eh",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_eh",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_thm_eh",
+  "thm_thm_ktuples",
+  "thm_thm_manyprimes",
+  "thm_thm_unconditional"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 4,
+  "classA": 0,
+  "classB": 4,
+  "classC": 0,
+  "curated": 4,
+  "customLemmas": 0,
+  "declarations": 4,
+  "skipped": 0
+ },
+ "id": "1311_4600",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 7,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "arxiv-nonexclusive-unverified — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "arxiv-nonexclusive-unverified",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:nthPrime",
+   "kind": "definition",
+   "label": "nthPrime",
+   "lean": "noncomputable def nthPrime (n : ℕ) : ℕ := Nat.nth Nat.Prime n",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:HasLevelOfDistribution",
+   "kind": "definition",
+   "label": "HasLevelOfDistribution",
+   "lean": "opaque HasLevelOfDistribution : ℝ → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:SatisfiesPrimeTuples",
+   "kind": "definition",
+   "label": "SatisfiesPrimeTuples",
+   "lean": "def SatisfiesPrimeTuples (H : Finset ℤ) : Prop := ∃ᶠ n in Filter.atTop, ∀ h ∈ H, Nat.Prime ((n : ℤ) + h).toNat",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_manyprimes"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_manyprimes",
+   "kind": "theorem",
+   "label": "thm_thm_manyprimes",
+   "lean": "theorem thm_thm_manyprimes : ∃ C : ℝ, 0 < C ∧ ∀ (m : ℕ), 1 ≤ m → ((Filter.liminf (fun n => nthPrime (n + m) - nthPrime n) Filter.atTop : ℕ) : ℝ) ≤ C * (m : ℝ) ^ 3 * Real.exp (4 * (m : ℝ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_ktuples"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_ktuples",
+   "kind": "theorem",
+   "label": "thm_thm_ktuples",
+   "lean": "theorem thm_thm_ktuples : ∀ (m : ℕ), 1 ≤ m → ∃ (r₀ : ℕ) (c : ℝ), 0 < c ∧ ∀ (r : ℕ), r₀ ≤ r → ∀ (A : Finset ℤ), A.card = r → c ≤ (Set.ncard {H : Finset ℤ | H ∈ Finset.powersetCard m A ∧ SatisfiesPrimeTuples H} : ℝ) / ((Finset.powersetCard m A).card : ℝ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_unconditional"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_unconditional",
+   "kind": "theorem",
+   "label": "thm_thm_unconditional",
+   "lean": "theorem thm_thm_unconditional : Filter.liminf (fun n => nthPrime (n + 1) - nthPrime n) Filter.atTop ≤ 600 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_eh"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_eh",
+   "kind": "theorem",
+   "label": "thm_thm_eh",
+   "lean": "theorem thm_thm_eh : (∀ θ : ℝ, 0 < θ → θ < 1 → HasLevelOfDistribution θ) → Filter.liminf (fun n => nthPrime (n + 1) - nthPrime n) Filter.atTop ≤ 12 ∧ Filter.liminf (fun n => nthPrime (n + 2) - nthPrime n) Filter.atTop ≤ 600 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "e25d30b2631b6a3f",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Small gaps between primes",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 4,
+  "nClassC": 0,
+  "nDeclarations": 4,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

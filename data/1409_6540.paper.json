@@ -1,0 +1,499 @@
+{
+ "arxivId": "1409.6540",
+ "attribution": {
+  "arxivId": "1409.6540",
+  "arxivUrl": "https://arxiv.org/abs/1409.6540",
+  "authors": [
+   "Aleksandr Tuxanidy",
+   "Qiang Wang"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "unknown",
+  "title": "Compositional inverses, complete mappings, orthogonal Latin squares and bent functions"
+ },
+ "audit": null,
+ "authors": [
+  "Aleksandr Tuxanidy",
+  "Qiang Wang"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "invLBP",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_invLBP",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_invLBP",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_invLBP",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_norm_identity",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_norm_identity",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_InvKer",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_InvKer",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_InvKer2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_InvKer2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_wu_and_lin",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_wu_and_lin",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_InvKer2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_InvKer2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_improv",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_improv",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_improv",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_improv",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_cor_InvKer2",
+  "thm_cor_improv",
+  "thm_cor_invLBP",
+  "thm_cor_wu_and_lin",
+  "thm_invLBP",
+  "thm_lem_norm_identity",
+  "thm_thm_InvKer",
+  "thm_thm_InvKer2",
+  "thm_thm_improv"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 9,
+  "classA": 0,
+  "classB": 9,
+  "classC": 0,
+  "curated": 9,
+  "customLemmas": 0,
+  "declarations": 9,
+  "skipped": 0
+ },
+ "id": "1409_6540",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 14,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "unknown — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "unknown",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:frobSum",
+   "kind": "definition",
+   "label": "frobSum",
+   "lean": "noncomputable def frobSum {F : Type*} [Field F] (p e cnt : ℕ) (x : F) : F :=\n  ∑ k ∈ Finset.range cnt, x ^ (p ^ (e * k))",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:frobNorm",
+   "kind": "definition",
+   "label": "frobNorm",
+   "lean": "noncomputable def frobNorm {F : Type*} [Field F] (p e cnt : ℕ) (x : F) : F :=\n  x ^ (∑ k ∈ Finset.range cnt, p ^ (e * k))",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsCPPOn",
+   "kind": "definition",
+   "label": "IsCPPOn",
+   "lean": "def IsCPPOn {F : Type*} [Field F] (S : Set F) (f : F → F) : Prop :=\n  Set.BijOn f S S ∧ Set.BijOn (fun x => f x + x) S S",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:LInvKer",
+   "kind": "definition",
+   "label": "LInvKer",
+   "lean": "noncomputable def LInvKer {F : Type*} [Field F] (p m n r s d : ℕ) (c x : F) : F :=\n  ∑ j ∈ Finset.range (s / d),\n    ((c⁻¹) ^ (∑ i ∈ Finset.range (j + 1), p ^ (m * r * i)))\n    * (((n / s : ℕ) : F)⁻¹ * ∑ k ∈ Finset.Icc 1 (n / s - 1), (k : F) * x ^ (p ^ (k * (m * s * r / d)))) ^ (p ^ (m * r * j))",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:LInvKer2",
+   "kind": "definition",
+   "label": "LInvKer2",
+   "lean": "noncomputable def LInvKer2 {F : Type*} [Field F] (p m n r d : ℕ) (c x : F) : F :=\n  ∑ j ∈ Finset.range (m / d),\n    ((c⁻¹) ^ (∑ i ∈ Finset.range (j + 1), p ^ (r * i)))\n    * (((n : ℕ) : F)⁻¹ * ∑ k ∈ Finset.Icc 1 (n - 1), (k : F) * x ^ (p ^ (k * m * r / d))) ^ (p ^ (r * j))",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_invLBP"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_invLBP",
+   "kind": "theorem",
+   "label": "thm_invLBP",
+   "lean": "theorem thm_invLBP : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ≠ 0 → (Function.Bijective (fun x : F => x ^ (p ^ (m * r)) - c * x) ↔ frobNorm p (m * Nat.gcd n r) (n / Nat.gcd n r) c ≠ 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_invLBP"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_invLBP",
+   "kind": "theorem",
+   "label": "thm_cor_invLBP",
+   "lean": "theorem thm_cor_invLBP : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ^ (p ^ m) = c → frobNorm p (Nat.gcd (m * n) r) ((m * n) / Nat.gcd (m * n) r) c ≠ 1 → Set.BijOn (fun x : F => x ^ (p ^ r) - c * x) {x : F | frobSum p m n x = 0} {x : F | frobSum p m n x = 0} := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_norm_identity"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_norm_identity",
+   "kind": "theorem",
+   "label": "thm_lem_norm_identity",
+   "lean": "theorem thm_lem_norm_identity : ∀ (F : Type*) [Field F] [Fintype F] (p m n r s : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → 0 < s → s ∣ n → Nat.gcd n r = Nat.gcd s r → Fintype.card F = p ^ (m * n) → (∀ x : F, frobSum p (m * s) (n / s) x = frobSum p (m * s * r / Nat.gcd n r) (n / s) x) ∧ (∀ c : F, c ^ (p ^ (m * s)) = c → frobNorm p (m * Nat.gcd n r) (s / Nat.gcd n r) c = frobNorm p (m * r) (s / Nat.gcd n r) c) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_InvKer"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_InvKer",
+   "kind": "theorem",
+   "label": "thm_thm_InvKer",
+   "lean": "theorem thm_thm_InvKer : ∀ (F : Type*) [Field F] [Fintype F] (p m n r s : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → 0 < s → s ∣ n → Nat.gcd n r = Nat.gcd s r → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ≠ 0 → c ^ (p ^ (m * s)) = c → frobNorm p (m * Nat.gcd n r) (s / Nat.gcd n r) c = 1 → (Set.BijOn (fun x : F => x ^ (p ^ (m * r)) - c * x) {x : F | frobSum p (m * s) (n / s) x = 0} {x : F | frobSum p (m * s) (n / s) x = 0} ↔ ¬ (p ∣ n / s)) ∧ (¬ (p ∣ n / s) → ∀ x ∈ {x : F | frobSum p (m * s) (n / s) x = 0}, (fun z : F => z ^ (p ^ (m * r)) - c * z) (LInvKer p m n r s (Nat.gcd n r) c x) = x) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_InvKer2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_InvKer2",
+   "kind": "theorem",
+   "label": "thm_thm_InvKer2",
+   "lean": "theorem thm_thm_InvKer2 : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Nat.gcd (m * n) r = Nat.gcd m r → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ≠ 0 → c ^ (p ^ m) = c → frobNorm p (Nat.gcd m r) (m / Nat.gcd m r) c = 1 → (Set.BijOn (fun x : F => x ^ (p ^ r) - c * x) {x : F | frobSum p m n x = 0} {x : F | frobSum p m n x = 0} ↔ ¬ (p ∣ n)) ∧ (¬ (p ∣ n) → ∀ x ∈ {x : F | frobSum p m n x = 0}, (fun z : F => z ^ (p ^ r) - c * z) (LInvKer2 p m n r (Nat.gcd m r) c x) = x) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_wu_and_lin"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_wu_and_lin",
+   "kind": "theorem",
+   "label": "thm_cor_wu_and_lin",
+   "lean": "theorem thm_cor_wu_and_lin : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Nat.gcd n r = 1 → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ^ (p ^ m) = c → (Set.BijOn (fun x : F => x ^ (p ^ r) - c * x) {x : F | frobSum p m n x = 0} {x : F | frobSum p m n x = 0} ↔ ((frobNorm p (Nat.gcd m r) (m / Nat.gcd m r) c = 1 ∧ ¬ (p ∣ n)) ∨ frobNorm p (Nat.gcd m r) (m * n / Nat.gcd m r) c ≠ 1)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_InvKer2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_InvKer2",
+   "kind": "theorem",
+   "label": "thm_cor_InvKer2",
+   "lean": "theorem thm_cor_InvKer2 : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Nat.gcd (m * n) r = Nat.gcd m r → ¬ (p ∣ n) → Nat.gcd n (p ^ Nat.gcd m r - 1) = 1 → Fintype.card F = p ^ (m * n) → ∀ (c : F), c ^ (p ^ m) = c → Set.BijOn (fun x : F => x ^ (p ^ r) - c * x) {x : F | frobSum p m n x = 0} {x : F | frobSum p m n x = 0} := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_improv"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_improv",
+   "kind": "theorem",
+   "label": "thm_thm_improv",
+   "lean": "theorem thm_thm_improv : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Nat.gcd m r = Nat.gcd (m * n) r → ¬ (p ∣ n) → Nat.gcd n (p ^ Nat.gcd m r - 1) = 1 → Fintype.card F = p ^ (m * n) → ∀ (G : Polynomial F), (∀ i, (G.coeff i) ^ (p ^ m) = G.coeff i) → ((∀ a : F, a ^ (p ^ m) = a → a ≠ 0 → IsCPPOn Set.univ (fun x : F => a * x ^ (p ^ r) + x * (G.eval (frobSum p m n x) - a * (frobSum p m n x) ^ (p ^ r - 1)))) ↔ IsCPPOn {y : F | y ^ (p ^ m) = y} (fun y : F => y * G.eval y)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_improv"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_improv",
+   "kind": "theorem",
+   "label": "thm_cor_improv",
+   "lean": "theorem thm_cor_improv : ∀ (F : Type*) [Field F] [Fintype F] (p m n r : ℕ), p.Prime → 0 < m → 0 < n → 0 < r → Nat.gcd m r = Nat.gcd (m * n) r → ¬ (p ∣ n) → Nat.gcd n (p ^ Nat.gcd m r - 1) = 1 → Fintype.card F = p ^ (m * n) → ∀ (a b : F), a ^ (p ^ m) = a → b ^ (p ^ m) = b → b ≠ -1 → b ≠ 0 → IsCPPOn Set.univ (fun x : F => a * (x ^ (p ^ r) - x * (frobSum p m n x) ^ (p ^ r - 1)) + b * x) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "eadff4fb3ce73465",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Compositional inverses, complete mappings, orthogonal Latin squares and bent functions",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 9,
+  "nClassC": 0,
+  "nDeclarations": 9,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

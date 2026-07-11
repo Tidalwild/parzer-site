@@ -1,0 +1,293 @@
+{
+ "arxivId": "1804.02385",
+ "attribution": {
+  "arxivId": "1804.02385",
+  "arxivUrl": "https://arxiv.org/abs/1804.02385",
+  "authors": [
+   "Aubrey D.N.J. de Grey"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "unknown",
+  "title": "The chromatic number of the plane is at least 5"
+ },
+ "audit": null,
+ "authors": [
+  "Aubrey D.N.J. de Grey"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_cnp_ge5",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_cnp_ge5",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_reduction",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_reduction",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_exists_finite",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_exists_finite",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_N_not4col",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_N_not4col",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_G_not4col",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_G_not4col",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_lem_reduction",
+  "thm_thm_G_not4col",
+  "thm_thm_N_not4col",
+  "thm_thm_cnp_ge5",
+  "thm_thm_exists_finite"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 5,
+  "classA": 0,
+  "classB": 5,
+  "classC": 0,
+  "curated": 5,
+  "customLemmas": 0,
+  "declarations": 5,
+  "skipped": 0
+ },
+ "id": "1804_02385",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 6,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "unknown — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "unknown",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:planeUDG",
+   "kind": "definition",
+   "label": "planeUDG",
+   "lean": "def planeUDG : SimpleGraph (EuclideanSpace ℝ (Fin 2)) := SimpleGraph.fromRel (fun p q => dist p q = 1)",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_reduction"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_reduction",
+   "kind": "theorem",
+   "label": "thm_lem_reduction",
+   "lean": "theorem thm_lem_reduction : ∀ (n : ℕ), ∀ (emb : Fin n → EuclideanSpace ℝ (Fin 2)), ¬ (planeUDG.comap emb).Colorable 4 → (5 : ℕ∞) ≤ planeUDG.chromaticNumber := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_N_not4col"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_N_not4col",
+   "kind": "theorem",
+   "label": "thm_thm_N_not4col",
+   "lean": "theorem thm_thm_N_not4col : ∃ (emb : Fin 20425 → EuclideanSpace ℝ (Fin 2)), Function.Injective emb ∧ ¬ (planeUDG.comap emb).Colorable 4 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_G_not4col"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_G_not4col",
+   "kind": "theorem",
+   "label": "thm_thm_G_not4col",
+   "lean": "theorem thm_thm_G_not4col : ∃ (emb : Fin 1581 → EuclideanSpace ℝ (Fin 2)), Function.Injective emb ∧ ¬ (planeUDG.comap emb).Colorable 4 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_exists_finite"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_exists_finite",
+   "kind": "theorem",
+   "label": "thm_thm_exists_finite",
+   "lean": "theorem thm_thm_exists_finite : ∃ (n : ℕ), ∃ (emb : Fin n → EuclideanSpace ℝ (Fin 2)), Function.Injective emb ∧ ¬ (planeUDG.comap emb).Colorable 4 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_cnp_ge5"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_cnp_ge5",
+   "kind": "theorem",
+   "label": "thm_thm_cnp_ge5",
+   "lean": "theorem thm_thm_cnp_ge5 : (5 : ℕ∞) ≤ planeUDG.chromaticNumber := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "76a7d1426f122335",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "The chromatic number of the plane is at least 5",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 5,
+  "nClassC": 0,
+  "nDeclarations": 5,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

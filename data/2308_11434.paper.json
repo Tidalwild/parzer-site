@@ -3,13 +3,21 @@
  "attribution": {
   "arxivId": "2308.11434",
   "arxivUrl": "https://arxiv.org/abs/2308.11434",
-  "authors": [],
+  "authors": [
+   "Yasamin Khaefi",
+   "Zeinab Akhlaghi",
+   "Behrooz Khosravi"
+  ],
   "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
   "licenseClass": "cc0",
   "title": "On the subgroup Regular sets in cayley graphs"
  },
  "audit": null,
- "authors": [],
+ "authors": [
+  "Yasamin Khaefi",
+  "Zeinab Akhlaghi",
+  "Behrooz Khosravi"
+ ],
  "blocksStub": [
   {
    "blockId": "thmA",

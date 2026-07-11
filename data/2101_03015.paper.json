@@ -5,9 +5,7 @@
   "arxivUrl": "https://arxiv.org/abs/2101.03015",
   "authors": [
    "by P. Frankl",
-   "G. O. H. Katona R'enyi Institute",
-   "Budapest",
-   "Hungary"
+   "G. O. H. Katona"
   ],
   "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
   "licenseClass": "cc0",
@@ -16,9 +14,7 @@
  "audit": null,
  "authors": [
   "by P. Frankl",
-  "G. O. H. Katona R'enyi Institute",
-  "Budapest",
-  "Hungary"
+  "G. O. H. Katona"
  ],
  "blocksStub": [
   {

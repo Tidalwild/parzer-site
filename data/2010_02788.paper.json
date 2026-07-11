@@ -3,13 +3,35 @@
  "attribution": {
   "arxivId": "2010.02788",
   "arxivUrl": "https://arxiv.org/abs/2010.02788",
-  "authors": [],
+  "authors": [
+   "Daniel Herden",
+   "Mark R. Sepanski",
+   "Jonathan Stanfill",
+   "Cordell C. Hammon",
+   "Joel Henningsen",
+   "Henry Ickes",
+   "Jorge Marchena Menendez",
+   "Taylor Poe",
+   "Indalecio Ruiz",
+   "Edward L. Smith"
+  ],
   "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
   "licenseClass": "cc-by",
-  "title": "2010.02788"
+  "title": "Counting the parts divisible by in all the partitions of whose parts have multiplicity less than"
  },
  "audit": null,
- "authors": [],
+ "authors": [
+  "Daniel Herden",
+  "Mark R. Sepanski",
+  "Jonathan Stanfill",
+  "Cordell C. Hammon",
+  "Joel Henningsen",
+  "Henry Ickes",
+  "Jorge Marchena Menendez",
+  "Taylor Poe",
+  "Indalecio Ruiz",
+  "Edward L. Smith"
+ ],
  "blocksStub": [
   {
    "blockId": "main",
@@ -499,7 +521,7 @@
  },
  "schema": "proofsite.paper/1",
  "stubDensity": 1.0,
- "title": "2010.02788",
+ "title": "Counting the parts divisible by in all the partitions of whose parts have multiplicity less than",
  "verdict": {
   "nClassA": 0,
   "nClassB": 8,

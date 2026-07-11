@@ -1,6 +1,26 @@
 {
  "papers": [
   {
+   "arxivId": "0404188",
+   "auditWilsonLb": null,
+   "authors": [
+    "Ben Green",
+    "Terence Tao"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "0404188",
+   "licenseClass": "arxiv_nonexclusive_unverified",
+   "nClassA": 0,
+   "nClassB": 3,
+   "nClassC": 0,
+   "nDeclarations": 3,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "The primes contain arbitrarily long arithmetic progressions"
+  },
+  {
    "arxivId": "0706.2987",
    "auditWilsonLb": null,
    "authors": [
@@ -19,6 +39,65 @@
    "probeOk": true,
    "stubDensity": 0.8333333333333334,
    "title": "Explicit birational geometry of threefolds of general type"
+  },
+  {
+   "arxivId": "1311.4600",
+   "auditWilsonLb": null,
+   "authors": [
+    "James Maynard"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1311_4600",
+   "licenseClass": "arxiv-nonexclusive-unverified",
+   "nClassA": 0,
+   "nClassB": 4,
+   "nClassC": 0,
+   "nDeclarations": 4,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Small gaps between primes"
+  },
+  {
+   "arxivId": "1409.6540",
+   "auditWilsonLb": null,
+   "authors": [
+    "Aleksandr Tuxanidy",
+    "Qiang Wang"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1409_6540",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 9,
+   "nClassC": 0,
+   "nDeclarations": 9,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Compositional inverses, complete mappings, orthogonal Latin squares and bent functions"
+  },
+  {
+   "arxivId": "1605.09223",
+   "auditWilsonLb": null,
+   "authors": [
+    "Jordan S. Ellenberg",
+    "Dion Gijswijt"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1605_09223",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 7,
+   "nClassC": 0,
+   "nDeclarations": 7,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.6666666666666666,
+   "title": "On large subsets of with no three-term arithmetic progression"
   },
   {
    "arxivId": "1606.09412",
@@ -81,6 +160,25 @@
    "title": "The Lucas and Babbage congruences"
   },
   {
+   "arxivId": "1804.02385",
+   "auditWilsonLb": null,
+   "authors": [
+    "Aubrey D.N.J. de Grey"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1804_02385",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 5,
+   "nClassC": 0,
+   "nDeclarations": 5,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "The chromatic number of the plane is at least 5"
+  },
+  {
    "arxivId": "1905.00573",
    "auditWilsonLb": null,
    "authors": [
@@ -104,7 +202,18 @@
   {
    "arxivId": "2010.02788",
    "auditWilsonLb": null,
-   "authors": [],
+   "authors": [
+    "Daniel Herden",
+    "Mark R. Sepanski",
+    "Jonathan Stanfill",
+    "Cordell C. Hammon",
+    "Joel Henningsen",
+    "Henry Ickes",
+    "Jorge Marchena Menendez",
+    "Taylor Poe",
+    "Indalecio Ruiz",
+    "Edward L. Smith"
+   ],
    "download": false,
    "fixture": false,
    "id": "2010_02788",
@@ -116,7 +225,7 @@
    "posture": "commission",
    "probeOk": true,
    "stubDensity": 1.0,
-   "title": "2010.02788"
+   "title": "Counting the parts divisible by in all the partitions of whose parts have multiplicity less than"
   },
   {
    "arxivId": "2010.05992",
@@ -142,9 +251,7 @@
    "auditWilsonLb": null,
    "authors": [
     "by P. Frankl",
-    "G. O. H. Katona R'enyi Institute",
-    "Budapest",
-    "Hungary"
+    "G. O. H. Katona"
    ],
    "download": false,
    "fixture": false,
@@ -201,7 +308,11 @@
   {
    "arxivId": "2308.11434",
    "auditWilsonLb": null,
-   "authors": [],
+   "authors": [
+    "Yasamin Khaefi",
+    "Zeinab Akhlaghi",
+    "Behrooz Khosravi"
+   ],
    "download": false,
    "fixture": false,
    "id": "2308_11434",
@@ -234,6 +345,23 @@
    "probeOk": true,
    "stubDensity": 1.0,
    "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions"
+  },
+  {
+   "arxivId": "2505.08560",
+   "auditWilsonLb": null,
+   "authors": [],
+   "download": false,
+   "fixture": false,
+   "id": "2505_08560",
+   "licenseClass": "unknown",
+   "nClassA": 3,
+   "nClassB": 2,
+   "nClassC": 0,
+   "nDeclarations": 5,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.4,
+   "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
   },
   {
    "arxivId": "2604.20962",

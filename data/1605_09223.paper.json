@@ -1,0 +1,331 @@
+{
+ "arxivId": "1605.09223",
+ "attribution": {
+  "arxivId": "1605.09223",
+  "arxivUrl": "https://arxiv.org/abs/1605.09223",
+  "authors": [
+   "Jordan S. Ellenberg",
+   "Dion Gijswijt"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "unknown",
+  "title": "On large subsets of with no three-term arithmetic progression"
+ },
+ "audit": null,
+ "authors": [
+  "Jordan S. Ellenberg",
+  "Dion Gijswijt"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "prop_clp",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_clp",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_main",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_thm_main",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_capset",
+   "finalKind": "failed_block",
+   "nSteps": 1,
+   "name": "thm_cor_capset",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_capset_ap_bridge",
+  "lem_capset_const",
+  "lem_clp_dim_bound",
+  "lem_monomial_reflect",
+  "thm_cor_capset",
+  "thm_prop_clp"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 2,
+  "blocksTotal": 3,
+  "classA": 0,
+  "classB": 7,
+  "classC": 0,
+  "curated": 7,
+  "customLemmas": 4,
+  "declarations": 7,
+  "skipped": 0
+ },
+ "id": "1605_09223",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 8,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "unknown — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "unknown",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:mdim",
+   "kind": "definition",
+   "label": "mdim",
+   "lean": "noncomputable def mdim (q n : ℕ) (d : ℝ) : ℕ :=\n  (Finset.univ.filter (fun e : Fin n → Fin q => (∑ i, (e i : ℕ)) ≤ ⌊d⌋₊)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Theorem (th:main) proof: the space V of polynomials vanishing on the complement of -gamma*A has dim >= m_d - q^n + |A|; maximal-support P gives dim V <= 2 m_{d/2} via Proposition pr:clp; whence |A| <= 2 m_{d/2} + (q^n - m_d).",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_clp_dim_bound"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_clp_dim_bound",
+   "kind": "custom_lemma_stub",
+   "label": "lem_clp_dim_bound",
+   "lean": "theorem lem_clp_dim_bound : ∀ {K : Type*} [Field K] [Fintype K] (q n : ℕ), Fintype.card K = q → ∀ (α β γ : K), α + β + γ = 0 → γ ≠ 0 → ∀ (A : Finset (Fin n → K)), (∀ a ∈ A, ∀ b ∈ A, ∀ c ∈ A, α • a + β • b + γ • c = 0 → a = b ∧ b = c) → ∀ (d : ℝ), A.card ≤ 2 * mdim q n (d / 2) + (q ^ n - mdim q n d) := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Theorem (th:main) proof: q^n - m_d is the number of q-power-free monomials of degree > d, in bijection with monomials of degree < (q-1)n - d, of which there are at most m_{(q-1)n-d}.",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_monomial_reflect"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_monomial_reflect",
+   "kind": "custom_lemma_stub",
+   "label": "lem_monomial_reflect",
+   "lean": "theorem lem_monomial_reflect : ∀ (q n : ℕ) (d : ℝ), q ^ n - mdim q n d ≤ mdim q n (((q : ℝ) - 1) * (n : ℝ) - d) := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "+ Corollary proof: by Cramer's theorem [timo, A course on large deviations, Sec 2.4], lim (1/n) log(m_{(q-1)n/3}/q^n) = -I((q-1)/3); for q=3, x=2/3 the sup is at e^theta=(sqrt 33 - 1)/8, giving 3 e^{-I(2/3)} < 2.756.",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_capset_const"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_capset_const",
+   "kind": "custom_lemma_stub",
+   "label": "lem_capset_const",
+   "lean": "theorem lem_capset_const : ∀ (ε : ℝ), 0 < ε → ∃ N : ℕ, ∀ (n : ℕ), N ≤ n → (3 * mdim 3 n (((3 : ℝ) - 1) * (n : ℝ) / 3) : ℝ) ≤ ε * 2.756 ^ n := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Corollary proof: 'applying Theorem th:main with alpha=beta=gamma=1'. In char 3, a+c=b+b (3AP-free) <=> a+b+c=0, and the trivial-solution conclusion a=b=c coincides.",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_capset_ap_bridge"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_capset_ap_bridge",
+   "kind": "custom_lemma_stub",
+   "label": "lem_capset_ap_bridge",
+   "lean": "theorem lem_capset_ap_bridge : ∀ (n : ℕ) (A : Finset (Fin n → ZMod 3)), ThreeAPFree (↑A : Set (Fin n → ZMod 3)) → ∀ a ∈ A, ∀ b ∈ A, ∀ c ∈ A, (1 : ZMod 3) • a + (1 : ZMod 3) • b + (1 : ZMod 3) • c = 0 → a = b ∧ b = c := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_clp"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_clp",
+   "kind": "theorem",
+   "label": "thm_prop_clp",
+   "lean": "theorem thm_prop_clp : ∀ {K : Type*} [Field K] [Fintype K] [DecidableEq K] (q n : ℕ), Fintype.card K = q → ∀ (A : Finset (Fin n → K)) (α β γ : K), α + β + γ = 0 → ∀ (d : ℝ) (P : MvPolynomial (Fin n) K), (P.totalDegree : ℝ) ≤ d → (∀ i, MvPolynomial.degreeOf i P ≤ q - 1) → (∀ a ∈ A, ∀ b ∈ A, a ≠ b → MvPolynomial.eval (α • a + β • b) P = 0) → (A.filter (fun a => MvPolynomial.eval ((-γ) • a) P ≠ 0)).card ≤ 2 * mdim q n (d / 2) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [
+    "lem_clp_dim_bound",
+    "lem_monomial_reflect"
+   ],
+   "conditionCount": 2,
+   "conditions": [
+    "lem_clp_dim_bound",
+    "lem_monomial_reflect"
+   ],
+   "demoted": false,
+   "dependsOn": [
+    "lem_clp_dim_bound",
+    "lem_monomial_reflect"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_thm_main",
+   "kind": "theorem",
+   "label": "thm_thm_main",
+   "lean": "theorem thm_thm_main : ∀ {K : Type*} [Field K] [Fintype K] (q n : ℕ), Fintype.card K = q → ∀ (α β γ : K), α + β + γ = 0 → γ ≠ 0 → ∀ (A : Finset (Fin n → K)), (∀ a ∈ A, ∀ b ∈ A, ∀ c ∈ A, α • a + β • b + γ • c = 0 → a = b ∧ b = c) → A.card ≤ 3 * mdim q n (((q : ℝ) - 1) * (n : ℝ) / 3) := by\n  intro K _ _ q n hq α β γ hsum hγ A hA; have hbound := lem_clp_dim_bound q n hq α β γ hsum hγ A hA (2 * ((q : ℝ) - 1) * (n : ℝ) / 3); have hrefl := lem_monomial_reflect q n (2 * ((q : ℝ) - 1) * (n : ℝ) / 3); rw [show (2 * ((q : ℝ) - 1) * (n : ℝ) / 3) / 2 = ((q : ℝ) - 1) * (n : ℝ) / 3 by ring] at hbound; rw [show ((q : ℝ) - 1) * (n : ℝ) - 2 * ((q : ℝ) - 1) * (n : ℝ) / 3 = ((q : ℝ) - 1) * (n : ℝ) / 3 by ring] at hrefl; omega",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_capset"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_capset_ap_bridge",
+    "lem_capset_const",
+    "thm_thm_main"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_cor_capset",
+   "kind": "theorem",
+   "label": "thm_cor_capset",
+   "lean": "theorem thm_cor_capset : ∀ (ε : ℝ), 0 < ε → ∃ N : ℕ, ∀ (n : ℕ), N ≤ n → ∀ (A : Finset (Fin n → ZMod 3)), ThreeAPFree (↑A : Set (Fin n → ZMod 3)) → (A.card : ℝ) ≤ ε * 2.756 ^ n := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "3307cc04539f0ac1",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.6666666666666666,
+ "title": "On large subsets of with no three-term arithmetic progression",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 7,
+  "nClassC": 0,
+  "nDeclarations": 7,
+  "quarantineRounds": 1,
+  "truncated": false,
+  "verifiedTreeDepth": 2
+ }
+}
