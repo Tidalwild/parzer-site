@@ -1,0 +1,520 @@
+{
+ "arxivId": "2211.04451",
+ "attribution": {
+  "arxivId": "2211.04451",
+  "arxivUrl": "https://arxiv.org/abs/2211.04451",
+  "authors": [
+   "Sarosh Adenwalla"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc-by",
+  "title": "Avoiding Monotone Arithmetic Progressions in Permutations of Integers"
+ },
+ "audit": null,
+ "authors": [
+  "Sarosh Adenwalla"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "b_1",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_1",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_4",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_4",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_6",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_6",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_7",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_7",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_8",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_8",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_10",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_10",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "b_12",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_b_12",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_b_1",
+  "thm_b_10",
+  "thm_b_12",
+  "thm_b_2",
+  "thm_b_4",
+  "thm_b_6",
+  "thm_b_7",
+  "thm_b_8"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 12,
+  "classA": 0,
+  "classB": 8,
+  "classC": 0,
+  "curated": 8,
+  "customLemmas": 0,
+  "declarations": 8,
+  "skipped": 4
+ },
+ "id": "2211_04451",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 20,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc-by — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc-by",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:AvoidsMonotoneAP",
+   "kind": "definition",
+   "label": "AvoidsMonotoneAP",
+   "lean": "def AvoidsMonotoneAP {ι : Type*} [LinearOrder ι] (P : ι → ℤ) (k : ℕ) : Prop := ¬ ∃ (idx : Fin k → ι) (a d : ℤ), StrictMono idx ∧ d ≠ 0 ∧ ∀ t : Fin k, P (idx t) = a + ((t : ℕ) : ℤ) * d",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:AvoidsAPmod",
+   "kind": "definition",
+   "label": "AvoidsAPmod",
+   "lean": "def AvoidsAPmod (n k : ℕ) (σ : Fin n → ZMod n) : Prop := ¬ ∃ (idx : Fin k → Fin n) (a d : ZMod n), StrictMono idx ∧ d ≠ 0 ∧ ∀ t : Fin k, σ (idx t) = a + ((t : ℕ) : ZMod n) * d",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:AllAPDiffDvd",
+   "kind": "definition",
+   "label": "AllAPDiffDvd",
+   "lean": "def AllAPDiffDvd {ι : Type*} [LinearOrder ι] (P : ι → ℤ) (k : ℕ) (n : ℤ) : Prop := ∀ (idx : Fin k → ι) (a d : ℤ), StrictMono idx → d ≠ 0 → (∀ t : Fin k, P (idx t) = a + ((t : ℕ) : ℤ) * d) → n ∣ d",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:kPermissible",
+   "kind": "definition",
+   "label": "kPermissible",
+   "lean": "def kPermissible (n k : ℕ) : Prop := ∃ σ : Fin n → ZMod n, Function.Bijective σ ∧ AvoidsAPmod n k σ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:numAvoidPerm",
+   "kind": "definition",
+   "label": "numAvoidPerm",
+   "lean": "noncomputable def numAvoidPerm (n k : ℕ) : ℕ := Set.ncard {σ : Fin n → ZMod n | Function.Bijective σ ∧ AvoidsAPmod n k σ}",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:PermutableAvoiding",
+   "kind": "definition",
+   "label": "PermutableAvoiding",
+   "lean": "def PermutableAvoiding (S : Set ℤ) (k : ℕ) : Prop := ∃ e : ℕ → ℤ, Function.Injective e ∧ Set.range e = S ∧ AvoidsMonotoneAP e k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:lowerDensityPos",
+   "kind": "definition",
+   "label": "lowerDensityPos",
+   "lean": "noncomputable def lowerDensityPos (S : Set ℤ) : ℝ := Filter.liminf (fun n : ℕ => ((S ∩ Set.Icc (1 : ℤ) (n : ℤ)).ncard : ℝ) / (n : ℝ)) Filter.atTop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:lowerDensityInt",
+   "kind": "definition",
+   "label": "lowerDensityInt",
+   "lean": "noncomputable def lowerDensityInt (R : Set ℤ) : ℝ := Filter.liminf (fun n : ℕ => ((R ∩ Set.Icc (-(n : ℤ)) (n : ℤ)).ncard : ℝ) / (2 * (n : ℝ))) Filter.atTop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:upperDensityInt",
+   "kind": "definition",
+   "label": "upperDensityInt",
+   "lean": "noncomputable def upperDensityInt (R : Set ℤ) : ℝ := Filter.limsup (fun n : ℕ => ((R ∩ Set.Icc (-(n : ℤ)) (n : ℤ)).ncard : ℝ) / (2 * (n : ℝ))) Filter.atTop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:betaPos",
+   "kind": "definition",
+   "label": "betaPos",
+   "lean": "noncomputable def betaPos (k : ℕ) : ℝ := sSup {x : ℝ | ∃ S : Set ℤ, S ⊆ {z : ℤ | 0 < z} ∧ PermutableAvoiding S k ∧ x = lowerDensityPos S}",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:betaInt",
+   "kind": "definition",
+   "label": "betaInt",
+   "lean": "noncomputable def betaInt (k : ℕ) : ℝ := sSup {x : ℝ | ∃ R : Set ℤ, PermutableAvoiding R k ∧ x = lowerDensityInt R}",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:alphaInt",
+   "kind": "definition",
+   "label": "alphaInt",
+   "lean": "noncomputable def alphaInt (k : ℕ) : ℝ := sSup {x : ℝ | ∃ R : Set ℤ, PermutableAvoiding R k ∧ x = upperDensityInt R}",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_1"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_1",
+   "kind": "theorem",
+   "label": "thm_b_1",
+   "lean": "theorem thm_b_1 : ∃ P : ℕ → ℤ, Function.Bijective P ∧ AvoidsMonotoneAP P 5 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_2",
+   "kind": "theorem",
+   "label": "thm_b_2",
+   "lean": "theorem thm_b_2 : ∃ T : ℤ → ℤ, Function.Bijective T ∧ AvoidsMonotoneAP T 5 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_4"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_4",
+   "kind": "theorem",
+   "label": "thm_b_4",
+   "lean": "theorem thm_b_4 : ∀ n : ℕ, kPermissible n 3 → ∃ P : ℕ → ℤ, Function.Injective P ∧ Set.range P = {z : ℤ | 0 < z} ∧ AllAPDiffDvd P 4 (n : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_6"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_6",
+   "kind": "theorem",
+   "label": "thm_b_6",
+   "lean": "theorem thm_b_6 : betaPos 4 = 1 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_7"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_7",
+   "kind": "theorem",
+   "label": "thm_b_7",
+   "lean": "theorem thm_b_7 : betaInt 4 ≥ 2 / 3 ∧ alphaInt 4 = 1 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_8"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_8",
+   "kind": "theorem",
+   "label": "thm_b_8",
+   "lean": "theorem thm_b_8 : betaInt 3 ≥ 3 / 10 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_10"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_10",
+   "kind": "theorem",
+   "label": "thm_b_10",
+   "lean": "theorem thm_b_10 : ∀ (n m k : ℕ), kPermissible n k → kPermissible m k → kPermissible (n * m) k := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_b_12"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_b_12",
+   "kind": "theorem",
+   "label": "thm_b_12",
+   "lean": "theorem thm_b_12 : ∀ k : ℕ, numAvoidPerm (2 ^ k) 3 = 2 ^ (2 ^ k - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "8042cbd9a4458aa1",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Avoiding Monotone Arithmetic Progressions in Permutations of Integers",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 8,
+  "nClassC": 0,
+  "nDeclarations": 8,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

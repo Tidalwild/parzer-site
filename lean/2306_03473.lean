@@ -13,17 +13,17 @@ set_option maxErrors 10000000
 set_option maxHeartbeats 1000000
 open Real
 
-opaque lexPrec : Finset ℕ → Finset ℕ → Prop
-opaque cSeq : ℕ → Finset ℕ → Finset ℕ → Prop
-opaque partner : Finset ℕ → Finset ℕ
-opaque LFamR : ℕ → ℕ → ℕ → Finset (Finset ℕ)
-opaque LFamS : ℕ → Finset ℕ → ℕ → Finset (Finset ℕ)
-opaque LInitial : ℕ → ℕ → Finset (Finset ℕ) → Prop
-opaque MaximalCrossInt : Finset (Finset ℕ) → Finset (Finset ℕ) → Prop
-opaque shadowD : ℕ → Finset (Finset ℕ) → Finset (Finset ℕ)
-opaque fFun : ℕ → Finset ℕ → ℚ
-opaque alphaF : ℕ → Finset ℕ → Finset ℕ → ℚ
-opaque betaF : ℕ → Finset ℕ → Finset ℕ → ℚ
+noncomputable opaque lexPrec : Finset ℕ → Finset ℕ → Prop
+noncomputable opaque cSeq : ℕ → Finset ℕ → Finset ℕ → Prop
+noncomputable opaque partner : Finset ℕ → Finset ℕ
+noncomputable opaque LFamR : ℕ → ℕ → ℕ → Finset (Finset ℕ)
+noncomputable opaque LFamS : ℕ → Finset ℕ → ℕ → Finset (Finset ℕ)
+noncomputable opaque LInitial : ℕ → ℕ → Finset (Finset ℕ) → Prop
+noncomputable opaque MaximalCrossInt : Finset (Finset ℕ) → Finset (Finset ℕ) → Prop
+noncomputable opaque shadowD : ℕ → Finset (Finset ℕ) → Finset (Finset ℕ)
+noncomputable opaque fFun : ℕ → Finset ℕ → ℚ
+noncomputable opaque alphaF : ℕ → Finset ℕ → Finset ℕ → ℚ
+noncomputable opaque betaF : ℕ → Finset ℕ → Finset ℕ → ℚ
 variable (n : ℕ)
 variable (t : ℕ)
 variable (k : ℕ → ℕ)

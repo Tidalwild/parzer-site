@@ -1,0 +1,430 @@
+{
+ "arxivId": "2605.21718",
+ "attribution": {
+  "arxivId": "2605.21718",
+  "arxivUrl": "https://arxiv.org/abs/2605.21718",
+  "authors": [
+   "Evan Chen",
+   "Ken Ono",
+   "Jujian Zhang"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc0",
+  "title": "Reciprocals of Partition Polynomials"
+ },
+ "audit": null,
+ "authors": [
+  "Evan Chen",
+  "Ken Ono",
+  "Jujian Zhang"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_intro_ordinary",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_intro_ordinary",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_intro_binary",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_intro_binary",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_intro_odd",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_intro_odd",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_intro_ternary_minus",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_intro_ternary_minus",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_intro_ternary_one",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_intro_ternary_one",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_cyclotomic_divisibility",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_cyclotomic_divisibility",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_cyclotomic_values",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_cyclotomic_values",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_21",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_21",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_blk_21",
+  "thm_lem_cyclotomic_divisibility",
+  "thm_lem_cyclotomic_values",
+  "thm_thm_intro_binary",
+  "thm_thm_intro_odd",
+  "thm_thm_intro_ordinary",
+  "thm_thm_intro_ternary_minus",
+  "thm_thm_intro_ternary_one"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 21,
+  "classA": 0,
+  "classB": 8,
+  "classC": 0,
+  "curated": 8,
+  "customLemmas": 0,
+  "declarations": 8,
+  "skipped": 13
+ },
+ "id": "2605_21718",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 10,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc0 — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc0",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:oddPart",
+   "kind": "definition",
+   "label": "oddPart",
+   "lean": "noncomputable def oddPart (m : ℕ) : ℕ := m / 2 ^ (m.factorization 2)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:tSeq",
+   "kind": "definition",
+   "label": "tSeq",
+   "lean": "noncomputable def tSeq (n : ℕ) : ℤ := if n = 0 then 1 else Polynomial.eval 1 (numT n)",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_intro_ordinary"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_intro_ordinary",
+   "kind": "theorem",
+   "label": "thm_thm_intro_ordinary",
+   "lean": "theorem thm_thm_intro_ordinary : ∀ n : ℕ, 1 ≤ n → IsRelPrime (num n) (den n) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_intro_binary"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_intro_binary",
+   "kind": "theorem",
+   "label": "thm_thm_intro_binary",
+   "lean": "theorem thm_thm_intro_binary : ∀ n : ℕ, 2 ≤ n → (∀ s : ℕ, 2 ^ s ≤ n → ¬ (1 + Polynomial.X ^ (2 ^ s)) ∣ numB n) ∧ IsRelPrime (numB n) (denB n) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_intro_odd"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_intro_odd",
+   "kind": "theorem",
+   "label": "thm_thm_intro_odd",
+   "lean": "theorem thm_thm_intro_odd : ∀ n : ℕ, 1 ≤ n → Polynomial.eval (-1 : ℤ) (numO n) = (oddPart (Nat.factorial n) : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_intro_ternary_minus"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_intro_ternary_minus",
+   "kind": "theorem",
+   "label": "thm_thm_intro_ternary_minus",
+   "lean": "theorem thm_thm_intro_ternary_minus : ∀ n : ℕ, 1 ≤ n → Polynomial.eval (-1 : ℤ) (numT n) = (3 : ℤ) ^ (Nat.factorization (Nat.factorial n) 3) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_intro_ternary_one"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_intro_ternary_one",
+   "kind": "theorem",
+   "label": "thm_thm_intro_ternary_one",
+   "lean": "theorem thm_thm_intro_ternary_one : (∀ n : ℕ, tSeq (3 * n) = tSeq (3 * n + 1) ∧ tSeq (3 * n + 1) = tSeq (3 * n + 2)) ∧ (∀ n : ℕ, 1 ≤ n → tSeq (3 * n) - tSeq (3 * n - 2) = 2 ^ (2 * n) * tSeq n) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_cyclotomic_divisibility"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_cyclotomic_divisibility",
+   "kind": "theorem",
+   "label": "thm_lem_cyclotomic_divisibility",
+   "lean": "theorem thm_lem_cyclotomic_divisibility : ∀ d i : ℕ, 1 ≤ d → 1 ≤ i → (Polynomial.cyclotomic (2 * d) ℤ ∣ (1 + Polynomial.X ^ i) ↔ ∃ j : ℕ, Odd j ∧ 1 ≤ j ∧ i = d * j) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_cyclotomic_values"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_cyclotomic_values",
+   "kind": "theorem",
+   "label": "thm_lem_cyclotomic_values",
+   "lean": "theorem thm_lem_cyclotomic_values : (∀ e : ℕ, 1 < e → Odd e → (∀ p a : ℕ, p.Prime → e = p ^ a → Polynomial.eval (-1 : ℤ) (Polynomial.cyclotomic (2 * e) ℤ) = (p : ℤ)) ∧ ((¬ ∃ p a : ℕ, p.Prime ∧ e = p ^ a) → Polynomial.eval (-1 : ℤ) (Polynomial.cyclotomic (2 * e) ℤ) = 1)) ∧ (∀ a : ℕ, 1 ≤ a → Polynomial.eval 1 (Polynomial.cyclotomic (2 * 3 ^ a) ℤ) = 1 ∧ Polynomial.eval (-1 : ℤ) (Polynomial.cyclotomic (2 * 3 ^ a) ℤ) = 3) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_21"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_21",
+   "kind": "theorem",
+   "label": "thm_blk_21",
+   "lean": "theorem thm_blk_21 : ∀ n : ℕ, GB n = 1 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "5ece84be7e51a824",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Reciprocals of Partition Polynomials",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 8,
+  "nClassC": 0,
+  "nDeclarations": 8,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

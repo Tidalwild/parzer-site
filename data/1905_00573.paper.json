@@ -1,0 +1,1259 @@
+{
+ "arxivId": "1905.00573",
+ "attribution": {
+  "arxivId": "1905.00573",
+  "arxivUrl": "https://arxiv.org/abs/1905.00573",
+  "authors": [
+   "Xuxu Zhao",
+   "Xu Wang",
+   "Haiyuan Yao"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc0",
+  "title": "Some enumerative properties of a class of Fibonacci-like cubes"
+ },
+ "audit": null,
+ "authors": [
+  "Xuxu Zhao",
+  "Xu Wang",
+  "Haiyuan Yao"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "prop_rec_R",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_R",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_AB",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_AB",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_gf_AB",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_gf_AB",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_rnk",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_rnk",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_rnx",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_rnx",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_fibs",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_fibs",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_q",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_q",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_Q",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_Q",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_gf_Q",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_gf_Q",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_RF_q",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_RF_q",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_27",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_27",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_h",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_h",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_H",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_H",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_30",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_30",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_gf_H",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_gf_H",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_gf_H",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_gf_H",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_d",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_d",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_rec_D",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_rec_D",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_gf_D",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_gf_D",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "pro_d",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_pro_d",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_41",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_41",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "pro_out_d",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_pro_out_d",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "pro_ouD",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_pro_ouD",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_QD",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_QD",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_45",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_45",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "pro_ou_d",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_pro_ou_d",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_48",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_48",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_blk_27",
+  "thm_blk_30",
+  "thm_blk_41",
+  "thm_blk_45",
+  "thm_blk_48",
+  "thm_cor_fibs",
+  "thm_pro_d",
+  "thm_pro_ouD",
+  "thm_pro_ou_d",
+  "thm_pro_out_d",
+  "thm_prop_QD",
+  "thm_prop_RF_q",
+  "thm_prop_gf_H",
+  "thm_prop_rec_AB",
+  "thm_prop_rec_D",
+  "thm_prop_rec_H",
+  "thm_prop_rec_Q",
+  "thm_prop_rec_R",
+  "thm_prop_rec_d",
+  "thm_prop_rec_h",
+  "thm_prop_rec_q",
+  "thm_th_gf_AB",
+  "thm_th_gf_D",
+  "thm_th_gf_H",
+  "thm_th_gf_Q",
+  "thm_th_rnk",
+  "thm_th_rnx"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 33,
+  "classA": 0,
+  "classB": 27,
+  "classC": 0,
+  "curated": 27,
+  "customLemmas": 0,
+  "declarations": 27,
+  "skipped": 6
+ },
+ "id": "1905_00573",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 34,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc0 — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc0",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rCoeff",
+   "kind": "definition",
+   "label": "rCoeff",
+   "lean": "noncomputable def rCoeff (n k : ℕ) : ℤ := (RPoly n).coeff k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:qCoeff",
+   "kind": "definition",
+   "label": "qCoeff",
+   "lean": "noncomputable def qCoeff (n k : ℕ) : ℤ := (QPoly n).coeff k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:hCoeff",
+   "kind": "definition",
+   "label": "hCoeff",
+   "lean": "noncomputable def hCoeff (n k : ℕ) : ℤ := (HPoly n).coeff k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:dCoeff",
+   "kind": "definition",
+   "label": "dCoeff",
+   "lean": "noncomputable def dCoeff (n k : ℕ) : ℤ := (DPoly n).coeff k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:dInCoeff",
+   "kind": "definition",
+   "label": "dInCoeff",
+   "lean": "noncomputable def dInCoeff (n k : ℕ) : ℤ := (DInPoly n).coeff k",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Yps",
+   "kind": "definition",
+   "label": "Yps",
+   "lean": "noncomputable def Yps : PowerSeries (Polynomial ℤ) := PowerSeries.X",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Xps",
+   "kind": "definition",
+   "label": "Xps",
+   "lean": "noncomputable def Xps : PowerSeries (Polynomial ℤ) := PowerSeries.C Polynomial.X",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_R"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_R",
+   "kind": "theorem",
+   "label": "thm_prop_rec_R",
+   "lean": "theorem thm_prop_rec_R (h0 : 5 ≤ n) : (¬ (2 ∣ n) → RPoly n = Polynomial.X * RPoly (n - 1) + RPoly (n - 2)) ∧ (2 ∣ n → RPoly n = RPoly (n - 1) + Polynomial.X ^ 2 * RPoly (n - 2)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_AB"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_AB",
+   "kind": "theorem",
+   "label": "thm_prop_rec_AB",
+   "lean": "theorem thm_prop_rec_AB : (4 ≤ m → APoly m = (1 + Polynomial.X + Polynomial.X ^ 2) * APoly (m - 1) - Polynomial.X ^ 2 * APoly (m - 2)) ∧ (2 ≤ m → BPoly m = (1 + Polynomial.X + Polynomial.X ^ 2) * BPoly (m - 1) - Polynomial.X ^ 2 * BPoly (m - 2)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_gf_AB"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_gf_AB",
+   "kind": "theorem",
+   "label": "thm_th_gf_AB",
+   "lean": "theorem thm_th_gf_AB : ((PowerSeries.mk (fun m => APoly m) - Yps) * (1 - (1 + Xps + Xps ^ 2) * Yps + Xps ^ 2 * Yps ^ 2) = 1 - Yps + Yps ^ 2) ∧ (PowerSeries.mk (fun m => BPoly m) * (1 - (1 + Xps + Xps ^ 2) * Yps + Xps ^ 2 * Yps ^ 2) = 1 + Xps - (Xps + Xps ^ 2) * Yps) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_rnk"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_rnk",
+   "kind": "theorem",
+   "label": "thm_th_rnk",
+   "lean": "theorem thm_th_rnk : (rCoeff (2 * m) k = (if m = 1 ∧ k = 0 then (1 : ℤ) else 0) + (∑ i ∈ Finset.range (m / 2 + 1), (-1 : ℤ) ^ i * (Nat.choose (m - i) i : ℤ) * trinom (m - 2 * i) (k - 2 * i)) - (∑ i ∈ Finset.range ((m - 1) / 2 + 1), (-1 : ℤ) ^ i * (Nat.choose (m - i - 1) i : ℤ) * trinom (m - 2 * i - 1) (k - 2 * i)) + (∑ i ∈ Finset.range ((m - 2) / 2 + 1), (-1 : ℤ) ^ i * (Nat.choose (m - i - 2) i : ℤ) * trinom (m - 2 * i - 2) (k - 2 * i))) ∧ (rCoeff (2 * m + 1) k = (∑ i ∈ Finset.range (m / 2 + 1), (-1 : ℤ) ^ i * (Nat.choose (m - i) i : ℤ) * (trinom (m - 2 * i) (k - 2 * i) + trinom (m - 2 * i) (k - 2 * i - 1))) - (∑ i ∈ Finset.range ((m - 1) / 2 + 1), (-1 : ℤ) ^ i * (Nat.choose (m - i - 1) i : ℤ) * (trinom (m - 2 * i - 1) (k - 2 * i - 1) + trinom (m - 2 * i - 1) (k - 2 * i - 2)))) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_rnx"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_rnx",
+   "kind": "theorem",
+   "label": "thm_th_rnx",
+   "lean": "theorem thm_th_rnx : PowerSeries.mk (fun n => RPoly n) * (1 - (1 + Xps + Xps ^ 2) * Yps ^ 2 + Xps ^ 2 * Yps ^ 4) = 1 + (1 + Xps) * Yps - (Xps + Xps ^ 2) * Yps ^ 3 - (Xps + Xps ^ 2) * Yps ^ 4 + Xps ^ 2 * Yps ^ 6 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_fibs"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_fibs",
+   "kind": "theorem",
+   "label": "thm_cor_fibs",
+   "lean": "theorem thm_cor_fibs (h0 : 3 ≤ n) : ∑ k ∈ Finset.range (n + 1), rCoeff n k = 2 * (Nat.fib n : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_q"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_q",
+   "kind": "theorem",
+   "label": "thm_prop_rec_q",
+   "lean": "theorem thm_prop_rec_q (h0 : 4 ≤ n) : qCoeff n k = qCoeff (n - 1) k + qCoeff (n - 2) k + qCoeff (n - 2) (k - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_Q"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_Q",
+   "kind": "theorem",
+   "label": "thm_prop_rec_Q",
+   "lean": "theorem thm_prop_rec_Q (h0 : 5 ≤ n) : QPoly n = QPoly (n - 1) + (1 + Polynomial.X) * QPoly (n - 2) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_gf_Q"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_gf_Q",
+   "kind": "theorem",
+   "label": "thm_th_gf_Q",
+   "lean": "theorem thm_th_gf_Q : PowerSeries.mk (fun n => QPoly n) * (1 - Yps - (1 + Xps) * Yps ^ 2) = 1 + (1 + Xps) * Yps - (1 + Xps) ^ 2 * Yps ^ 3 - (1 + Xps) ^ 2 * Yps ^ 4 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_RF_q"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_RF_q",
+   "kind": "theorem",
+   "label": "thm_prop_RF_q",
+   "lean": "theorem thm_prop_RF_q : qCoeff n k = (∑ j ∈ Finset.range ((n + 1) / 2 + 1), (Nat.choose (n - j + 1) j : ℤ) * (Nat.choose j k : ℤ)) - (∑ j ∈ Finset.Icc 2 ((n + 1) / 2), (Nat.choose (n - j - 1) (j - 2) : ℤ) * (Nat.choose j k : ℤ)) - (∑ j ∈ Finset.Icc 2 (n / 2), (Nat.choose (n - j - 2) (j - 2) : ℤ) * (Nat.choose j k : ℤ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_27"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_27",
+   "kind": "theorem",
+   "label": "thm_blk_27",
+   "lean": "theorem thm_blk_27 (h0 : 3 ≤ n) : qCoeff n 0 = 2 * (Nat.fib n : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_h"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_h",
+   "kind": "theorem",
+   "label": "thm_prop_rec_h",
+   "lean": "theorem thm_prop_rec_h (h0 : 6 ≤ n) : hCoeff n k = hCoeff (n - 2) (k - 1) + hCoeff (n - 3) (k - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_H"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_H",
+   "kind": "theorem",
+   "label": "thm_prop_rec_H",
+   "lean": "theorem thm_prop_rec_H (h0 : 6 ≤ n) : HPoly n = Polynomial.X * HPoly (n - 2) + Polynomial.X * HPoly (n - 3) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_30"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_30",
+   "kind": "theorem",
+   "label": "thm_blk_30",
+   "lean": "theorem thm_blk_30 (h0 : 3 ≤ n) : Polynomial.eval 1 (HPoly n) = (padovan (n - 2) : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_gf_H"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_gf_H",
+   "kind": "theorem",
+   "label": "thm_th_gf_H",
+   "lean": "theorem thm_th_gf_H : PowerSeries.mk (fun n => HPoly n) * (1 - Xps * Yps ^ 2 * (1 + Yps)) = 1 + Xps * Yps * (1 + Yps) + 2 * Xps * Yps ^ 3 * (1 + Yps) - Xps ^ 2 * Yps ^ 3 * (1 + Yps) ^ 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_gf_H"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_gf_H",
+   "kind": "theorem",
+   "label": "thm_prop_gf_H",
+   "lean": "theorem thm_prop_gf_H (h0 : 3 ≤ n) : hCoeff n k = (Nat.choose (k + 1) (n - 2 * k) : ℤ) + (Nat.choose k (n - 2 * k - 1) : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_d"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_d",
+   "kind": "theorem",
+   "label": "thm_prop_rec_d",
+   "lean": "theorem thm_prop_rec_d (h0 : 4 ≤ n) : dCoeff n k = dCoeff (n - 2) (k - 1) + dCoeff (n - 1) (k - 1) - dCoeff (n - 3) (k - 2) + dCoeff (n - 3) (k - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_rec_D"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_rec_D",
+   "kind": "theorem",
+   "label": "thm_prop_rec_D",
+   "lean": "theorem thm_prop_rec_D (h0 : 6 ≤ n) : DPoly n = Polynomial.X * DPoly (n - 1) + Polynomial.X * DPoly (n - 2) + (Polynomial.X - Polynomial.X ^ 2) * DPoly (n - 3) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_gf_D"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_gf_D",
+   "kind": "theorem",
+   "label": "thm_th_gf_D",
+   "lean": "theorem thm_th_gf_D : (PowerSeries.mk (fun n => DPoly n) - (- Yps + Xps * Yps + Xps ^ 2 * Yps ^ 2)) * ((1 - Xps * Yps) * (1 - Xps * Yps ^ 2) - Xps * Yps ^ 3) = 1 + Yps - Xps ^ 2 * Yps ^ 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_pro_d"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_pro_d",
+   "kind": "theorem",
+   "label": "thm_pro_d",
+   "lean": "theorem thm_pro_d (h0 : 3 ≤ n) : dCoeff n k = ∑ j ∈ Finset.range (k + 1), ((Nat.choose (n - 2 * j) (k - j) : ℤ) * (Nat.choose j (n - k - j) : ℤ) + (Nat.choose (n - 2 * j - 1) (k - j) : ℤ) * (Nat.choose j (n - k - j - 1) : ℤ) - (Nat.choose (n - 2 * j - 2) (k - j - 2) : ℤ) * (Nat.choose j (n - k - j) : ℤ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_41"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_41",
+   "kind": "theorem",
+   "label": "thm_blk_41",
+   "lean": "theorem thm_blk_41 (h0 : 3 ≤ n) : ∑ k ∈ Finset.range (n + 1), dCoeff n k = 2 * (Nat.fib n : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_pro_out_d"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_pro_out_d",
+   "kind": "theorem",
+   "label": "thm_pro_out_d",
+   "lean": "theorem thm_pro_out_d (h0 : 3 ≤ n) (h1 : 1 ≤ k) : dInCoeff n k = dInCoeff (n - 1) k + dInCoeff (n - 2) (k - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_pro_ouD"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_pro_ouD",
+   "kind": "theorem",
+   "label": "thm_pro_ouD",
+   "lean": "theorem thm_pro_ouD (h0 : 5 ≤ n) : DInPoly n = DInPoly (n - 1) + Polynomial.X * DInPoly (n - 2) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_QD"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_QD",
+   "kind": "theorem",
+   "label": "thm_prop_QD",
+   "lean": "theorem thm_prop_QD : (DInPoly n).comp (1 + Polynomial.X) = QPoly n := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_45"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_45",
+   "kind": "theorem",
+   "label": "thm_blk_45",
+   "lean": "theorem thm_blk_45 : PowerSeries.mk (fun n => DInPoly n) * (1 - Yps - Xps * Yps ^ 2) = 1 + Xps * Yps - Xps ^ 2 * Yps ^ 3 - Xps ^ 2 * Yps ^ 4 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_pro_ou_d"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_pro_ou_d",
+   "kind": "theorem",
+   "label": "thm_pro_ou_d",
+   "lean": "theorem thm_pro_ou_d : dInCoeff n k = (Nat.choose (n - k - 2) (k - 1) : ℤ) + (Nat.choose (n - k) k : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_48"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_48",
+   "kind": "theorem",
+   "label": "thm_blk_48",
+   "lean": "theorem thm_blk_48 (h0 : 3 ≤ n) : ∑ k ∈ Finset.range (n + 1), dInCoeff n k = 2 * (Nat.fib n : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "f8f3c54d74eb371d",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Some enumerative properties of a class of Fibonacci-like cubes",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 27,
+  "nClassC": 0,
+  "nDeclarations": 27,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

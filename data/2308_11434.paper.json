@@ -1,0 +1,335 @@
+{
+ "arxivId": "2308.11434",
+ "attribution": {
+  "arxivId": "2308.11434",
+  "arxivUrl": "https://arxiv.org/abs/2308.11434",
+  "authors": [],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc0",
+  "title": "On the subgroup Regular sets in cayley graphs"
+ },
+ "audit": null,
+ "authors": [],
+ "blocksStub": [
+  {
+   "blockId": "thmA",
+   "finalKind": "failed_block",
+   "nSteps": 4,
+   "name": "thm_thmA",
+   "stepsCite": 4,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thmB",
+   "finalKind": "failed_block",
+   "nSteps": 3,
+   "name": "thm_thmB",
+   "stepsCite": 3,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t1",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t1",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t3",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t3",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_lem_1_2",
+  "thm_t",
+  "thm_t1",
+  "thm_t2",
+  "thm_t3",
+  "thm_thmA",
+  "thm_thmB"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 2,
+  "blocksTotal": 13,
+  "classA": 0,
+  "classB": 7,
+  "classC": 0,
+  "curated": 7,
+  "customLemmas": 1,
+  "declarations": 7,
+  "skipped": 7
+ },
+ "id": "2308_11434",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 7,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc0 — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc0",
+ "nodes": [
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "Chen–Wang–Xia \\cite[Thm 1.2]{1} & Ma–Walls–Wang–Zhou \\cite[Lem 2.2]{9} (Lemma 2.3)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_lem_1_2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_lem_1_2",
+   "kind": "custom_lemma_stub",
+   "label": "lem_lem_1_2",
+   "lean": "theorem lem_lem_1_2 : IsPerfectCode ↔ (∀ x : GEl, OutsideH x → HasInvClosedTransversals x 1) := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t1"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t1",
+   "kind": "theorem",
+   "label": "thm_t1",
+   "lean": "theorem thm_t1 : ∀ x : GEl, OutsideH x → ¬ SelfPairedDoset x → HasInvClosedTransversals x horder := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t2",
+   "kind": "theorem",
+   "label": "thm_t2",
+   "lean": "theorem thm_t2 : ∀ x : GEl, OutsideH x → SelfPairedDoset x → Even (CosetRatio x) → ∀ b : ℕ, b ≤ horder → HasInvClosedTransversals x b := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t3"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t3",
+   "kind": "theorem",
+   "label": "thm_t3",
+   "lean": "theorem thm_t3 : ∀ x : GEl, ∀ n : ℕ, OutsideH x → SelfPairedDoset x → CosetRatio x = 2 * n + 1 → ((∀ b : ℕ, Even b → b ≤ horder → HasInvClosedTransversals x b) ∧ (IsPerfectCode → ∀ b : ℕ, b ≤ horder → HasInvClosedTransversals x b)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thmA"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_lem_1_2",
+    "thm_t1",
+    "thm_t2",
+    "thm_t3"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_thmA",
+   "kind": "theorem",
+   "label": "thm_thmA",
+   "lean": "theorem thm_thmA (h0 : 2 ≤ horder) : IsPerfectCode ↔ (∀ a b : ℕ, a ≤ horder - 1 → b ≤ horder → Nat.gcd 2 (horder - 1) ∣ a → IsRegularSet a b) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 4,
+    "stepsCite": 4,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thmB"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "thm_t1",
+    "thm_t2",
+    "thm_t3"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_thmB",
+   "kind": "theorem",
+   "label": "thm_thmB",
+   "lean": "theorem thm_thmB (h0 : 2 ≤ horder) : ∀ a b : ℕ, a ≤ horder - 1 → b ≤ horder → Nat.gcd 2 (horder - 1) ∣ a → Even b → IsRegularSet a b := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 3,
+    "stepsCite": 3,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t",
+   "kind": "theorem",
+   "label": "thm_t",
+   "lean": "theorem thm_t : ∀ x : GEl, ∀ n : ℕ, OutsideH x → SelfPairedDoset x → CosetRatio x = 2 * n → HasInvClosedTransversals x (horder - CoreOrder x) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "077844e000908a84",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "On the subgroup Regular sets in cayley graphs",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 7,
+  "nClassC": 0,
+  "nDeclarations": 7,
+  "quarantineRounds": 1,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

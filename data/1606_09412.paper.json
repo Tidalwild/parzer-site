@@ -1,0 +1,442 @@
+{
+ "arxivId": "1606.09412",
+ "attribution": {
+  "arxivId": "1606.09412",
+  "arxivUrl": "https://arxiv.org/abs/1606.09412",
+  "authors": [
+   "Karim A.~Adiprasito",
+   "Raman Sanyal"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "unknown",
+  "title": "1606.09412"
+ },
+ "audit": null,
+ "authors": [
+  "Karim A.~Adiprasito",
+  "Raman Sanyal"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_log_conc2",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_thm_log_conc2",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "b"
+  },
+  {
+   "blockId": "AF",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_AF",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_wills_log",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_wills_log",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prp_levy",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prp_levy",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_char_large_prod",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_char_large_prod",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_flexible_extensions",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_flexible_extensions",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_flex_limit",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_flex_limit",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_measure1",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_measure1",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_main",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_main",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_AF",
+  "thm_cor_flex_limit",
+  "thm_cor_wills_log",
+  "thm_lem_char_large_prod",
+  "thm_lem_flexible_extensions",
+  "thm_prp_levy",
+  "thm_thm_main",
+  "thm_thm_measure1"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 1,
+  "blocksTotal": 9,
+  "classA": 0,
+  "classB": 9,
+  "classC": 0,
+  "curated": 9,
+  "customLemmas": 0,
+  "declarations": 9,
+  "skipped": 0
+ },
+ "id": "1606_09412",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 9,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "unknown — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "unknown",
+ "nodes": [
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_AF"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_AF",
+   "kind": "theorem",
+   "label": "thm_AF",
+   "lean": "theorem thm_AF : ∀ (K : ConvexBodyT) (d i : ℕ), bodyDim K ≤ d → 1 ≤ i → i + 1 ≤ d → (nu K (i - 1) * kappa (d - (i - 1))) * (nu K (i + 1) * kappa (d - (i + 1))) ≤ (nu K i * kappa (d - i)) ^ 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_wills_log"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_wills_log",
+   "kind": "theorem",
+   "label": "thm_cor_wills_log",
+   "lean": "theorem thm_cor_wills_log : ∀ (K : ConvexBodyT) (i : ℕ), 1 ≤ i → i + 1 ≤ bodyDim K → nu K (i - 1) * nu K (i + 1) ≤ nu K i ^ 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_char_large_prod"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_char_large_prod",
+   "kind": "theorem",
+   "label": "thm_lem_char_large_prod",
+   "lean": "theorem thm_lem_char_large_prod : ∀ (A : ArrT) (c k h : ℕ), IsCArrangement A c → 1 ≤ k → 1 ≤ h → charPoly (LPE k h A) = (Polynomial.X + Polynomial.C (h : ℝ)) * charPoly (LPE (k - 1) h A) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_flexible_extensions"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_flexible_extensions",
+   "kind": "theorem",
+   "label": "thm_lem_flexible_extensions",
+   "lean": "theorem thm_lem_flexible_extensions : ∀ (A : ArrT) (e : ElemT) (k h : ℕ), 1 ≤ k → 1 ≤ h → charPoly (SFE k h A e) = Polynomial.C (h : ℝ) * charPoly (SFE (k - 1) h A e) + charPoly (LPE (k - 1) h (acontr A e)) + charPoly (LPE (k - 1) h (adel A e)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_flex_limit"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_flex_limit",
+   "kind": "theorem",
+   "label": "thm_cor_flex_limit",
+   "lean": "theorem thm_cor_flex_limit : ∀ (A : ArrT) (e : ElemT) (k i : ℕ) (ε : ℝ), 0 < ε → ∃ N : ℕ, ∀ h : ℕ, N ≤ h → |Polynomial.coeff (charPoly (SFE k h A e)) i / (h : ℝ) ^ k - Polynomial.coeff (charPoly A) i| < ε ∧ |Polynomial.coeff (charPoly (LPE k h A)) i / (h : ℝ) ^ k - Polynomial.coeff (charPoly A) i| < ε := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prp_levy"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prp_levy",
+   "kind": "theorem",
+   "label": "thm_prp_levy",
+   "lean": "theorem thm_prp_levy : ∀ (r d : ℕ), NormalLevyFamily r d := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_measure1"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_measure1",
+   "kind": "theorem",
+   "label": "thm_thm_measure1",
+   "lean": "theorem thm_thm_measure1 : ∀ (A : ArrT) (c : ℕ), IsCArrangement A c → AASWillsDelContr A := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_main"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_main",
+   "kind": "theorem",
+   "label": "thm_thm_main",
+   "lean": "theorem thm_thm_main : ∀ (A : ArrT) (c : ℕ), IsCArrangement A c → AASWhitneyLimit A ∧ (∀ i : ℕ, 1 ≤ i → i + 1 ≤ mrank (matroidOf A) → whitney (matroidOf A) (i - 1) * whitney (matroidOf A) (i + 1) ≤ whitney (matroidOf A) i ^ 2) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [
+    "thm_thm_main"
+   ],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_main"
+   ],
+   "demoted": false,
+   "dependsOn": [
+    "thm_thm_main"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_thm_log_conc2",
+   "kind": "theorem",
+   "label": "thm_thm_log_conc2",
+   "lean": "theorem thm_thm_log_conc2 : ∀ (M : MatroidT) (c : ℕ), (∃ A : ArrT, IsCArrangement A c ∧ matroidOf A = M) → ∀ i : ℕ, 1 ≤ i → i + 1 ≤ mrank M → whitney M (i - 1) * whitney M (i + 1) ≤ whitney M i ^ 2 := by\n  intro M c hreal i hi1 hi2; rcases hreal with ⟨A, hA, hMA⟩; subst hMA; exact (thm_thm_main matroidOf A c hA).2 i hi1 hi2",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "72a2cabc6bb23ca6",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.8888888888888888,
+ "title": "1606.09412",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 9,
+  "nClassC": 0,
+  "nDeclarations": 9,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 2
+ }
+}

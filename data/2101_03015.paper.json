@@ -1,0 +1,561 @@
+{
+ "arxivId": "2101.03015",
+ "attribution": {
+  "arxivId": "2101.03015",
+  "arxivUrl": "https://arxiv.org/abs/2101.03015",
+  "authors": [
+   "by P. Frankl",
+   "G. O. H. Katona R'enyi Institute",
+   "Budapest",
+   "Hungary"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc0",
+  "title": "On strengthenings of the intersecting shadow theorem"
+ },
+ "audit": null,
+ "authors": [
+  "by P. Frankl",
+  "G. O. H. Katona R'enyi Institute",
+  "Budapest",
+  "Hungary"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "th_1_4",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_1_4",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_2_9",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_2_9",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_2_10",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_2_10",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_2_11",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_2_11",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_3_1",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_3_1",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_5_3",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_5_3",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_5_5",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_5_5",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_6_3",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_6_3",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "th_6_7",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_th_6_7",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_frankl_2_2",
+  "lem_katona",
+  "lem_sperner",
+  "thm_cor_6_3",
+  "thm_lem_2_9",
+  "thm_prop_2_11",
+  "thm_prop_3_1",
+  "thm_prop_5_3",
+  "thm_th_1_4",
+  "thm_th_2_10",
+  "thm_th_5_5",
+  "thm_th_6_7"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 9,
+  "classA": 0,
+  "classB": 12,
+  "classC": 0,
+  "curated": 12,
+  "customLemmas": 3,
+  "declarations": 12,
+  "skipped": 0
+ },
+ "id": "2101_03015",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 15,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc0 — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc0",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:TIntersecting",
+   "kind": "definition",
+   "label": "TIntersecting",
+   "lean": "def TIntersecting (t : ℕ) (F : Finset (Finset ℕ)) : Prop := ∀ A ∈ F, ∀ B ∈ F, t ≤ (A ∩ B).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsSemistar",
+   "kind": "definition",
+   "label": "IsSemistar",
+   "lean": "def IsSemistar (t : ℕ) (F : Finset (Finset ℕ)) : Prop := ∃ D : Finset ℕ, D.card = t + 1 ∧ ∀ A ∈ F, t ≤ (A ∩ D).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:franklA",
+   "kind": "definition",
+   "label": "franklA",
+   "lean": "def franklA (h n k t : ℕ) : Finset (Finset ℕ) := ((Finset.Icc 1 n).powersetCard k).filter (fun A => t + h ≤ (A ∩ Finset.Icc 1 (t + 2 * h)).card)",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Sperner (Prop 1.1) \\cite{S} ; the elementary shadow-ratio lower bound eq:1.1",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_sperner"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_sperner",
+   "kind": "custom_lemma_stub",
+   "label": "lem_sperner",
+   "lean": "theorem lem_sperner : ∀ (n k j : ℕ), ∀ F : Finset (Finset ℕ), F.Nonempty → F ⊆ (Finset.Icc 1 n).powersetCard k → 0 < j → j < k → (Finset.shadow^[j] F).card * Nat.choose n k ≥ Nat.choose n (k - j) * F.card := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Katona Intersecting Shadow Theorem (Thm 1.3) \\cite{Ka1} ; eq:1.2",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_katona"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_katona",
+   "kind": "custom_lemma_stub",
+   "label": "lem_katona",
+   "lean": "theorem lem_katona : ∀ (n k t l : ℕ), ∀ F : Finset (Finset ℕ), F.Nonempty → F ⊆ (Finset.Icc 1 n).powersetCard k → TIntersecting t F → k - t ≤ l → l < k → (Finset.shadow^[k - l] F).card * Nat.choose (2 * k - t) k ≥ Nat.choose (2 * k - t) l * F.card := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "Frankl (Prop 2.2) \\cite{F78} ; eq:2.1 structural property of shifted t-intersecting families",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_frankl_2_2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_frankl_2_2",
+   "kind": "custom_lemma_stub",
+   "label": "lem_frankl_2_2",
+   "lean": "theorem lem_frankl_2_2 : ∀ (n k t : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → IsShifted F → TIntersecting t F → ∀ A ∈ F, ∃ h : ℕ, h ≤ k - t ∧ t + h ≤ (A ∩ Finset.Icc 1 (t + 2 * h)).card := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_2_9"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_2_9",
+   "kind": "theorem",
+   "label": "thm_lem_2_9",
+   "lean": "theorem thm_lem_2_9 : ∀ (t j : ℕ), ∀ F : Finset (Finset ℕ), IsPseudoTIntersecting t F → 0 < j → j ≤ t → (Finset.shadow^[j] F).card ≥ (restrictedShadow j F).card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_2_11"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_2_11",
+   "kind": "theorem",
+   "label": "thm_prop_2_11",
+   "lean": "theorem thm_prop_2_11 : ∀ (t j h w r : ℕ), 0 < j → j < t → h < w → 1 ≤ r → r ≤ w → (Nat.choose (t + 2 * h) (t + h - j) * Nat.choose (t + 2 * w) (t + w) > Nat.choose (t + 2 * w) (t + w - j) * Nat.choose (t + 2 * h) (t + h)) ∧ (Nat.choose (t + 2 * w) (t + w - j + r) * Nat.choose (t + 2 * w) (t + w) > Nat.choose (t + 2 * w) (t + w - j) * Nat.choose (t + 2 * w) (t + w + r)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_2_10"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_2_10",
+   "kind": "theorem",
+   "label": "thm_th_2_10",
+   "lean": "theorem thm_th_2_10 : ∀ (n k t j w : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → IsShifted F → IsPseudoTIntersecting t F → familyWidth t F = w → 0 < j → j ≤ t → (restrictedShadow j F).card * Nat.choose (t + 2 * w) (t + w) ≥ F.card * Nat.choose (t + 2 * w) (t - j + w) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_3_1"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_3_1",
+   "kind": "theorem",
+   "label": "thm_prop_3_1",
+   "lean": "theorem thm_prop_3_1 : ∀ (n k t : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → IsShifted F → TIntersecting t F → familyWidth t F = k - t → IsPseudoTIntersecting (t + 1) (F \\ (Finset.Icc 1 (2 * k - t)).powersetCard k) ∧ familyWidth (t + 1) (F \\ (Finset.Icc 1 (2 * k - t)).powersetCard k) ≤ k - t - 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_1_4"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_1_4",
+   "kind": "theorem",
+   "label": "thm_th_1_4",
+   "lean": "theorem thm_th_1_4 : ∀ (n k t j : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → TIntersecting t F → 1 ≤ j → j < t → t < k → k < n → (k + t + 1 - j) * F.card ≥ Nat.choose (2 * k - t) k * (k + 2 * t + 1 - 2 * j) → (Finset.shadow^[j] F).card * Nat.choose (2 * (k - 1) - t) (k - 1) ≥ Nat.choose (2 * (k - 1) - t) (k - 1 - j) * F.card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_5_3"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_5_3",
+   "kind": "theorem",
+   "label": "thm_prop_5_3",
+   "lean": "theorem thm_prop_5_3 : ∀ (n k t j : ℕ), ∀ F : Finset (Finset ℕ), 1 < j → j < t → (F.Nonempty → F ⊆ franklA 0 n k t ∪ franklA 1 n k t → (Finset.shadow^[j] F).card * (t + 2) ≥ Nat.choose (t + 2) (j + 1) * F.card) ∧ (F.Nonempty → F ⊆ franklA 0 n k t → (Finset.shadow^[j] F).card * (franklA 0 n k t).card ≥ (Finset.shadow^[j] (franklA 0 n k t)).card * F.card ∧ (Finset.shadow^[j] (franklA 0 n k t)).card > Nat.choose t j * (franklA 0 n k t).card) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_5_5"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_5_5",
+   "kind": "theorem",
+   "label": "thm_th_5_5",
+   "lean": "theorem thm_th_5_5 : ∀ (n k t j : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → TIntersecting t F → IsSemistar t F → 1 < j → j < t → (Finset.shadow^[j] F).card * (t + 2) ≥ Nat.choose (t + 2) (j + 1) * F.card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_6_3"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_6_3",
+   "kind": "theorem",
+   "label": "thm_cor_6_3",
+   "lean": "theorem thm_cor_6_3 : ∀ (n k t j : ℕ), ∀ F : Finset (Finset ℕ), (k - t + 1) * (t + 1) ≤ n → k ≤ 2 * t → 1 ≤ j → j < t → F ⊆ (Finset.Icc 1 n).powersetCard k → TIntersecting t F → (franklA 1 n k t).card < F.card → (Finset.shadow^[j] F).card * (franklA 0 n k t).card ≥ (Finset.shadow^[j] (franklA 0 n k t)).card * F.card ∧ (Finset.shadow^[j] (franklA 0 n k t)).card > Nat.choose t j * (franklA 0 n k t).card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_th_6_7"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_th_6_7",
+   "kind": "theorem",
+   "label": "thm_th_6_7",
+   "lean": "theorem thm_th_6_7 : ∀ (n k t j : ℕ), ∀ F : Finset (Finset ℕ), F ⊆ (Finset.Icc 1 n).powersetCard k → IsShifted F → TIntersecting t F → ¬ F ⊆ franklA 1 n k t → t + 1 ≤ baseSizeAt (t + 1) F → 1 ≤ j → j < t → (Finset.shadow^[j] F).card > Nat.choose t j * F.card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "09b780337249844b",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "On strengthenings of the intersecting shadow theorem",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 12,
+  "nClassC": 0,
+  "nDeclarations": 12,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

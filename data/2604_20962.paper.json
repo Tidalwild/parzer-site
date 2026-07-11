@@ -1,0 +1,413 @@
+{
+ "arxivId": "2604.20962",
+ "attribution": {
+  "arxivId": "2604.20962",
+  "arxivUrl": "https://arxiv.org/abs/2604.20962",
+  "authors": [
+   "Veronica Bitonti"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "arxiv_nonexclusive",
+  "title": "Sharp bounds for covering with large cliques and independent sets"
+ },
+ "audit": null,
+ "authors": [
+  "Veronica Bitonti"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_main",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_thm_main",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_multicol",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_thm_multicol",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_lowerbound",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_lowerbound",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_eq_if_int",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_eq_if_int",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_improved",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_lem_improved",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "a"
+  },
+  {
+   "blockId": "lem_multicol_lb",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_multicol_lb",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_conj_extrem",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_conj_extrem",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_lem_conj_extrem",
+  "thm_lem_eq_if_int",
+  "thm_lem_lowerbound",
+  "thm_lem_multicol_lb"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 3,
+  "blocksTotal": 14,
+  "classA": 1,
+  "classB": 6,
+  "classC": 0,
+  "curated": 7,
+  "customLemmas": 0,
+  "declarations": 7,
+  "skipped": 7
+ },
+ "id": "2604_20962",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 11,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "arxiv_nonexclusive — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "arxiv_nonexclusive",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsEnabling",
+   "kind": "definition",
+   "label": "IsEnabling",
+   "lean": "def IsEnabling (k₁ k₂ : ℕ) {n : ℕ} (G : SimpleGraph (Fin n)) : Prop :=\n  ∀ v : Fin n, (∃ s : Finset (Fin n), G.IsNClique k₁ s ∧ v ∈ s) ∧ (∃ t : Finset (Fin n), G.IsNIndepSet k₂ t ∧ v ∈ t)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:enablingNum",
+   "kind": "definition",
+   "label": "enablingNum",
+   "lean": "noncomputable def enablingNum (k₁ k₂ : ℕ) : ℕ :=\n  sInf {n : ℕ | ∃ G : SimpleGraph (Fin n), IsEnabling k₁ k₂ G}",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsColEnabling",
+   "kind": "definition",
+   "label": "IsColEnabling",
+   "lean": "def IsColEnabling (r k : ℕ) {n : ℕ} (c : Fin n → Fin n → Fin r) : Prop :=\n  (∀ x y : Fin n, c x y = c y x) ∧ ∀ (v : Fin n) (i : Fin r), ∃ s : Finset (Fin n), v ∈ s ∧ s.card = k ∧ ∀ x ∈ s, ∀ y ∈ s, x ≠ y → c x y = i",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:colEnablingNum",
+   "kind": "definition",
+   "label": "colEnablingNum",
+   "lean": "noncomputable def colEnablingNum (r k : ℕ) : ℕ :=\n  sInf {n : ℕ | ∃ c : Fin n → Fin n → Fin r, IsColEnabling r k c}",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_lowerbound"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_lowerbound",
+   "kind": "theorem",
+   "label": "thm_lem_lowerbound",
+   "lean": "theorem thm_lem_lowerbound : ∀ (k₁ k₂ : ℕ), 2 ≤ k₁ → 2 ≤ k₂ → (Real.sqrt ((k₁ : ℝ) - 1) + Real.sqrt ((k₂ : ℝ) - 1)) ^ 2 ≤ (enablingNum k₁ k₂ : ℝ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_eq_if_int"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_eq_if_int",
+   "kind": "theorem",
+   "label": "thm_lem_eq_if_int",
+   "lean": "theorem thm_lem_eq_if_int : ∀ (k₁ k₂ : ℕ), 2 ≤ k₁ → 2 ≤ k₂ → ∀ m : ℕ, (m : ℝ) = (Real.sqrt ((k₁ : ℝ) - 1) + Real.sqrt ((k₂ : ℝ) - 1)) ^ 2 → ∃ G : SimpleGraph (Fin m), IsEnabling k₁ k₂ G := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [
+    "thm_lem_eq_if_int",
+    "thm_lem_lowerbound"
+   ],
+   "conditionCount": 2,
+   "conditions": [
+    "thm_lem_eq_if_int",
+    "thm_lem_lowerbound"
+   ],
+   "demoted": false,
+   "dependsOn": [
+    "thm_lem_eq_if_int",
+    "thm_lem_lowerbound"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_thm_main",
+   "kind": "theorem",
+   "label": "thm_thm_main",
+   "lean": "theorem thm_thm_main : ∀ (k₁ k₂ : ℕ), 2 ≤ k₁ → 2 ≤ k₂ → ((Real.sqrt ((k₁ : ℝ) - 1) + Real.sqrt ((k₂ : ℝ) - 1)) ^ 2 ≤ (enablingNum k₁ k₂ : ℝ)) ∧ (∀ m : ℕ, (m : ℝ) = (Real.sqrt ((k₁ : ℝ) - 1) + Real.sqrt ((k₂ : ℝ) - 1)) ^ 2 → (enablingNum k₁ k₂ : ℝ) = (Real.sqrt ((k₁ : ℝ) - 1) + Real.sqrt ((k₂ : ℝ) - 1)) ^ 2) := by\n  intro k₁ k₂ hk₁ hk₂; refine ⟨thm_lem_lowerbound k₁ k₂ hk₁ hk₂, ?_⟩; intro m hm; have hle : enablingNum k₁ k₂ ≤ m := Nat.sInf_le (thm_lem_eq_if_int k₁ k₂ hk₁ hk₂ m hm); have h1 : ((enablingNum k₁ k₂ : ℕ) : ℝ) ≤ (m : ℝ) := Nat.cast_le.mpr hle; rw [hm] at h1; exact le_antisymm h1 (thm_lem_lowerbound k₁ k₂ hk₁ hk₂)",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_multicol_lb"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_multicol_lb",
+   "kind": "theorem",
+   "label": "thm_lem_multicol_lb",
+   "lean": "theorem thm_lem_multicol_lb : ∀ (r k : ℕ), 2 ≤ r → 2 ≤ k → 2 * (r : ℤ) * (k : ℤ) - 2 * (r : ℤ) * ((r : ℤ) - 1) ≤ (colEnablingNum r k : ℤ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_conj_extrem"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_conj_extrem",
+   "kind": "theorem",
+   "label": "thm_lem_conj_extrem",
+   "lean": "theorem thm_lem_conj_extrem : ∀ (r k : ℕ), 2 ≤ r → 2 ≤ k → (colEnablingNum r k : ℤ) ≤ 2 * (r : ℤ) * ((k : ℤ) - 1) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [
+    "thm_lem_conj_extrem",
+    "thm_lem_multicol_lb"
+   ],
+   "conditionCount": 2,
+   "conditions": [
+    "thm_lem_conj_extrem",
+    "thm_lem_multicol_lb"
+   ],
+   "demoted": false,
+   "dependsOn": [
+    "thm_lem_conj_extrem",
+    "thm_lem_multicol_lb"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_thm_multicol",
+   "kind": "theorem",
+   "label": "thm_thm_multicol",
+   "lean": "theorem thm_thm_multicol : ∀ (r k : ℕ), 2 ≤ r → 2 ≤ k → (2 * (r : ℤ) * (k : ℤ) - 2 * (r : ℤ) * ((r : ℤ) - 1) ≤ (colEnablingNum r k : ℤ)) ∧ ((colEnablingNum r k : ℤ) ≤ 2 * (r : ℤ) * ((k : ℤ) - 1)) := by\n  intro r k hr hk; exact ⟨thm_lem_multicol_lb r k hr hk, thm_lem_conj_extrem r k hr hk⟩",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 0,
+   "conditions": [],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_lem_improved",
+   "kind": "theorem",
+   "label": "thm_lem_improved",
+   "lean": "theorem thm_lem_improved : ∀ (m : ℕ) (x : Fin m → ℝ), (∀ i, 0 ≤ x i) → (∀ i, x i ≤ 1) → 0 ≤ (∑ i, ∑ j, if i < j then x i * x j else 0) - (∑ i, x i) + 1 := by\n  intro m; induction m with | zero => (intro x h0 h1; norm_num) | succ n ih => (intro x h0 h1; have hlast : (∑ j, if Fin.last n < j then x (Fin.last n) * x j else 0) = 0 := Finset.sum_eq_zero fun j _ => if_neg (not_lt.mpr (Fin.le_last j)); have key : (∑ i, ∑ j, if i < j then x i * x j else 0) = (∑ i : Fin n, ∑ j : Fin n, if i < j then x (Fin.castSucc i) * x (Fin.castSucc j) else 0) + (∑ i : Fin n, x (Fin.castSucc i)) * x (Fin.last n) := (by rw [Fin.sum_univ_castSucc (f := fun i => ∑ j, if i < j then x i * x j else 0)]; rw [hlast, add_zero, Finset.sum_mul, ← Finset.sum_add_distrib]; refine Finset.sum_congr rfl fun i _ => ?_; rw [Fin.sum_univ_castSucc (f := fun j => if Fin.castSucc i < j then x (Fin.castSucc i) * x j else 0)]; rw [if_pos (Fin.castSucc_lt_last i)]; all_goals congr 1); have hSsplit : (∑ i, x i) = (∑ i : Fin n, x (Fin.castSucc i)) + x (Fin.last n) := Fin.sum_univ_castSucc x; have hD0 : 0 ≤ ∑ i : Fin n, ∑ j : Fin n, if i < j then x (Fin.castSucc i) * x (Fin.castSucc j) else 0 := Finset.sum_nonneg fun i _ => Finset.sum_nonneg fun j _ => (by split <;> first | exact mul_nonneg (h0 _) (h0 _) | exact le_rfl); have hIH := ih (fun i => x (Fin.castSucc i)) (fun i => h0 _) (fun i => h1 _); simp only [] at hIH; rw [key, hSsplit]; rcases le_total (∑ i : Fin n, x (Fin.castSucc i)) 1 with hS | hS; all_goals nlinarith [hIH, hD0, h0 (Fin.last n), h1 (Fin.last n), hS])",
+   "source": null,
+   "status": "kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "a"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "4ba75c31de901d5d",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.5714285714285714,
+ "title": "Sharp bounds for covering with large cliques and independent sets",
+ "verdict": {
+  "nClassA": 1,
+  "nClassB": 6,
+  "nClassC": 0,
+  "nDeclarations": 7,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 2
+ }
+}

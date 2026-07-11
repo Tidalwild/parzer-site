@@ -21,6 +21,26 @@
    "title": "Explicit birational geometry of threefolds of general type"
   },
   {
+   "arxivId": "1606.09412",
+   "auditWilsonLb": null,
+   "authors": [
+    "Karim A.~Adiprasito",
+    "Raman Sanyal"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1606_09412",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 9,
+   "nClassC": 0,
+   "nDeclarations": 9,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.8888888888888888,
+   "title": "1606.09412"
+  },
+  {
    "arxivId": "1706.04537",
    "auditWilsonLb": null,
    "authors": [
@@ -40,6 +60,46 @@
    "probeOk": true,
    "stubDensity": 0.9,
    "title": "Edge erasures and chordal graphs"
+  },
+  {
+   "arxivId": "1712.02095",
+   "auditWilsonLb": null,
+   "authors": [
+    "Darij Grinberg"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1712_02095",
+   "licenseClass": "cc0",
+   "nClassA": 15,
+   "nClassB": 0,
+   "nClassC": 0,
+   "nDeclarations": 15,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 0.0,
+   "title": "The Lucas and Babbage congruences"
+  },
+  {
+   "arxivId": "1905.00573",
+   "auditWilsonLb": null,
+   "authors": [
+    "Xuxu Zhao",
+    "Xu Wang",
+    "Haiyuan Yao"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1905_00573",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 27,
+   "nClassC": 0,
+   "nDeclarations": 27,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Some enumerative properties of a class of Fibonacci-like cubes"
   },
   {
    "arxivId": "2010.02788",
@@ -78,6 +138,47 @@
    "title": "Near-sunflowers and focal families"
   },
   {
+   "arxivId": "2101.03015",
+   "auditWilsonLb": null,
+   "authors": [
+    "by P. Frankl",
+    "G. O. H. Katona R'enyi Institute",
+    "Budapest",
+    "Hungary"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2101_03015",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 12,
+   "nClassC": 0,
+   "nDeclarations": 12,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "On strengthenings of the intersecting shadow theorem"
+  },
+  {
+   "arxivId": "2211.04451",
+   "auditWilsonLb": null,
+   "authors": [
+    "Sarosh Adenwalla"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2211_04451",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 8,
+   "nClassC": 0,
+   "nDeclarations": 8,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Avoiding Monotone Arithmetic Progressions in Permutations of Integers"
+  },
+  {
    "arxivId": "2306.03473",
    "auditWilsonLb": null,
    "authors": [
@@ -98,6 +199,23 @@
    "title": "Non-empty pairwise cross-intersecting families"
   },
   {
+   "arxivId": "2308.11434",
+   "auditWilsonLb": null,
+   "authors": [],
+   "download": false,
+   "fixture": false,
+   "id": "2308_11434",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 7,
+   "nClassC": 0,
+   "nDeclarations": 7,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "On the subgroup Regular sets in cayley graphs"
+  },
+  {
    "arxivId": "2411.19241",
    "auditWilsonLb": null,
    "authors": [
@@ -116,6 +234,46 @@
    "probeOk": true,
    "stubDensity": 1.0,
    "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions"
+  },
+  {
+   "arxivId": "2604.20962",
+   "auditWilsonLb": null,
+   "authors": [
+    "Veronica Bitonti"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2604_20962",
+   "licenseClass": "arxiv_nonexclusive",
+   "nClassA": 1,
+   "nClassB": 6,
+   "nClassC": 0,
+   "nDeclarations": 7,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.5714285714285714,
+   "title": "Sharp bounds for covering with large cliques and independent sets"
+  },
+  {
+   "arxivId": "2605.21718",
+   "auditWilsonLb": null,
+   "authors": [
+    "Evan Chen",
+    "Ken Ono",
+    "Jujian Zhang"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2605_21718",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 8,
+   "nClassC": 0,
+   "nDeclarations": 8,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Reciprocals of Partition Polynomials"
   }
  ],
  "schema": "proofsite.index/1"
