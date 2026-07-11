@@ -1,0 +1,556 @@
+{
+ "arxivId": "1706.04537",
+ "attribution": {
+  "arxivId": "1706.04537",
+  "arxivUrl": "https://arxiv.org/abs/1706.04537",
+  "authors": [
+   "Jared Culbertson",
+   "Dan P. Guralnik",
+   "Peter F. Stiller"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc0",
+  "title": "Edge erasures and chordal graphs"
+ },
+ "audit": null,
+ "authors": [
+  "Jared Culbertson",
+  "Dan P. Guralnik",
+  "Peter F. Stiller"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_chordal",
+   "finalKind": "theorem",
+   "nSteps": 1,
+   "name": "thm_thm_chordal",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": false,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_bridge",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_bridge",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_neighborhoods",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_neighborhoods",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_chordal_erasure",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_chordal_erasure",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_crucial",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_crucial",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_tree",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_tree",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_exposed",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_exposed",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "prop_cycles",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_prop_cycles",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_mst",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_mst",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_mst",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_mst",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_dirac_fulkerson_gross",
+  "thm_cor_mst",
+  "thm_lem_bridge",
+  "thm_lem_crucial",
+  "thm_lem_exposed",
+  "thm_lem_neighborhoods",
+  "thm_prop_cycles",
+  "thm_prop_tree",
+  "thm_thm_chordal_erasure",
+  "thm_thm_mst"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 1,
+  "blocksTotal": 15,
+  "classA": 0,
+  "classB": 11,
+  "classC": 0,
+  "curated": 11,
+  "customLemmas": 1,
+  "declarations": 11,
+  "skipped": 5
+ },
+ "id": "1706_04537",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 15,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc0 — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc0",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Simplicial",
+   "kind": "definition",
+   "label": "Simplicial",
+   "lean": "def Simplicial {W : Type} (Gr : SimpleGraph W) (v : W) : Prop := Gr.IsClique (Gr.neighborSet v)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsMaximalClique",
+   "kind": "definition",
+   "label": "IsMaximalClique",
+   "lean": "def IsMaximalClique {W : Type} (Gr : SimpleGraph W) (s : Set W) : Prop := Gr.IsClique s ∧ ∀ t : Set W, Gr.IsClique t → s ⊆ t → t ⊆ s",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:FacetEdge",
+   "kind": "definition",
+   "label": "FacetEdge",
+   "lean": "def FacetEdge {W : Type} (Gr : SimpleGraph W) (x y : W) : Prop := Gr.Adj x y ∧ IsMaximalClique Gr ({x, y} : Set W)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Exposed",
+   "kind": "definition",
+   "label": "Exposed",
+   "lean": "def Exposed {W : Type} (Gr : SimpleGraph W) (x y : W) : Prop := Gr.Adj x y ∧ (∃! s : Set W, IsMaximalClique Gr s ∧ x ∈ s ∧ y ∈ s) ∧ ¬ FacetEdge Gr x y",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "\\cite{dirac:rigid_circuit,fulkerson-gross:incidence}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_dirac_fulkerson_gross"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_dirac_fulkerson_gross",
+   "kind": "custom_lemma_stub",
+   "label": "lem_dirac_fulkerson_gross",
+   "lean": "theorem lem_dirac_fulkerson_gross : ∀ {W : Type} (Gr : SimpleGraph W), (Chordal Gr ↔ PerfElimOrdering Gr) ∧ (Chordal Gr → Gr = ⊤ ∨ ∃ u v : W, u ≠ v ∧ ¬ Gr.Adj u v ∧ Simplicial Gr u ∧ Simplicial Gr v) := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [
+    "lem_dirac_fulkerson_gross"
+   ],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_dirac_fulkerson_gross"
+   ],
+   "demoted": false,
+   "dependsOn": [
+    "lem_dirac_fulkerson_gross"
+   ],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_thm_chordal",
+   "kind": "theorem",
+   "label": "thm_thm_chordal",
+   "lean": "theorem thm_thm_chordal : (Chordal G ↔ PerfElimOrdering G) ∧ (Chordal G → G = ⊤ ∨ ∃ u v : V, u ≠ v ∧ ¬ G.Adj u v ∧ Simplicial G u ∧ Simplicial G v) := by\n  exact lem_dirac_fulkerson_gross G",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_bridge"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_bridge",
+   "kind": "theorem",
+   "label": "thm_lem_bridge",
+   "lean": "theorem thm_lem_bridge : ∀ (x y : V), (G.IsBridge (Sym2.mk x y) → FacetEdge G x y) ∧ (Chordal G → FacetEdge G x y → G.IsBridge (Sym2.mk x y)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_neighborhoods"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_neighborhoods",
+   "kind": "theorem",
+   "label": "thm_lem_neighborhoods",
+   "lean": "theorem thm_lem_neighborhoods : ∀ (v w : V), Exposed G v w ↔ ((G.commonNeighbors v w).Nonempty ∧ G.IsClique (G.commonNeighbors v w)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_chordal_erasure"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_chordal_erasure",
+   "kind": "theorem",
+   "label": "thm_thm_chordal_erasure",
+   "lean": "theorem thm_thm_chordal_erasure : ErasableFrom (⊤ : SimpleGraph V) H ↔ (H.Connected ∧ Chordal H) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_crucial"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_crucial",
+   "kind": "theorem",
+   "label": "thm_lem_crucial",
+   "lean": "theorem thm_lem_crucial : (∀ (S : Set (Sym2 V)), (∀ e ∈ S, ∃ x y, FacetEdge G x y ∧ e = Sym2.mk x y) → ExposedSubgraph (G.deleteEdges S) = ExposedSubgraph G) ∧ (∀ (v : V), Simplicial G v → 1 < Set.ncard (G.neighborSet v) → ∀ (x : V), G.Adj v x → Exposed G v x) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_tree"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_tree",
+   "kind": "theorem",
+   "label": "thm_prop_tree",
+   "lean": "theorem thm_prop_tree : G.Connected → Chordal G → ∃ T : SimpleGraph V, T.IsTree ∧ ErasableFrom G T := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_exposed"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_exposed",
+   "kind": "theorem",
+   "label": "thm_lem_exposed",
+   "lean": "theorem thm_lem_exposed (h0 : Chordal G) : ∀ (v : V) (K : Set V), IsMaximalClique G K → v ∈ K → 3 ≤ Set.ncard K → ∃ x y : V, x ≠ y ∧ Exposed G v x ∧ Exposed G v y := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_prop_cycles"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_prop_cycles",
+   "kind": "theorem",
+   "label": "thm_prop_cycles",
+   "lean": "theorem thm_prop_cycles : Chordal G → TwoEdgeConnected (ExposedSubgraph G) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_mst"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_mst",
+   "kind": "theorem",
+   "label": "thm_thm_mst",
+   "lean": "theorem thm_thm_mst (h0 : G.Connected) (h1 : Chordal G) (h2 : WErasure wt G G') : ∃ T : SimpleGraph V, IsMST wt G T ∧ T ≤ G' := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_mst"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_mst",
+   "kind": "theorem",
+   "label": "thm_cor_mst",
+   "lean": "theorem thm_cor_mst : ∃ T : SimpleGraph V, T.IsTree ∧ IsMST wt (⊤ : SimpleGraph V) T ∧ ErasableFrom (⊤ : SimpleGraph V) T := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "4e60712dcd70b3b4",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.9,
+ "title": "Edge erasures and chordal graphs",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 11,
+  "nClassC": 0,
+  "nDeclarations": 11,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 2
+ }
+}

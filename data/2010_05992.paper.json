@@ -1,0 +1,456 @@
+{
+ "arxivId": "2010.05992",
+ "attribution": {
+  "arxivId": "2010.05992",
+  "arxivUrl": "https://arxiv.org/abs/2010.05992",
+  "authors": [
+   "Noga Alon"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc-by",
+  "title": "Near-sunflowers and focal families"
+ },
+ "audit": null,
+ "authors": [
+  "Noga Alon"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_main",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_main",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_3diff",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_3diff",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_linear",
+   "finalKind": "failed_block",
+   "nSteps": 1,
+   "name": "thm_cor_linear",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_1_sided",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_1_sided",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_one_sided",
+   "finalKind": "failed_block",
+   "nSteps": 1,
+   "name": "thm_cor_one_sided",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "con_k",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_con_k",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_k",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_k",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_mrrw_lp_bound",
+  "thm_con_k",
+  "thm_cor_linear",
+  "thm_cor_one_sided",
+  "thm_thm_1_sided",
+  "thm_thm_3diff",
+  "thm_thm_k",
+  "thm_thm_main"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 2,
+  "blocksTotal": 9,
+  "classA": 0,
+  "classB": 8,
+  "classC": 0,
+  "curated": 8,
+  "customLemmas": 1,
+  "declarations": 8,
+  "skipped": 2
+ },
+ "id": "2010_05992",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 14,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc-by — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc-by",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsNearSunflower",
+   "kind": "definition",
+   "label": "IsNearSunflower",
+   "lean": "def IsNearSunflower (n r : ℕ) (H : Finset (Finset (Fin n))) : Prop :=\n  H.card = r ∧ ∀ i : Fin n,\n    (H.filter (fun A => i ∈ A)).card = 0 ∨ (H.filter (fun A => i ∈ A)).card = 1 ∨\n    (H.filter (fun A => i ∈ A)).card = r - 1 ∨ (H.filter (fun A => i ∈ A)).card = r",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsFocalFamily",
+   "kind": "definition",
+   "label": "IsFocalFamily",
+   "lean": "def IsFocalFamily (n r : ℕ) (x0 : Finset (Fin n)) (H : Finset (Finset (Fin n))) : Prop :=\n  x0 ∈ H ∧ H.card = r ∧\n    ∀ i : Fin n, r - 2 ≤ ((H.erase x0).filter (fun A => (i ∈ A ↔ i ∈ x0))).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:IsBFocalFamily",
+   "kind": "definition",
+   "label": "IsBFocalFamily",
+   "lean": "def IsBFocalFamily (n r : ℕ) (b : Bool) (x0 : Finset (Fin n)) (H : Finset (Finset (Fin n))) : Prop :=\n  x0 ∈ H ∧ H.card = r ∧ ∀ i : Fin n, (i ∈ x0 ↔ b = true) →\n    r - 2 ≤ ((H.erase x0).filter (fun A => (i ∈ A ↔ b = true))).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:HasFocal",
+   "kind": "definition",
+   "label": "HasFocal",
+   "lean": "def HasFocal (n r : ℕ) (F : Finset (Finset (Fin n))) : Prop :=\n  ∃ x0 : Finset (Fin n), ∃ H : Finset (Finset (Fin n)), H ⊆ F ∧ IsFocalFamily n r x0 H",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:HasNearSunflower",
+   "kind": "definition",
+   "label": "HasNearSunflower",
+   "lean": "def HasNearSunflower (n r : ℕ) (F : Finset (Finset (Fin n))) : Prop :=\n  ∃ H : Finset (Finset (Fin n)), H ⊆ F ∧ IsNearSunflower n r H",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:HasBFocal",
+   "kind": "definition",
+   "label": "HasBFocal",
+   "lean": "def HasBFocal (n r : ℕ) (b : Bool) (F : Finset (Finset (Fin n))) : Prop :=\n  ∃ x0 : Finset (Fin n), ∃ H : Finset (Finset (Fin n)), H ⊆ F ∧ IsBFocalFamily n r b x0 H",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "McEliece-Rodemich-Rumsey-Welch LP bound, \\cite{MRRW}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_mrrw_lp_bound"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_mrrw_lp_bound",
+   "kind": "custom_lemma_stub",
+   "label": "lem_mrrw_lp_bound",
+   "lean": "theorem lem_mrrw_lp_bound : ∀ (δ : ℝ), 0 < δ → δ < 1 → ∀ (ε : ℝ), 0 < ε → ∃ n0 : ℕ, ∀ n : ℕ, n0 ≤ n → ∀ F : Finset (Finset (Fin n)), (∀ A ∈ F, ∀ B ∈ F, A ≠ B → δ * (n : ℝ) < ((symmDiff A B).card : ℝ)) → (F.card : ℝ) ≤ (2 : ℝ) ^ ((Real.logb 2 (1/2 - Real.sqrt (δ * (1 - δ))) + ε) * (n : ℝ)) := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_main"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_main",
+   "kind": "theorem",
+   "label": "thm_thm_main",
+   "lean": "theorem thm_thm_main : ∀ r : ℕ, 3 ≤ r → ((∀ n : ℕ, ∀ F : Finset (Finset (Fin n)), (r - 1) * 2 ^ (Nat.ceil ((((r - 2) * n : ℕ) : ℚ) / (((r - 1 : ℕ)) : ℚ))) < F.card → HasFocal n r F) ∧ (∀ n : ℕ, ∀ F : Finset (Finset (Fin n)), ¬ HasNearSunflower n r F → ¬ HasFocal n r F) ∧ (∃ cns : ℝ, 0 < cns ∧ ∀ n : ℕ, ∃ F : Finset (Finset (Fin n)), ¬ HasNearSunflower n r F ∧ cns * (2 / Real.rpow ((r : ℝ) + 1) (1 / ((r : ℝ) - 1))) ^ n ≤ (F.card : ℝ)) ∧ (∃ cff : ℝ, 0 < cff ∧ ∀ n : ℕ, ∃ F : Finset (Finset (Fin n)), ¬ HasFocal n r F ∧ cff * (2 / Real.rpow (r : ℝ) (1 / ((r : ℝ) - 1))) ^ n ≤ (F.card : ℝ))) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_3diff"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_3diff",
+   "kind": "theorem",
+   "label": "thm_thm_3diff",
+   "lean": "theorem thm_thm_3diff : ∃ n0 : ℕ, ∀ n : ℕ, n0 ≤ n → ∀ F : Finset (Finset (Fin n)), (2 : ℝ) ^ (0.44 * (n : ℝ)) ≤ (F.card : ℝ) → ∃ A ∈ F, ∃ B ∈ F, ∃ C ∈ F, ∃ D ∈ F, ∃ E ∈ F, ∃ G ∈ F, A ≠ B ∧ C ≠ D ∧ E ≠ G ∧ Disjoint (symmDiff A B) (symmDiff C D) ∧ Disjoint (symmDiff A B) (symmDiff E G) ∧ Disjoint (symmDiff C D) (symmDiff E G) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_linear"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "thm_thm_3diff"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_cor_linear",
+   "kind": "theorem",
+   "label": "thm_cor_linear",
+   "lean": "theorem thm_cor_linear : ∃ n0 : ℕ, ∀ n : ℕ, n0 ≤ n → ∀ F : Finset (Finset (Fin n)), (∅ : Finset (Fin n)) ∈ F → (∀ A ∈ F, ∀ B ∈ F, symmDiff A B ∈ F) → (2 : ℝ) ^ (0.44 * (n : ℝ)) ≤ (F.card : ℝ) → HasFocal n 4 F := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_1_sided"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_1_sided",
+   "kind": "theorem",
+   "label": "thm_thm_1_sided",
+   "lean": "theorem thm_thm_1_sided : ∀ n k r : ℕ, 3 ≤ r → k ≤ n → ∀ F : Finset (Finset (Fin n)), (∀ A ∈ F, A.card = k) → ¬ HasBFocal n r true F → (F.card : ℚ) ≤ ((r : ℚ) - 1) * (Nat.choose n (Nat.ceil ((((r - 2) * k : ℕ) : ℚ) / (((r - 1 : ℕ)) : ℚ))) : ℚ) / (Nat.choose k (Nat.ceil ((((r - 2) * k : ℕ) : ℚ) / (((r - 1 : ℕ)) : ℚ))) : ℚ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_one_sided"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "thm_thm_1_sided"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_cor_one_sided",
+   "kind": "theorem",
+   "label": "thm_cor_one_sided",
+   "lean": "theorem thm_cor_one_sided : ∀ n r : ℕ, 3 ≤ r → ∀ b : Bool, ∀ F : Finset (Finset (Fin n)), ¬ HasBFocal n r b F → (F.card : ℚ) ≤ ((r : ℚ) - 1) * ∑ k ∈ Finset.range (n + 1), (Nat.choose n (Nat.ceil ((((r - 2) * k : ℕ) : ℚ) / (((r - 1 : ℕ)) : ℚ))) : ℚ) / (Nat.choose k (Nat.ceil ((((r - 2) * k : ℕ) : ℚ) / (((r - 1 : ℕ)) : ℚ))) : ℚ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_con_k"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_con_k",
+   "kind": "theorem",
+   "label": "thm_con_k",
+   "lean": "theorem thm_con_k : ∀ r : ℕ, 4 ≤ r → ∃ C : ℝ, 0 < C ∧ ∀ n k : ℕ, ∀ F : Finset (Finset (Fin n)), (∀ A ∈ F, A.card = k) → ¬ HasNearSunflower n r F → (F.card : ℝ) ≤ Real.rpow C (k : ℝ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_k"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_k",
+   "kind": "theorem",
+   "label": "thm_thm_k",
+   "lean": "theorem thm_thm_k : ∃ k0 : ℕ, ∀ n k : ℕ, k0 ≤ k → ∀ F : Finset (Finset (Fin n)), (∀ A ∈ F, A.card = k) → (∀ A ∈ F, ∀ B ∈ F, ∀ C ∈ F, ∀ D ∈ F, A ≠ B → A ≠ C → A ≠ D → B ≠ C → B ≠ D → C ≠ D → ¬ Disjoint (symmDiff A B) (symmDiff C D)) → (F.card : ℝ) ≤ Real.rpow 2.148 (k : ℝ) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "a424c786e6f1cfac",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Near-sunflowers and focal families",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 8,
+  "nClassC": 0,
+  "nDeclarations": 8,
+  "quarantineRounds": 1,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

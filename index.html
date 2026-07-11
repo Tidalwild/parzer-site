@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      CSP (interim, GitHub Pages route). Pages cannot set response headers, so the
+      §8 policy is carried here as a meta tag. Mirrors deploy/_headers except:
+      (1) connect-src adds https://export.arxiv.org — the ratified arXiv carve-out
+          (decision #10) so the client-side "find your paper" lookup works on the
+          Pages host; on header-capable hosts the stricter connect-src 'self' header
+          still wins (intersection) → graceful fallback, unchanged.
+      (2) frame-ancestors is omitted (ignored in meta CSP); Pages also cannot send
+          X-Frame-Options — accepted interim limitation until the domain lands on a
+          header-capable host.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://export.arxiv.org; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="theme-color" content="#020617" />
+    <link rel="icon" type="image/svg+xml" href="/parzer-site/favicon.svg" />
+    <title>parZer — kernel receipts for research mathematics</title>
+    <meta
+      name="description"
+      content="parZer formalizes your research paper into a single kernel-checked Lean file, with per-declaration receipts, disclosed conditions, and a blind faithfulness audit. It also licenses a research-math training corpus verified against Lean 4 + Mathlib. Receipts, not claims."
+    />
+
+    <!-- Open Graph (site-level; per-paper values are set client-side from public fields) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="parZer" />
+    <meta property="og:title" content="parZer — kernel receipts for research mathematics" />
+    <meta
+      property="og:description"
+      content="Commission a Lean formalization of your paper — one self-contained kernel-checked file with recomputable receipts and a blind faithfulness audit — or license the research-math training corpus. Receipts, not claims."
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="parZer — kernel receipts for research mathematics" />
+    <meta
+      name="twitter:description"
+      content="Research papers formalized in Lean. Every verdict is a kernel receipt you can recompute yourself. Receipts, not claims."
+    />
+    <script type="module" crossorigin src="/parzer-site/assets/index-K7jwn_71.js"></script>
+    <link rel="stylesheet" crossorigin href="/parzer-site/assets/index-7mvB6O-c.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

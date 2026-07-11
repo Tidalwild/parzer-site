@@ -1,0 +1,915 @@
+{
+ "arxivId": "2411.19241",
+ "attribution": {
+  "arxivId": "2411.19241",
+  "arxivUrl": "https://arxiv.org/abs/2411.19241",
+  "authors": [
+   "Marius Lemm",
+   "Tom Wessel"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc-by",
+  "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions"
+ },
+ "audit": null,
+ "authors": [
+  "Marius Lemm",
+  "Tom Wessel"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "thm_finite_range",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_finite_range",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_short_range",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_short_range",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_long_ge_nu",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_long_ge_nu",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_long_ge_0",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_long_ge_0",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "lem_evolution",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_lem_evolution",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_local_approx",
+   "finalKind": "failed_block",
+   "nSteps": 1,
+   "name": "thm_thm_local_approx",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_commuting",
+   "finalKind": "failed_block",
+   "nSteps": 1,
+   "name": "thm_cor_commuting",
+   "stepsCite": 1,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_decay_correlations",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_decay_correlations",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_lppl",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_lppl",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "thm_general_commuting",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_thm_general_commuting",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "cor_general_exp",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_cor_general_exp",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_cor_commuting",
+  "thm_cor_general_exp",
+  "thm_lem_evolution",
+  "thm_thm_decay_correlations",
+  "thm_thm_finite_range",
+  "thm_thm_general_commuting",
+  "thm_thm_local_approx",
+  "thm_thm_long_ge_0",
+  "thm_thm_long_ge_nu",
+  "thm_thm_lppl",
+  "thm_thm_short_range"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 2,
+  "blocksTotal": 11,
+  "classA": 0,
+  "classB": 11,
+  "classC": 0,
+  "curated": 11,
+  "customLemmas": 0,
+  "declarations": 11,
+  "skipped": 0
+ },
+ "id": "2411_19241",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 49,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc-by — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc-by",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Op",
+   "kind": "definition",
+   "label": "Op",
+   "lean": "structure Op where deriving Inhabited",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Region",
+   "kind": "definition",
+   "label": "Region",
+   "lean": "structure Region where deriving Inhabited",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Site",
+   "kind": "definition",
+   "label": "Site",
+   "lean": "structure Site where deriving Inhabited",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Interaction",
+   "kind": "definition",
+   "label": "Interaction",
+   "lean": "structure Interaction where deriving Inhabited",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:gamma",
+   "kind": "definition",
+   "label": "gamma",
+   "lean": "opaque gamma : Region",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ozero",
+   "kind": "definition",
+   "label": "ozero",
+   "lean": "opaque ozero : Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:opNorm",
+   "kind": "definition",
+   "label": "opNorm",
+   "lean": "opaque opNorm : Op → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ocomm",
+   "kind": "definition",
+   "label": "ocomm",
+   "lean": "opaque ocomm : Op → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:omul",
+   "kind": "definition",
+   "label": "omul",
+   "lean": "opaque omul : Op → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:osub",
+   "kind": "definition",
+   "label": "osub",
+   "lean": "opaque osub : Op → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:tau",
+   "kind": "definition",
+   "label": "tau",
+   "lean": "opaque tau : Interaction → Region → ℝ → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:tauTS",
+   "kind": "definition",
+   "label": "tauTS",
+   "lean": "opaque tauTS : Interaction → ℝ → ℝ → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:tauCap",
+   "kind": "definition",
+   "label": "tauCap",
+   "lean": "opaque tauCap : Interaction → Region → Region → ℝ → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:cexp",
+   "kind": "definition",
+   "label": "cexp",
+   "lean": "opaque cexp : Region → Op → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:trace",
+   "kind": "definition",
+   "label": "trace",
+   "lean": "opaque trace : Op → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:traceNorm",
+   "kind": "definition",
+   "label": "traceNorm",
+   "lean": "opaque traceNorm : Op → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:intVal",
+   "kind": "definition",
+   "label": "intVal",
+   "lean": "opaque intVal : Interaction → Region → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:intNorm",
+   "kind": "definition",
+   "label": "intNorm",
+   "lean": "opaque intNorm : Interaction → (ℝ → ℝ) → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:iadd",
+   "kind": "definition",
+   "label": "iadd",
+   "lean": "opaque iadd : Interaction → Interaction → Interaction",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:commuting",
+   "kind": "definition",
+   "label": "commuting",
+   "lean": "opaque commuting : Interaction → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ham",
+   "kind": "definition",
+   "label": "ham",
+   "lean": "opaque ham : Interaction → Region → Op",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rdist",
+   "kind": "definition",
+   "label": "rdist",
+   "lean": "opaque rdist : Region → Region → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rcard",
+   "kind": "definition",
+   "label": "rcard",
+   "lean": "opaque rcard : Region → ℕ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rball",
+   "kind": "definition",
+   "label": "rball",
+   "lean": "opaque rball : Region → ℝ → Region",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rsub",
+   "kind": "definition",
+   "label": "rsub",
+   "lean": "opaque rsub : Region → Region → Region",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rdiam",
+   "kind": "definition",
+   "label": "rdiam",
+   "lean": "opaque rdiam : Region → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rdisj",
+   "kind": "definition",
+   "label": "rdisj",
+   "lean": "opaque rdisj : Region → Region → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:rsubset",
+   "kind": "definition",
+   "label": "rsubset",
+   "lean": "opaque rsubset : Region → Region → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:suppIn",
+   "kind": "definition",
+   "label": "suppIn",
+   "lean": "opaque suppIn : Op → Region → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:finiteRegion",
+   "kind": "definition",
+   "label": "finiteRegion",
+   "lean": "opaque finiteRegion : Region → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:shellCard",
+   "kind": "definition",
+   "label": "shellCard",
+   "lean": "opaque shellCard : Site → ℕ → ℕ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Dregular",
+   "kind": "definition",
+   "label": "Dregular",
+   "lean": "opaque Dregular : ℝ → ℕ → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:spectralGapGround",
+   "kind": "definition",
+   "label": "spectralGapGround",
+   "lean": "opaque spectralGapGround : Op → ℝ → ℝ → Op → Op → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:lpplGap",
+   "kind": "definition",
+   "label": "lpplGap",
+   "lean": "opaque lpplGap : Op → Op → ℝ → Op → Op → Prop",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:zeta",
+   "kind": "definition",
+   "label": "zeta",
+   "lean": "opaque zeta : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:pairSumF",
+   "kind": "definition",
+   "label": "pairSumF",
+   "lean": "opaque pairSumF : Region → Region → (ℝ → ℝ) → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:pairSumPsi",
+   "kind": "definition",
+   "label": "pairSumPsi",
+   "lean": "opaque pairSumPsi : Interaction → Region → Region → Region → ℝ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:SurfaceRegular",
+   "kind": "definition",
+   "label": "SurfaceRegular",
+   "lean": "def SurfaceRegular (κ : ℝ) (D : ℕ) : Prop := ∀ (x : Site) (r : ℕ), (shellCard x r : ℝ) ≤ κ * (r : ℝ) ^ (D - 1)",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_lem_evolution"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_lem_evolution",
+   "kind": "theorem",
+   "label": "thm_lem_evolution",
+   "lean": "theorem thm_lem_evolution : ∀ (Ψ : Interaction) (Λ X : Region) (A : Op) (t : ℝ), commuting Ψ → finiteRegion Λ → rsubset X Λ → suppIn A X → tau Ψ Λ t A = tauCap Ψ X Λ t A := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_finite_range"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_finite_range",
+   "kind": "theorem",
+   "label": "thm_thm_finite_range",
+   "lean": "theorem thm_thm_finite_range : ∀ (Ψ : Interaction) (R : ℝ), commuting Ψ → (∀ Z : Region, R < rdiam Z → intVal Ψ Z = ozero) → (∃ Cpsi : ℝ, ∀ Z : Region, opNorm (intVal Ψ Z) < Cpsi) → (∀ (X : Region) (A : Op) (t : ℝ), suppIn A X → (tau Ψ gamma t A = tau Ψ (rball X R) t A ∧ suppIn (tau Ψ gamma t A) (rball X R))) ∧ (∀ (X Y : Region) (A B : Op) (t : ℝ), suppIn A X → suppIn B Y → R < rdist X Y → opNorm (ocomm (tau Ψ gamma t A) B) = 0) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_local_approx"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "thm_lem_evolution"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_thm_local_approx",
+   "kind": "theorem",
+   "label": "thm_thm_local_approx",
+   "lean": "theorem thm_thm_local_approx : ∀ (Ψ : Interaction) (Λ Λ' X : Region) (A : Op) (t : ℝ), commuting Ψ → finiteRegion Λ → rsubset X Λ' → rsubset Λ' Λ → suppIn A X → (opNorm (osub (tau Ψ Λ t A) (tau Ψ Λ' t A)) ≤ 2 * opNorm A * |t| * pairSumPsi Ψ X Λ Λ') ∧ (∀ (F : ℝ → ℝ), opNorm (osub (tau Ψ Λ t A) (tau Ψ Λ' t A)) ≤ 2 * opNorm A * intNorm Ψ F * |t| * pairSumF X (rsub Λ Λ') F) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_commuting"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "thm_thm_local_approx"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_cor_commuting",
+   "kind": "theorem",
+   "label": "thm_cor_commuting",
+   "lean": "theorem thm_cor_commuting : ∀ (Ψ : Interaction) (Λ : Region) (F : ℝ → ℝ), commuting Ψ → finiteRegion Λ → (∀ (X Y : Region) (A B : Op) (t : ℝ), rdisj X Y → suppIn A X → suppIn B Y → opNorm (ocomm (tau Ψ Λ t A) B) ≤ 4 * intNorm Ψ F * opNorm A * opNorm B * |t| * pairSumF X Y F) ∧ (∀ (X : Region) (A : Op) (t r : ℝ), suppIn A X → 0 ≤ r → opNorm (osub (tau Ψ Λ t A) (cexp (rball X r) (tau Ψ Λ t A))) ≤ 4 * intNorm Ψ F * opNorm A * |t| * pairSumF X (rsub Λ (rball X r)) F) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 1,
+    "stepsCite": 1,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_short_range"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_short_range",
+   "kind": "theorem",
+   "label": "thm_thm_short_range",
+   "lean": "theorem thm_thm_short_range : ∀ (b b' p κ : ℝ) (D : ℕ), 0 < b' → b' < b → 0 < p → p ≤ 1 → 0 < κ → ∃ C : ℝ, 0 < C ∧ ∀ (Ψ : Interaction), commuting Ψ → Dregular κ D → (∀ (X Y : Region) (A B : Op) (t : ℝ), rdisj X Y → suppIn A X → suppIn B Y → opNorm (ocomm (tau Ψ gamma t A) B) ≤ C * intNorm Ψ (fun r => Real.exp (-b * Real.rpow r p)) * opNorm A * opNorm B * (Min.min (rcard X) (rcard Y) : ℝ) * |t| * Real.exp (-b * Real.rpow (rdist X Y) p)) ∧ (∀ (X : Region) (A : Op) (t r : ℝ), suppIn A X → 0 ≤ r → opNorm (osub (tau Ψ gamma t A) (cexp (rball X r) (tau Ψ gamma t A))) ≤ C * intNorm Ψ (fun r => Real.exp (-b * Real.rpow r p)) * opNorm A * (rcard X : ℝ) * |t| * Real.exp (-b * Real.rpow r p)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_long_ge_nu"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_long_ge_nu",
+   "kind": "theorem",
+   "label": "thm_thm_long_ge_nu",
+   "lean": "theorem thm_thm_long_ge_nu : ∀ (κ α : ℝ) (D : ℕ), 0 < κ → (D : ℝ) < α → ∃ C : ℝ, 0 < C ∧ ∀ (Ψ : Interaction), commuting Ψ → SurfaceRegular κ D → (∀ (X Y : Region) (A B : Op) (t : ℝ), rdisj X Y → suppIn A X → suppIn B Y → opNorm (ocomm (tau Ψ gamma t A) B) ≤ C * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) * opNorm A * opNorm B * (Min.min (rcard X) (rcard Y) : ℝ) * |t| * Real.rpow (1 + (rdist X Y)) (-(α - (D : ℝ)))) ∧ (∀ (X Y : Region) (A B : Op) (t : ℝ), rdisj X Y → suppIn A X → suppIn B Y → opNorm (ocomm (tau Ψ gamma t A) B) ≤ 4 * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) * opNorm A * opNorm B * (rcard X : ℝ) * (rcard Y : ℝ) * |t| * Real.rpow (1 + (rdist X Y)) (-(α))) ∧ (∀ (X : Region) (A : Op) (t r : ℝ), suppIn A X → 0 ≤ r → opNorm (osub (tau Ψ gamma t A) (cexp (rball X r) (tau Ψ gamma t A))) ≤ C * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) * opNorm A * (rcard X : ℝ) * |t| * Real.rpow (1 + r) (-(α - (D : ℝ)))) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_long_ge_0"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_long_ge_0",
+   "kind": "theorem",
+   "label": "thm_thm_long_ge_0",
+   "lean": "theorem thm_thm_long_ge_0 : ∀ (α : ℝ) (Λ : Region) (Ψ : Interaction), 0 < α → finiteRegion Λ → commuting Ψ → ∀ (X Y : Region) (A B : Op) (t : ℝ), rdisj X Y → suppIn A X → suppIn B Y → opNorm (ocomm (tau Ψ Λ t A) B) ≤ 4 * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) * opNorm A * opNorm B * (rcard X : ℝ) * (rcard Y : ℝ) * |t| * Real.rpow (1 + (rdist X Y)) (-(α)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_decay_correlations"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_decay_correlations",
+   "kind": "theorem",
+   "label": "thm_thm_decay_correlations",
+   "lean": "theorem thm_thm_decay_correlations : ∀ (Ψ : Interaction) (Λ X Y : Region) (A B P0 rho0 : Op) (α E0 g : ℝ), commuting Ψ → finiteRegion Λ → 0 < g → spectralGapGround (ham Ψ Λ) E0 g P0 rho0 → 0 < α → rdisj X Y → suppIn A X → suppIn B Y → |trace (omul rho0 (omul A B)) - (1 / 2) * (trace (omul rho0 (omul A (omul P0 B))) + trace (omul rho0 (omul B (omul P0 A))))| ≤ 8 * opNorm A * opNorm B * (rcard X : ℝ) * (rcard Y : ℝ) * traceNorm rho0 * (Real.sqrt (α / Real.pi) * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) / g + 1) * Real.log (1 + rdist X Y) * Real.rpow (1 + (rdist X Y)) (-(α)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_lppl"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_lppl",
+   "kind": "theorem",
+   "label": "thm_thm_lppl",
+   "lean": "theorem thm_thm_lppl : ∀ (Ψ : Interaction) (Λ X Y : Region) (B V rho0 rho1 : Op) (α g : ℝ), commuting Ψ → finiteRegion Λ → suppIn V X → 0 < g → lpplGap (ham Ψ Λ) V g rho0 rho1 → 0 < α → suppIn B Y → |trace (omul rho0 B) - trace (omul rho1 B)| ≤ 32 * intNorm Ψ (fun r => Real.rpow (1 + r) (-(α))) * opNorm B * (opNorm V + (opNorm V) ^ 2) * (rcard X : ℝ) * (rcard Y : ℝ) * Real.rpow (1 + (rdist X Y)) (-(α)) * ((g + 2) / g ^ 3) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_thm_general_commuting"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_thm_general_commuting",
+   "kind": "theorem",
+   "label": "thm_thm_general_commuting",
+   "lean": "theorem thm_thm_general_commuting : ∀ (Λ : Region) (F : ℝ → ℝ) (Φ Ψ : Interaction) (R κ : ℝ) (D : ℕ), finiteRegion Λ → 0 < R → (∀ (Φ' : Interaction) (X Y : Region) (A B : Op) (t s : ℝ), suppIn A X → suppIn B Y → opNorm (ocomm (tauTS Φ' t s A) B) ≤ zeta (intNorm Φ' F) (opNorm A) (opNorm B) (rcard X : ℝ) (rcard Y : ℝ) (rdist X Y) |t - s|) → commuting Ψ → (∀ Z : Region, R < rdiam Z → intVal Ψ Z = ozero) → (∀ (X Y : Region) (A B : Op) (t s : ℝ), suppIn A X → suppIn B Y → opNorm (ocomm (tauTS (iadd Φ Ψ) t s A) B) ≤ zeta ((1 + κ) ^ 2 * (R ^ D) ^ 2 * intNorm Φ (fun x => F (x + 2 * R))) (opNorm A) (opNorm B) ((1 + κ) * R ^ D * (rcard X : ℝ)) ((1 + κ) * R ^ D * (rcard Y : ℝ)) (rdist X Y - 2 * R) |t - s|) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_cor_general_exp"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_cor_general_exp",
+   "kind": "theorem",
+   "label": "thm_cor_general_exp",
+   "lean": "theorem thm_cor_general_exp : ∀ (Λ : Region) (Φ Ψ : Interaction) (b R κ : ℝ) (D : ℕ), finiteRegion Λ → 0 < b → 0 < R → 0 < κ → commuting Ψ → (∀ Z : Region, R < rdiam Z → intVal Ψ Z = ozero) → ∃ C vb : ℝ, 0 < C ∧ 0 < vb ∧ ∀ (X Y : Region) (A B : Op) (t s : ℝ), suppIn A X → suppIn B Y → opNorm (ocomm (tauTS (iadd Φ Ψ) t s A) B) ≤ C * opNorm A * opNorm B * (Min.min (rcard X) (rcard Y) : ℝ) * Real.exp (b * (vb * |t - s| - rdist X Y)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "92fbf580b902a2ea",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 11,
+  "nClassC": 0,
+  "nDeclarations": 11,
+  "quarantineRounds": 1,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

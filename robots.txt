@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tidalwild.github.io/parzer-site/sitemap.xml

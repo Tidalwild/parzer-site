@@ -1,0 +1,122 @@
+{
+ "papers": [
+  {
+   "arxivId": "0706.2987",
+   "auditWilsonLb": null,
+   "authors": [
+    "Jungkai A. Chen",
+    "Meng Chen"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "0706_2987",
+   "licenseClass": "arxiv-assumed-1991-2003",
+   "nClassA": 1,
+   "nClassB": 19,
+   "nClassC": 0,
+   "nDeclarations": 20,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.8333333333333334,
+   "title": "Explicit birational geometry of threefolds of general type"
+  },
+  {
+   "arxivId": "1706.04537",
+   "auditWilsonLb": null,
+   "authors": [
+    "Jared Culbertson",
+    "Dan P. Guralnik",
+    "Peter F. Stiller"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1706_04537",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 11,
+   "nClassC": 0,
+   "nDeclarations": 11,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 0.9,
+   "title": "Edge erasures and chordal graphs"
+  },
+  {
+   "arxivId": "2010.02788",
+   "auditWilsonLb": null,
+   "authors": [],
+   "download": false,
+   "fixture": false,
+   "id": "2010_02788",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 8,
+   "nClassC": 0,
+   "nDeclarations": 8,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "2010.02788"
+  },
+  {
+   "arxivId": "2010.05992",
+   "auditWilsonLb": null,
+   "authors": [
+    "Noga Alon"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2010_05992",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 8,
+   "nClassC": 0,
+   "nDeclarations": 8,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Near-sunflowers and focal families"
+  },
+  {
+   "arxivId": "2306.03473",
+   "auditWilsonLb": null,
+   "authors": [
+    "Yang Huang",
+    "Yuejian Peng"
+   ],
+   "download": true,
+   "fixture": false,
+   "id": "2306_03473",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 15,
+   "nClassC": 0,
+   "nDeclarations": 15,
+   "posture": "public_download",
+   "probeOk": true,
+   "stubDensity": 0.9166666666666666,
+   "title": "Non-empty pairwise cross-intersecting families"
+  },
+  {
+   "arxivId": "2411.19241",
+   "auditWilsonLb": null,
+   "authors": [
+    "Marius Lemm",
+    "Tom Wessel"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2411_19241",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 11,
+   "nClassC": 0,
+   "nDeclarations": 11,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions"
+  }
+ ],
+ "schema": "proofsite.index/1"
+}

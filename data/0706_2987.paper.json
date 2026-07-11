@@ -1,0 +1,761 @@
+{
+ "arxivId": "0706.2987",
+ "attribution": {
+  "arxivId": "0706.2987",
+  "arxivUrl": "https://arxiv.org/abs/0706.2987",
+  "authors": [
+   "Jungkai A. Chen",
+   "Meng Chen"
+  ],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "arxiv-assumed-1991-2003",
+  "title": "Explicit birational geometry of threefolds of general type"
+ },
+ "audit": null,
+ "authors": [
+  "Jungkai A. Chen",
+  "Meng Chen"
+ ],
+ "blocksStub": [
+  {
+   "blockId": "volume",
+   "finalKind": "failed_block",
+   "nSteps": 2,
+   "name": "thm_volume",
+   "stepsCite": 2,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "packing",
+   "finalKind": "failed_block",
+   "nSteps": 3,
+   "name": "thm_packing",
+   "stepsCite": 1,
+   "stepsTactic": 2,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "addition",
+   "finalKind": "theorem",
+   "nSteps": 4,
+   "name": "thm_addition",
+   "stepsCite": 0,
+   "stepsTactic": 4,
+   "stubbed": false,
+   "verdict": "a"
+  },
+  {
+   "blockId": "p2m",
+   "finalKind": "failed_block",
+   "nSteps": 2,
+   "name": "thm_p2m",
+   "stepsCite": 2,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "volume_chi_1",
+   "finalKind": "failed_block",
+   "nSteps": 4,
+   "name": "thm_volume_chi_1",
+   "stepsCite": 2,
+   "stepsTactic": 2,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "vol",
+   "finalKind": "failed_block",
+   "nSteps": 7,
+   "name": "thm_vol",
+   "stepsCite": 3,
+   "stepsTactic": 4,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "lem_assumptions_bundle",
+  "lem_bombieri_reider_bpf",
+  "lem_cc_vol_chi_le0",
+  "lem_chenhacon_q_pos",
+  "lem_fletcher_chi1_p12p24",
+  "lem_fletcher_l_monotone",
+  "lem_formal_basket_pm_recursion",
+  "lem_formal_basket_pm_seed",
+  "lem_kawamata_viehweg",
+  "lem_mpcps_movable_restrict",
+  "lem_reid_plurigenus_formula",
+  "lem_tableA_completeness",
+  "lem_tableB_completeness",
+  "lem_viehweg_semipos",
+  "thm_p2m",
+  "thm_packing",
+  "thm_vol",
+  "thm_volume",
+  "thm_volume_chi_1"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 6,
+  "blocksTotal": 45,
+  "classA": 1,
+  "classB": 19,
+  "classC": 0,
+  "curated": 20,
+  "customLemmas": 14,
+  "declarations": 20,
+  "skipped": 39
+ },
+ "id": "0706_2987",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 28,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": false,
+  "download": false,
+  "label": "arxiv-assumed-1991-2003 — view-only demo",
+  "permissive": false,
+  "posture": "demo",
+  "watermark": true
+ },
+ "licenseClass": "arxiv-assumed-1991-2003",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:sigmaB",
+   "kind": "definition",
+   "label": "sigmaB",
+   "lean": "def sigmaB (B : Multiset (ℕ × ℕ)) : ℕ := (B.map Prod.fst).sum",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:sigmaP",
+   "kind": "definition",
+   "label": "sigmaP",
+   "lean": "def sigmaP (B : Multiset (ℕ × ℕ)) : ℚ := (B.map (fun p => (p.1 : ℚ) ^ 2 / (p.2 : ℚ))).sum",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Delta_br",
+   "kind": "definition",
+   "label": "Delta_br",
+   "lean": "def Delta_br (n b r : ℕ) : ℤ := let i : ℤ := ((b * n) / r : ℕ); i * b * n - (i ^ 2 + i) / 2 * r",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:DeltaB",
+   "kind": "definition",
+   "label": "DeltaB",
+   "lean": "def DeltaB (n : ℕ) (B : Multiset (ℕ × ℕ)) : ℤ := (B.map (fun p => Delta_br n p.1 p.2)).sum",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:FormalBasket",
+   "kind": "definition",
+   "label": "FormalBasket",
+   "lean": "structure FormalBasket where\n  basket : Multiset (ℕ × ℕ)\n  chi : ℤ\n  P2 : ℤ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:K3B",
+   "kind": "definition",
+   "label": "K3B",
+   "lean": "def K3B (Bf : FormalBasket) : ℚ := -(sigmaB Bf.basket : ℚ) + sigmaP Bf.basket + 6 * (Bf.chi : ℚ) + 2 * (Bf.P2 : ℚ)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:Pm",
+   "kind": "definition",
+   "label": "Pm",
+   "lean": "opaque Pm : ℕ → FormalBasket → ℤ",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:BasketPacking",
+   "kind": "definition",
+   "label": "BasketPacking",
+   "lean": "def BasketPacking (B B' : Multiset (ℕ × ℕ)) : Prop :=\n  ∃ b₁ r₁ b₂ r₂ R, B = (b₁, r₁) ::ₘ (b₂, r₂) ::ₘ R ∧ B' = (b₁ + b₂, r₁ + r₂) ::ₘ R",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "\\cite{YPG} (Reid), Fletcher uniqueness \\cite{Fletcher}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_reid_plurigenus_formula"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_reid_plurigenus_formula",
+   "kind": "custom_lemma_stub",
+   "label": "lem_reid_plurigenus_formula",
+   "lean": "theorem lem_reid_plurigenus_formula : ∀ (X : PaperVariety), IsMinimal X → IsGeneralType X → Terminal X → ∀ (m : ℕ), 1 < m → (PX m X : ℚ) = (1 / 12) * (m : ℚ) * ((m : ℚ) - 1) * (2 * (m : ℚ) - 1) * Vol X - (2 * (m : ℚ) - 1) * (chiX X : ℚ) + lCorr m (BasketOf X) := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "\\cite[Lemma 3.1]{Flt}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_fletcher_l_monotone"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_fletcher_l_monotone",
+   "kind": "custom_lemma_stub",
+   "label": "lem_fletcher_l_monotone",
+   "lean": "theorem lem_fletcher_l_monotone : ∀ (B : Multiset (ℕ × ℕ)) (m : ℕ), 2 ≤ m → lCorr (m + 2) B - lCorr m B - lCorr 2 B ≥ 0 := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "\\cite[Theorem 1.1]{Jungkai-Meng}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_cc_vol_chi_le0"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_cc_vol_chi_le0",
+   "kind": "custom_lemma_stub",
+   "label": "lem_cc_vol_chi_le0",
+   "lean": "theorem lem_cc_vol_chi_le0 : ∀ (X : PaperVariety), IsMinimal X → IsGeneralType X → chiX X ≤ 0 → Vol X ≥ 1 / 30 := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite{Flt} (restated as chi=1)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_fletcher_chi1_p12p24"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_fletcher_chi1_p12p24",
+   "kind": "custom_lemma_stub",
+   "label": "lem_fletcher_chi1_p12p24",
+   "lean": "theorem lem_fletcher_chi1_p12p24 : ∀ (X : PaperVariety), IsMinimal X → IsGeneralType X → chiX X = 1 → 1 ≤ PX 12 X ∧ 2 ≤ PX 24 X := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite{JC-H} (q>0 thm)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_chenhacon_q_pos"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_chenhacon_q_pos",
+   "kind": "custom_lemma_stub",
+   "label": "lem_chenhacon_q_pos",
+   "lean": "theorem lem_chenhacon_q_pos : ∀ (X : PaperVariety), IsMinimal X → IsGeneralType X → 0 < qX X → (∀ m, 2 ≤ m → 0 < PX m X) ∧ (∀ m, 7 ≤ m → BirationalPhi m X) := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "def of P_2(B), P_3(B)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_formal_basket_pm_seed"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_formal_basket_pm_seed",
+   "kind": "custom_lemma_stub",
+   "label": "lem_formal_basket_pm_seed",
+   "lean": "theorem lem_formal_basket_pm_seed : ∀ (Bf : FormalBasket), Pm 2 Bf = Bf.P2 ∧ Pm 3 Bf = -(sigmaB Bf.basket : ℤ) + 10 * Bf.chi + 5 * Bf.P2 := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": "(5.1)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_formal_basket_pm_recursion"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_formal_basket_pm_recursion",
+   "kind": "custom_lemma_stub",
+   "label": "lem_formal_basket_pm_recursion",
+   "lean": "theorem lem_formal_basket_pm_recursion : ∀ (Bf : FormalBasket) (m : ℕ), 3 ≤ m → 2 * (Pm (m + 1) Bf - Pm m Bf) = (m : ℤ) ^ 2 * (-(sigmaB Bf.basket : ℤ) + 6 * Bf.chi + 2 * Bf.P2) + (m : ℤ) * (sigmaB Bf.basket : ℤ) - 4 * Bf.chi + 2 * DeltaB m Bf.basket := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\ref{assumptions} (2.9)",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_assumptions_bundle"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_assumptions_bundle",
+   "kind": "custom_lemma_stub",
+   "label": "lem_assumptions_bundle",
+   "lean": "theorem lem_assumptions_bundle : AssumptionsBundle := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite{KaV,V}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_kawamata_viehweg"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_kawamata_viehweg",
+   "kind": "custom_lemma_stub",
+   "label": "lem_kawamata_viehweg",
+   "lean": "theorem lem_kawamata_viehweg : KVVanishing := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite[Lemma 2.7]{MPCPS}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_mpcps_movable_restrict"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_mpcps_movable_restrict",
+   "kind": "custom_lemma_stub",
+   "label": "lem_mpcps_movable_restrict",
+   "lean": "theorem lem_mpcps_movable_restrict : MPCPSRestrict := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite{Bom},\\cite{Reider}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_bombieri_reider_bpf"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_bombieri_reider_bpf",
+   "kind": "custom_lemma_stub",
+   "label": "lem_bombieri_reider_bpf",
+   "lean": "theorem lem_bombieri_reider_bpf : BombieriReiderBPF := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "\\cite{VV}",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_viehweg_semipos"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_viehweg_semipos",
+   "kind": "custom_lemma_stub",
+   "label": "lem_viehweg_semipos",
+   "lean": "theorem lem_viehweg_semipos : ViehwegSemipos := by sorry",
+   "source": "external_citation",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "Table A / Section 6 classification",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_tableA_completeness"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_tableA_completeness",
+   "kind": "custom_lemma_stub",
+   "label": "lem_tableA_completeness",
+   "lean": "theorem lem_tableA_completeness : TableAComplete := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": "Table B / Section 7 enumeration",
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "lem_tableB_completeness"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": null,
+   "hasReceipt": true,
+   "id": "lem_tableB_completeness",
+   "kind": "custom_lemma_stub",
+   "label": "lem_tableB_completeness",
+   "lean": "theorem lem_tableB_completeness : TableBComplete := by sorry",
+   "source": "in_paper_ref",
+   "status": "conditional_kernel",
+   "stubDensity": null,
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_volume"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_assumptions_bundle",
+    "lem_bombieri_reider_bpf"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_volume",
+   "kind": "theorem",
+   "label": "thm_volume",
+   "lean": "theorem thm_volume (h0 : IsGeneralType X) (h1 : 0 < m0) (h2 : 2 ≤ PX m0 X) : ((TypeIII X → Vol X ≥ 10 / ((m0 : ℚ) ^ 2 * (3 * (m0 : ℚ) + 2))) ∧ (TypeII X → Vol X ≥ 4 / ((m0 : ℚ) ^ 2 * (3 * (m0 : ℚ) + 2))) ∧ (TypeI3 X → Vol X ≥ 36 / (5 * (m0 : ℚ) * ((m0 : ℚ) + 2) ^ 2)) ∧ Vol X ≥ 11 / (12 * (m0 : ℚ) * ((m0 : ℚ) + 1) ^ 2)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 2,
+    "stepsCite": 2,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_packing"
+   ],
+   "demoted": true,
+   "dependsOn": [],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_packing",
+   "kind": "theorem",
+   "label": "thm_packing",
+   "lean": "theorem thm_packing : (∀ (b1 r1 b2 r2 : ℕ) (Rest : Multiset (ℕ × ℕ)), 0 < r1 → 0 < r2 → 2 * b1 ≤ r1 → 2 * b2 ≤ r2 → (∀ n, 2 ≤ n → DeltaB n ((b1, r1) ::ₘ (b2, r2) ::ₘ Rest) ≥ DeltaB n ((b1 + b2, r1 + r2) ::ₘ Rest)) ∧ sigmaB ((b1, r1) ::ₘ (b2, r2) ::ₘ Rest) = sigmaB ((b1 + b2, r1 + r2) ::ₘ Rest) ∧ sigmaP ((b1, r1) ::ₘ (b2, r2) ::ₘ Rest) = sigmaP ((b1 + b2, r1 + r2) ::ₘ Rest) + ((r1 : ℚ) * b2 - (r2 : ℚ) * b1) ^ 2 / ((r1 : ℚ) * r2 * (r1 + r2))) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 3,
+    "stepsCite": 1,
+    "stepsTactic": 2
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 0,
+   "conditions": [],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "theorem",
+   "hasReceipt": true,
+   "id": "thm_addition",
+   "kind": "theorem",
+   "label": "thm_addition",
+   "lean": "theorem thm_addition : (∀ (m b r : ℕ), 1 < m → 2 * b ≤ r → Nat.Coprime b r → sigmaB ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = sigmaB (Multiset.replicate m (b, r)) ∧ sigmaP ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = sigmaP (Multiset.replicate m (b, r)) ∧ (∀ n, 0 < n → DeltaB n ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = DeltaB n (Multiset.replicate m (b, r)))) := by\n  have h_0 : ∀ (m b r : ℕ), sigmaB ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = sigmaB (Multiset.replicate m (b, r)) := by intro m b r; simp [sigmaB, Multiset.map_replicate, Multiset.sum_replicate]\n  have h_1 : ∀ (m b r : ℕ), 1 < m → sigmaP ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = sigmaP (Multiset.replicate m (b, r)) := by intro m b r h1; simp only [sigmaP, Multiset.map_singleton, Multiset.sum_singleton, Multiset.map_replicate, Multiset.sum_replicate, nsmul_eq_mul]; push_cast; rw [mul_pow]; rw [show (m:ℚ) ^ 2 * (b:ℚ) ^ 2 = (m:ℚ) * ((m:ℚ) * (b:ℚ)^2) from by ring, mul_div_mul_left _ _ (show (m:ℚ) ≠ 0 by positivity), mul_div_assoc]\n  have h_2 : ∀ (m b r : ℕ), 1 < m → ∀ n, 0 < n → DeltaB n ({(m * b, m * r)} : Multiset (ℕ × ℕ)) = DeltaB n (Multiset.replicate m (b, r)) := by intro m b r h1; intro n hn; simp only [DeltaB, Multiset.map_singleton, Multiset.sum_singleton, Multiset.map_replicate, Multiset.sum_replicate, nsmul_eq_mul]; simp only [Delta_br]; rw [show (m * b * n) / (m * r) = (b * n) / r from by rw [Nat.mul_assoc, Nat.mul_div_mul_left _ _ (show 0 < m by omega)]]; push_cast; ring\n  exact fun m b r hm hbr hcop => ⟨h_0 m b r, h_1 m b r hm, h_2 m b r hm⟩",
+   "source": null,
+   "status": "kernel",
+   "stubDensity": {
+    "nSteps": 4,
+    "stepsCite": 0,
+    "stepsTactic": 4
+   },
+   "verdictClass": "a"
+  },
+  {
+   "axioms": [
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_p2m"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_fletcher_l_monotone",
+    "lem_reid_plurigenus_formula"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_p2m",
+   "kind": "theorem",
+   "label": "thm_p2m",
+   "lean": "theorem thm_p2m (h0 : IsMinimal X) (h1 : IsGeneralType X) (h2 : Terminal X) (h3 : chiX X = 1) : (∀ (m : ℕ), 2 ≤ m → PX (m + 2) X ≥ PX m X + PX 2 X) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 2,
+    "stepsCite": 2,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_volume_chi_1"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_tableA_completeness",
+    "thm_volume"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_volume_chi_1",
+   "kind": "theorem",
+   "label": "thm_volume_chi_1",
+   "lean": "theorem thm_volume_chi_1 (h0 : IsMinimal X) (h1 : IsGeneralType X) (h2 : chiX X = 1) : (Vol X ≥ 1 / 420) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 4,
+    "stepsCite": 2,
+    "stepsTactic": 2
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_vol"
+   ],
+   "demoted": true,
+   "dependsOn": [
+    "lem_cc_vol_chi_le0",
+    "lem_tableB_completeness",
+    "thm_volume_chi_1"
+   ],
+   "finalKind": "failed_block",
+   "hasReceipt": true,
+   "id": "thm_vol",
+   "kind": "theorem",
+   "label": "thm_vol",
+   "lean": "theorem thm_vol (h0 : IsGeneralType X) : (Vol X ≥ 1 / 2660) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 7,
+    "stepsCite": 3,
+    "stepsTactic": 4
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "8b164e46b13d1123",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 0.8333333333333334,
+ "title": "Explicit birational geometry of threefolds of general type",
+ "verdict": {
+  "nClassA": 1,
+  "nClassB": 19,
+  "nClassC": 0,
+  "nDeclarations": 20,
+  "quarantineRounds": 1,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}

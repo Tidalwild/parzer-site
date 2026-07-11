@@ -1,0 +1,512 @@
+{
+ "arxivId": "2010.02788",
+ "attribution": {
+  "arxivId": "2010.02788",
+  "arxivUrl": "https://arxiv.org/abs/2010.02788",
+  "authors": [],
+  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "licenseClass": "cc-by",
+  "title": "2010.02788"
+ },
+ "audit": null,
+ "authors": [],
+ "blocksStub": [
+  {
+   "blockId": "main",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_main",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "B_to_C",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_B_to_C",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "blk_4",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_blk_4",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t5_2",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t5_2",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t5_3",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t5_3",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t6_3",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t6_3",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t6_4",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t6_4",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  },
+  {
+   "blockId": "t6_5",
+   "finalKind": "skipped_block",
+   "nSteps": 0,
+   "name": "thm_t6_5",
+   "stepsCite": 0,
+   "stepsTactic": 0,
+   "stubbed": true,
+   "verdict": "b"
+  }
+ ],
+ "conditions": [
+  "thm_B_to_C",
+  "thm_blk_4",
+  "thm_main",
+  "thm_t5_2",
+  "thm_t5_3",
+  "thm_t6_3",
+  "thm_t6_4",
+  "thm_t6_5"
+ ],
+ "fixture": false,
+ "fixtureSource": null,
+ "funnel": {
+  "blocksEmitted": 0,
+  "blocksTotal": 10,
+  "classA": 0,
+  "classB": 8,
+  "classC": 0,
+  "curated": 8,
+  "customLemmas": 0,
+  "declarations": 8,
+  "skipped": 2
+ },
+ "id": "2010_02788",
+ "lean": {
+  "available": true,
+  "download": false,
+  "lineCount": 0,
+  "sliceCount": 19,
+  "source": null,
+  "watermark": true
+ },
+ "license": {
+  "commission": true,
+  "download": false,
+  "label": "cc-by — full Lean file available under commission",
+  "permissive": true,
+  "posture": "commission",
+  "watermark": true
+ },
+ "licenseClass": "cc-by",
+ "nodes": [
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:akn",
+   "kind": "definition",
+   "label": "akn",
+   "lean": "def akn (k n : ℕ) : ℕ :=\n  ∑ p ∈ Nat.Partition.countRestricted n k, (p.parts.filter (fun x => k ∣ x)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:bk0",
+   "kind": "definition",
+   "label": "bk0",
+   "lean": "def bk0 (k n : ℕ) : ℕ :=\n  (Finset.univ.filter (fun p : Nat.Partition n =>\n    (p.parts.toFinset.filter (fun a => k ∣ a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ∣ a → k ∣ p.parts.count a)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:bk1",
+   "kind": "definition",
+   "label": "bk1",
+   "lean": "def bk1 (k n : ℕ) : ℕ :=\n  (Finset.univ.filter (fun p : Nat.Partition n =>\n    (p.parts.toFinset.filter (fun a => k ∣ a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ∣ a → ¬ k ∣ p.parts.count a)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ck0",
+   "kind": "definition",
+   "label": "ck0",
+   "lean": "def ck0 (k n : ℕ) : ℕ :=\n  (Finset.univ.filter (fun p : Nat.Partition n =>\n    (p.parts.toFinset.filter (fun a => k ≤ p.parts.count a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ≤ p.parts.count a → k ∣ a)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ck1",
+   "kind": "definition",
+   "label": "ck1",
+   "lean": "def ck1 (k n : ℕ) : ℕ :=\n  (Finset.univ.filter (fun p : Nat.Partition n =>\n    (p.parts.toFinset.filter (fun a => k ≤ p.parts.count a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ≤ p.parts.count a → ¬ k ∣ a)).card",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:BSet0",
+   "kind": "definition",
+   "label": "BSet0",
+   "lean": "def BSet0 (k n : ℕ) : Finset (Nat.Partition n) :=\n  Finset.univ.filter (fun p =>\n    (p.parts.toFinset.filter (fun a => k ∣ a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ∣ a → k ∣ p.parts.count a)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:BSet1",
+   "kind": "definition",
+   "label": "BSet1",
+   "lean": "def BSet1 (k n : ℕ) : Finset (Nat.Partition n) :=\n  Finset.univ.filter (fun p =>\n    (p.parts.toFinset.filter (fun a => k ∣ a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ∣ a → ¬ k ∣ p.parts.count a)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:CSet0",
+   "kind": "definition",
+   "label": "CSet0",
+   "lean": "def CSet0 (k n : ℕ) : Finset (Nat.Partition n) :=\n  Finset.univ.filter (fun p =>\n    (p.parts.toFinset.filter (fun a => k ≤ p.parts.count a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ≤ p.parts.count a → k ∣ a)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:CSet1",
+   "kind": "definition",
+   "label": "CSet1",
+   "lean": "def CSet1 (k n : ℕ) : Finset (Nat.Partition n) :=\n  Finset.univ.filter (fun p =>\n    (p.parts.toFinset.filter (fun a => k ≤ p.parts.count a)).card = 1 ∧\n    ∀ a ∈ p.parts.toFinset, k ≤ p.parts.count a → ¬ k ∣ a)",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ASet",
+   "kind": "definition",
+   "label": "ASet",
+   "lean": "def ASet (k n : ℕ) : Finset (Nat.Partition n × ℕ × ℕ) :=\n  (Nat.Partition.countRestricted n k).biUnion (fun p =>\n    (p.parts.toFinset.filter (fun x => k ∣ x)).biUnion (fun i0 =>\n      (Finset.range (p.parts.count i0)).image (fun m => (p, i0, m))))",
+   "status": "out_of_scope"
+  },
+  {
+   "conditionCount": 0,
+   "dependsOn": [],
+   "hasReceipt": false,
+   "id": "def:ApSet",
+   "kind": "definition",
+   "label": "ApSet",
+   "lean": "def ApSet (k n : ℕ) : Finset (Nat.Partition n × ℕ × ℕ) :=\n  (CSet0 k n).biUnion (fun p =>\n    (p.parts.toFinset.filter (fun x => k ∣ x ∧ k ≤ p.parts.count x)).biUnion (fun i0 =>\n      (Finset.range k).image (fun m => (p, i0, m))))",
+   "status": "out_of_scope"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_B_to_C"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_B_to_C",
+   "kind": "theorem",
+   "label": "thm_B_to_C",
+   "lean": "theorem thm_B_to_C : ∀ (n k : ℕ), 2 ≤ k → (BSet0 k n).card = (CSet0 k n).card ∧ (BSet1 k n).card = (CSet1 k n).card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_blk_4"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_blk_4",
+   "kind": "theorem",
+   "label": "thm_blk_4",
+   "lean": "theorem thm_blk_4 : ∀ (n k : ℕ), 2 ≤ k → (ASet k n).card + (ApSet k n).card = (CSet0 k n).card + (CSet1 k n).card := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_main"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_main",
+   "kind": "theorem",
+   "label": "thm_main",
+   "lean": "theorem thm_main : ∀ (n k : ℕ), 2 ≤ k → (bk0 k n = ck0 k n ∧ bk1 k n = ck1 k n) ∧ ((akn k n : ℤ) = (bk1 k n : ℤ) - ((k : ℤ) - 1) * (bk0 k n : ℤ) ∧ (akn k n : ℤ) = (ck1 k n : ℤ) - ((k : ℤ) - 1) * (ck0 k n : ℤ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t5_2"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t5_2",
+   "kind": "theorem",
+   "label": "thm_t5_2",
+   "lean": "theorem thm_t5_2 : ∀ (n k : ℕ), 2 ≤ k → ¬ k ∣ n → (∑ j ∈ (Finset.Icc (-(n:ℤ)) (n:ℤ)).filter (fun j => 0 ≤ j*(3*j-1)/2 ∧ j*(3*j-1)/2 ≤ (n:ℤ)), (-1:ℤ)^(j.natAbs) * (akn k (n - Int.toNat (j*(3*j-1)/2)) : ℤ)) = 0 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t5_3"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t5_3",
+   "kind": "theorem",
+   "label": "thm_t5_3",
+   "lean": "theorem thm_t5_3 : ∀ (n k : ℕ), Even k → Odd n → (∑ j ∈ (Finset.range (n+1)).filter (fun j => j*(j+1)/2 ≤ n), (-1:ℤ)^(j*(j+1)/2) * (akn k (n - j*(j+1)/2) : ℤ)) = 0 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t6_3"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t6_3",
+   "kind": "theorem",
+   "label": "thm_t6_3",
+   "lean": "theorem thm_t6_3 : ∀ (n k : ℕ), Even k → Odd n → (akn k n : ℤ) = (∑ m ∈ Finset.Icc 1 (Nat.sqrt n), (-1:ℤ)^(m-1) * (akn k (n - m^2) : ℤ)) + (∑ m ∈ Finset.Icc 1 (Nat.sqrt (n/2)), (-1:ℤ)^(m-1) * (akn k (n - 2*m^2) : ℤ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t6_4"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t6_4",
+   "kind": "theorem",
+   "label": "thm_t6_4",
+   "lean": "theorem thm_t6_4 : ∀ (n k : ℕ), Even k → Even n → (∑ m ∈ Finset.Icc 1 (Nat.sqrt n), (-1:ℤ)^(m-1) * (akn k (n - m^2) : ℤ)) = (∑ m ∈ Finset.Icc 1 (Nat.sqrt (n/2)), (-1:ℤ)^(m-1) * (akn k (n - 2*m^2) : ℤ)) := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  },
+  {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext",
+    "sorryAx"
+   ],
+   "citation": null,
+   "closure": [],
+   "conditionCount": 1,
+   "conditions": [
+    "thm_t6_5"
+   ],
+   "demoted": false,
+   "dependsOn": [],
+   "finalKind": "skipped_block",
+   "hasReceipt": true,
+   "id": "thm_t6_5",
+   "kind": "theorem",
+   "label": "thm_t6_5",
+   "lean": "theorem thm_t6_5 : ∀ (n : ℕ), Even n → (∑ m ∈ Finset.Icc 1 (Nat.sqrt n), (-1:ℤ)^(m-1) * (Fintype.card (Nat.Partition (n - m^2)) : ℤ)) = ((Fintype.card (Nat.Partition n) : ℤ) - (Nat.Partition.oddDistincts n).card) / 2 := by sorry",
+   "source": null,
+   "status": "conditional_kernel",
+   "stubDensity": {
+    "nSteps": 0,
+    "stepsCite": 0,
+    "stepsTactic": 0
+   },
+   "verdictClass": "b"
+  }
+ ],
+ "probe": {
+  "inconsistent": false,
+  "probeClosedFalse": false,
+  "ran": true
+ },
+ "probeOk": true,
+ "provenance": {
+  "curationDigest": "236785fc379d3456",
+  "curator": "parzer-curation-v1",
+  "llmCurated": true,
+  "validator": "VALID"
+ },
+ "schema": "proofsite.paper/1",
+ "stubDensity": 1.0,
+ "title": "2010.02788",
+ "verdict": {
+  "nClassA": 0,
+  "nClassB": 8,
+  "nClassC": 0,
+  "nDeclarations": 8,
+  "quarantineRounds": 0,
+  "truncated": false,
+  "verifiedTreeDepth": 1
+ }
+}
