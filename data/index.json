@@ -246,13 +246,13 @@
    "fixture": false,
    "id": "1905_00573",
    "licenseClass": "cc0",
-   "nClassA": 0,
-   "nClassB": 27,
+   "nClassA": 7,
+   "nClassB": 20,
    "nClassC": 0,
    "nDeclarations": 27,
    "posture": "commission",
    "probeOk": true,
-   "stubDensity": 1.0,
+   "stubDensity": 0.7407407407407407,
    "title": "Some enumerative properties of a class of Fibonacci-like cubes"
   },
   {

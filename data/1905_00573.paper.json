@@ -8,7 +8,7 @@
    "Xu Wang",
    "Haiyuan Yao"
   ],
-  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "changes": "Statements formalized into Lean 4 by parZer; 7 declarations are kernel-checked under the trusted axioms; 20 remain conditional on disclosed sorry-stubs.",
   "licenseClass": "cc0",
   "title": "Some enumerative properties of a class of Fibonacci-like cubes"
  },
@@ -21,23 +21,23 @@
  "blocksStub": [
   {
    "blockId": "prop_rec_R",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_prop_rec_R",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "prop_rec_AB",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_prop_rec_AB",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "th_gf_AB",
@@ -91,13 +91,13 @@
   },
   {
    "blockId": "prop_rec_Q",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_prop_rec_Q",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "th_gf_Q",
@@ -141,23 +141,23 @@
   },
   {
    "blockId": "prop_rec_H",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_prop_rec_H",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "blk_30",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_blk_30",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "th_gf_H",
@@ -191,13 +191,13 @@
   },
   {
    "blockId": "prop_rec_D",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_prop_rec_D",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "th_gf_D",
@@ -271,13 +271,13 @@
   },
   {
    "blockId": "pro_ou_d",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_pro_ou_d",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "blk_48",
@@ -292,23 +292,16 @@
  ],
  "conditions": [
   "thm_blk_27",
-  "thm_blk_30",
   "thm_blk_41",
   "thm_blk_45",
   "thm_blk_48",
   "thm_cor_fibs",
   "thm_pro_d",
   "thm_pro_ouD",
-  "thm_pro_ou_d",
   "thm_pro_out_d",
   "thm_prop_QD",
   "thm_prop_RF_q",
   "thm_prop_gf_H",
-  "thm_prop_rec_AB",
-  "thm_prop_rec_D",
-  "thm_prop_rec_H",
-  "thm_prop_rec_Q",
-  "thm_prop_rec_R",
   "thm_prop_rec_d",
   "thm_prop_rec_h",
   "thm_prop_rec_q",
@@ -322,10 +315,10 @@
  "fixture": false,
  "fixtureSource": null,
  "funnel": {
-  "blocksEmitted": 0,
+  "blocksEmitted": 7,
   "blocksTotal": 33,
-  "classA": 0,
-  "classB": 27,
+  "classA": 7,
+  "classB": 20,
   "classC": 0,
   "curated": 27,
   "customLemmas": 0,
@@ -337,7 +330,7 @@
   "available": true,
   "download": false,
   "lineCount": 0,
-  "sliceCount": 34,
+  "sliceCount": 27,
   "source": null,
   "watermark": true
  },
@@ -425,61 +418,61 @@
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_prop_rec_R"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_prop_rec_R",
    "kind": "theorem",
    "label": "thm_prop_rec_R",
-   "lean": "theorem thm_prop_rec_R (h0 : 5 ≤ n) : (¬ (2 ∣ n) → RPoly n = Polynomial.X * RPoly (n - 1) + RPoly (n - 2)) ∧ (2 ∣ n → RPoly n = RPoly (n - 1) + Polynomial.X ^ 2 * RPoly (n - 2)) := by sorry",
+   "lean": "theorem thm_prop_rec_R (n : ℕ) (h0 : 5 ≤ n) :\n    (¬ Even n → RPoly n = X * RPoly (n - 1) + RPoly (n - 2)) ∧\n      (Even n → RPoly n = RPoly (n - 1) + X ^ 2 * RPoly (n - 2)) := by\n  obtain ⟨k, rfl⟩ := Nat.exists_eq_add_of_le' h0\n  -- n = k + 5  (exists_eq_add_of_le' gives n = m + k with m = 5)\n  constructor\n  · intro hodd\n    -- RPoly (k+5) unfolds via the n+5 clause with n := k\n    change\n        (if Even (k + 5) then RPoly (k + 4) + X ^ 2 * RPoly (k + 3)\n         else X * RPoly (k + 4) + RPoly (k + 3)) =\n          X * RPoly (k + 5 - 1) + RPoly (k + 5 - 2)\n    simp only [hodd, ↓reduceIte]\n    simp [show k + 5 - 1 = k + 4 by omega, show k + 5 - 2 = k + 3 by omega]\n  · intro hev\n    change\n        (if Even (k + 5) then RPoly (k + 4) + X ^ 2 * RPoly (k + 3)\n         else X * RPoly (k + 4) + RPoly (k + 3)) =\n          RPoly (k + 5 - 1) + X ^ 2 * RPoly (k + 5 - 2)\n    simp only [hev, ↓reduceIte]\n    simp [show k + 5 - 1 = k + 4 by omega, show k + 5 - 2 = k + 3 by omega]\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
-   "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_prop_rec_AB"
+   "closure": [
+    "thm_prop_rec_R"
    ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
-   "dependsOn": [],
-   "finalKind": "skipped_block",
+   "dependsOn": [
+    "thm_prop_rec_R"
+   ],
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_prop_rec_AB",
    "kind": "theorem",
    "label": "thm_prop_rec_AB",
-   "lean": "theorem thm_prop_rec_AB : (4 ≤ m → APoly m = (1 + Polynomial.X + Polynomial.X ^ 2) * APoly (m - 1) - Polynomial.X ^ 2 * APoly (m - 2)) ∧ (2 ≤ m → BPoly m = (1 + Polynomial.X + Polynomial.X ^ 2) * BPoly (m - 1) - Polynomial.X ^ 2 * BPoly (m - 2)) := by sorry",
+   "lean": "theorem thm_prop_rec_AB :\n    (∀ m, 4 ≤ m →\n        APoly m = (1 + X + X ^ 2) * APoly (m - 1) - X ^ 2 * APoly (m - 2)) ∧\n      (∀ m, 3 ≤ m →\n        BPoly m = (1 + X + X ^ 2) * BPoly (m - 1) - X ^ 2 * BPoly (m - 2)) := by\n  constructor\n  · intro m hm\n    have eqA := rec_A_from_B m (by omega)\n    have eqA'' : APoly (m - 1) = BPoly (m - 2) + X ^ 2 * APoly (m - 2) := by\n      have h := rec_A_from_B (m - 1) (by omega)\n      -- h: A(m-1) = B((m-1)-1) + X² A((m-1)-1)\n      have e : m - 1 - 1 = m - 2 := by omega\n      simpa [e] using h\n    have eqB' : BPoly (m - 1) = X * APoly (m - 1) + BPoly (m - 2) := by\n      have h := rec_B_from_A (m - 1) (by omega)\n      have e : m - 1 - 1 = m - 2 := by omega\n      simpa [e] using h\n    -- A_m = B_{m-1} + X² A_{m-1}\n    --     = X A_{m-1} + B_{m-2} + X² A_{m-1}\n    --     and B_{m-2} = A_{m-1} - X² A_{m-2} from eqA''\n    -- Direct substitution without isolating terms:\n    -- A_m = B_{m-1} + X² A_{m-1}\n    --     = X A_{m-1} + B_{m-2} + X² A_{m-1}\n    --     = X A_{m-1} + (A_{m-1} - X² A_{m-2}) + X² A_{m-1}   [from eqA'']\n    -- but rewrite B via eqA'' as A - X² A' by `sub_eq_of_eq_add`\n    calc\n      APoly m = BPoly (m - 1) + X ^ 2 * APoly (m - 1) := eqA\n      _ = X * APoly (m - 1) + BPoly (m - 2) + X ^ 2 * APoly (m - 1) := by\n            rw [eqB']\n      _ = X * APoly (m - 1) + (APoly (m - 1) - X ^ 2 * APoly (m - 2)) +\n            X ^ 2 * APoly (m - 1) := by\n            -- replace B(m-2) using eqA'': A(m-1) = B(m-2) + X² A(m-2)\n            have h := congr_arg (fun p => p - X ^ 2 * APoly (m - 2)) eqA''\n            -- h: A - X²A' = B + X²A' - X²A' = B\n            simp only [add_sub_cancel_right] at h\n            rw [← h]\n      _ = (1 + X + X ^ 2) * APoly (m - 1) - X ^ 2 * APoly (m - 2) := by ring\n  · intro m hm\n    have eqBm := rec_B_from_A m (by omega)\n    have eqAm := rec_A_from_B m hm\n    have eqBm1 : BPoly (m - 1) = X * APoly (m - 1) + BPoly (m - 2) := by\n      have h := rec_B_from_A (m - 1) (by omega)\n      have e : m - 1 - 1 = m - 2 := by omega\n      simpa [e] using h\n    calc\n      BPoly m = X * APoly m + BPoly (m - 1) := eqBm\n      _ = X * (BPoly (m - 1) + X ^ 2 * APoly (m - 1)) + BPoly (m - 1) := by rw [eqAm]\n      _ = (1 + X) * BPoly (m - 1) + X ^ 3 * APoly (m - 1) := by ring\n      _ = (1 + X) * BPoly (m - 1) + X ^ 2 * (X * APoly (m - 1)) := by ring\n      _ = (1 + X) * BPoly (m - 1) + X ^ 2 * (BPoly (m - 1) - BPoly (m - 2)) := by\n            have h := congr_arg (fun p => p - BPoly (m - 2)) eqBm1\n            simp only [add_sub_cancel_right] at h\n            rw [← h]\n      _ = (1 + X + X ^ 2) * BPoly (m - 1) - X ^ 2 * BPoly (m - 2) := by ring\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -635,31 +628,29 @@
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_prop_rec_Q"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_prop_rec_Q",
    "kind": "theorem",
    "label": "thm_prop_rec_Q",
-   "lean": "theorem thm_prop_rec_Q (h0 : 5 ≤ n) : QPoly n = QPoly (n - 1) + (1 + Polynomial.X) * QPoly (n - 2) := by sorry",
+   "lean": "theorem thm_prop_rec_Q (n : ℕ) (h0 : 5 ≤ n) :\n    QPoly n = QPoly (n - 1) + (1 + X) * QPoly (n - 2) := by\n  obtain ⟨k, rfl⟩ := Nat.exists_eq_add_of_le' h0\n  -- n = k + 5\n  change QPoly (k + 4) + (1 + X) * QPoly (k + 3) =\n      QPoly (k + 5 - 1) + (1 + X) * QPoly (k + 5 - 2)\n  simp [show k + 5 - 1 = k + 4 by omega, show k + 5 - 2 = k + 3 by omega]\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -785,61 +776,61 @@
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_prop_rec_H"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_prop_rec_H",
    "kind": "theorem",
    "label": "thm_prop_rec_H",
-   "lean": "theorem thm_prop_rec_H (h0 : 6 ≤ n) : HPoly n = Polynomial.X * HPoly (n - 2) + Polynomial.X * HPoly (n - 3) := by sorry",
+   "lean": "theorem thm_prop_rec_H (n : ℕ) (h0 : 6 ≤ n) :\n    HPoly n = X * HPoly (n - 2) + X * HPoly (n - 3) := by\n  obtain ⟨k, rfl⟩ := Nat.exists_eq_add_of_le' h0\n  change X * HPoly (k + 4) + X * HPoly (k + 3) =\n      X * HPoly (k + 6 - 2) + X * HPoly (k + 6 - 3)\n  simp [show k + 6 - 2 = k + 4 by omega, show k + 6 - 3 = k + 3 by omega]\n\n/-- (1,3,3)-Padovan as in the paper. -/\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
-   "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_blk_30"
+   "closure": [
+    "thm_prop_rec_H"
    ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
-   "dependsOn": [],
-   "finalKind": "skipped_block",
+   "dependsOn": [
+    "thm_prop_rec_H"
+   ],
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_blk_30",
    "kind": "theorem",
    "label": "thm_blk_30",
-   "lean": "theorem thm_blk_30 (h0 : 3 ≤ n) : Polynomial.eval 1 (HPoly n) = (padovan (n - 2) : ℤ) := by sorry",
+   "lean": "theorem thm_blk_30 (n : ℕ) (h0 : 3 ≤ n) :\n    eval (1 : ℤ) (HPoly n) = (padovan (n - 2) : ℤ) := by\n  induction n using Nat.strong_induction_on with\n  | h n ih =>\n    match n with\n    | 0 | 1 | 2 => omega\n    | 3 =>\n      change eval (1 : ℤ) (3 * (X : Polynomial ℤ)) = (3 : ℤ)\n      simp [eval_mul, eval_X]\n    | 4 =>\n      change eval (1 : ℤ) (2 * X + X ^ 2) = (3 : ℤ)\n      simp [eval_add, eval_mul, eval_X, eval_pow]\n    | 5 =>\n      change eval (1 : ℤ) (4 * X ^ 2) = (padovan 3 : ℤ)\n      simp [padovan, eval_mul, eval_pow, eval_X]\n    | n + 6 =>\n      -- H(n+6) = X H(n+4) + X H(n+3) definitionally\n      have hdef : HPoly (n + 6) = X * HPoly (n + 4) + X * HPoly (n + 3) := rfl\n      rw [hdef, eval_add, eval_mul, eval_mul, eval_X, one_mul, one_mul]\n      have e1 : eval (1 : ℤ) (HPoly (n + 4)) = (padovan (n + 2) : ℤ) := by\n        have h := ih (n + 4) (by omega) (by omega)\n        have : (n + 4) - 2 = n + 2 := by omega\n        rwa [this] at h\n      have e2 : eval (1 : ℤ) (HPoly (n + 3)) = (padovan (n + 1) : ℤ) := by\n        have h := ih (n + 3) (by omega) (by omega)\n        have : (n + 3) - 2 = n + 1 := by omega\n        rwa [this] at h\n      rw [e1, e2]\n      -- padovan (n+4) = padovan ((n+1)+3) = padovan (n+2) + padovan (n+1)\n      have prec : padovan (n + 4) = padovan (n + 2) + padovan (n + 1) := by\n        have h := padovan_add3 (n + 1)\n        -- h: padovan (n+1+3) = padovan (n+1+1) + padovan (n+1)\n        -- i.e. padovan (n+4) = padovan (n+2) + padovan (n+1) after assoc\n        simpa [Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using h\n      have hidx : (n + 6) - 2 = n + 4 := by omega\n      rw [hidx]\n      exact_mod_cast prec.symm\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 2
   },
   {
    "axioms": [
@@ -935,31 +926,29 @@
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_prop_rec_D"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_prop_rec_D",
    "kind": "theorem",
    "label": "thm_prop_rec_D",
-   "lean": "theorem thm_prop_rec_D (h0 : 6 ≤ n) : DPoly n = Polynomial.X * DPoly (n - 1) + Polynomial.X * DPoly (n - 2) + (Polynomial.X - Polynomial.X ^ 2) * DPoly (n - 3) := by sorry",
+   "lean": "theorem thm_prop_rec_D (n : ℕ) (h0 : 6 ≤ n) :\n    DPoly n =\n      X * DPoly (n - 1) + X * DPoly (n - 2) + (X - X ^ 2) * DPoly (n - 3) := by\n  obtain ⟨k, rfl⟩ := Nat.exists_eq_add_of_le' h0\n  change\n      X * DPoly (k + 5) + X * DPoly (k + 4) + (X - X ^ 2) * DPoly (k + 3) =\n        X * DPoly (k + 6 - 1) + X * DPoly (k + 6 - 2) +\n          (X - X ^ 2) * DPoly (k + 6 - 3)\n  simp [show k + 6 - 1 = k + 5 by omega, show k + 6 - 2 = k + 4 by omega,\n    show k + 6 - 3 = k + 3 by omega]\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -1175,31 +1164,29 @@
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_pro_ou_d"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_pro_ou_d",
    "kind": "theorem",
    "label": "thm_pro_ou_d",
-   "lean": "theorem thm_pro_ou_d : dInCoeff n k = (Nat.choose (n - k - 2) (k - 1) : ℤ) + (Nat.choose (n - k) k : ℤ) := by sorry",
+   "lean": "theorem thm_pro_ou_d (n k : ℕ) :\n    dInCoeff n k =\n      (Nat.choose (n - k - 2) (k - 1) : ℤ) + (Nat.choose (n - k) k : ℤ) :=\n  rfl\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -1245,15 +1232,38 @@
   "validator": "VALID"
  },
  "schema": "proofsite.paper/1",
- "stubDensity": 1.0,
+ "stubDensity": 0.7407407407407407,
  "title": "Some enumerative properties of a class of Fibonacci-like cubes",
  "verdict": {
-  "nClassA": 0,
-  "nClassB": 27,
+  "nClassA": 7,
+  "nClassB": 20,
   "nClassC": 0,
   "nDeclarations": 27,
   "quarantineRounds": 0,
   "truncated": false,
-  "verifiedTreeDepth": 1
- }
+  "verifiedTreeDepth": 2
+ },
+ "stages": [
+  {
+   "id": "stage1",
+   "label": "Stage 1 — recurrences",
+   "blurb": "Generating-polynomial recurrences closed under the trusted axioms by base cases plus the paper relations.",
+   "nodeIds": [
+    "thm_prop_rec_R",
+    "thm_prop_rec_AB",
+    "thm_prop_rec_Q",
+    "thm_prop_rec_H",
+    "thm_prop_rec_D",
+    "thm_pro_ou_d"
+   ]
+  },
+  {
+   "id": "stage2",
+   "label": "Stage 2 — evaluation identity",
+   "blurb": "Maximal-cube polynomial at 1 recovers the Padovan sequence.",
+   "nodeIds": [
+    "thm_blk_30"
+   ]
+  }
+ ]
 }
