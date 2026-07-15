@@ -1,24 +1,59 @@
 {
  "papers": [
   {
-   "arxivId": "0404188",
+   "arxivId": "1712.02095",
    "auditWilsonLb": null,
    "authors": [
-    "Ben Green",
-    "Terence Tao"
+    "Darij Grinberg"
    ],
    "download": false,
    "fixture": false,
-   "id": "0404188",
-   "licenseClass": "arxiv_nonexclusive_unverified",
-   "nClassA": 0,
-   "nClassB": 3,
+   "id": "1712_02095",
+   "licenseClass": "cc0",
+   "nClassA": 15,
+   "nClassB": 0,
    "nClassC": 0,
-   "nDeclarations": 3,
+   "nDeclarations": 15,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 0.0,
+   "title": "The Lucas and Babbage congruences"
+  },
+  {
+   "arxivId": "2505.08560",
+   "auditWilsonLb": null,
+   "authors": [],
+   "download": false,
+   "fixture": false,
+   "id": "2505_08560",
+   "licenseClass": "unknown",
+   "nClassA": 3,
+   "nClassB": 2,
+   "nClassC": 0,
+   "nDeclarations": 5,
    "posture": "demo",
    "probeOk": true,
-   "stubDensity": 1.0,
-   "title": "The primes contain arbitrarily long arithmetic progressions"
+   "stubDensity": 0.4,
+   "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
+  },
+  {
+   "arxivId": "2604.20962",
+   "auditWilsonLb": null,
+   "authors": [
+    "Veronica Bitonti"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "2604_20962",
+   "licenseClass": "arxiv_nonexclusive",
+   "nClassA": 1,
+   "nClassB": 6,
+   "nClassC": 0,
+   "nDeclarations": 7,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.5714285714285714,
+   "title": "Sharp bounds for covering with large cliques and independent sets"
   },
   {
    "arxivId": "0706.2987",
@@ -39,6 +74,107 @@
    "probeOk": true,
    "stubDensity": 0.8333333333333334,
    "title": "Explicit birational geometry of threefolds of general type"
+  },
+  {
+   "arxivId": "1605.09223",
+   "auditWilsonLb": null,
+   "authors": [
+    "Jordan S. Ellenberg",
+    "Dion Gijswijt"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1605_09223",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 7,
+   "nClassC": 0,
+   "nDeclarations": 7,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.6666666666666666,
+   "title": "On large subsets of F_q^n with no three-term arithmetic progression"
+  },
+  {
+   "arxivId": "1606.09412",
+   "auditWilsonLb": null,
+   "authors": [
+    "Karim A. Adiprasito",
+    "Raman Sanyal"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1606_09412",
+   "licenseClass": "unknown",
+   "nClassA": 0,
+   "nClassB": 9,
+   "nClassC": 0,
+   "nDeclarations": 9,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 0.8888888888888888,
+   "title": "Whitney numbers of arrangements via measure concentration of intrinsic volumes"
+  },
+  {
+   "arxivId": "1706.04537",
+   "auditWilsonLb": null,
+   "authors": [
+    "Jared Culbertson",
+    "Dan P. Guralnik",
+    "Peter F. Stiller"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "1706_04537",
+   "licenseClass": "cc0",
+   "nClassA": 0,
+   "nClassB": 11,
+   "nClassC": 0,
+   "nDeclarations": 11,
+   "posture": "commission",
+   "probeOk": true,
+   "stubDensity": 0.9,
+   "title": "Edge erasures and chordal graphs"
+  },
+  {
+   "arxivId": "2306.03473",
+   "auditWilsonLb": null,
+   "authors": [
+    "Yang Huang",
+    "Yuejian Peng"
+   ],
+   "download": true,
+   "fixture": false,
+   "id": "2306_03473",
+   "licenseClass": "cc-by",
+   "nClassA": 0,
+   "nClassB": 15,
+   "nClassC": 0,
+   "nDeclarations": 15,
+   "posture": "public_download",
+   "probeOk": true,
+   "stubDensity": 0.9166666666666666,
+   "title": "Non-empty pairwise cross-intersecting families"
+  },
+  {
+   "arxivId": "0404188",
+   "auditWilsonLb": null,
+   "authors": [
+    "Ben Green",
+    "Terence Tao"
+   ],
+   "download": false,
+   "fixture": false,
+   "id": "0404188",
+   "licenseClass": "arxiv_nonexclusive_unverified",
+   "nClassA": 0,
+   "nClassB": 3,
+   "nClassC": 0,
+   "nDeclarations": 3,
+   "posture": "demo",
+   "probeOk": true,
+   "stubDensity": 1.0,
+   "title": "The primes contain arbitrarily long arithmetic progressions"
   },
   {
    "arxivId": "1311.4600",
@@ -78,86 +214,6 @@
    "probeOk": true,
    "stubDensity": 1.0,
    "title": "Compositional inverses, complete mappings, orthogonal Latin squares and bent functions"
-  },
-  {
-   "arxivId": "1605.09223",
-   "auditWilsonLb": null,
-   "authors": [
-    "Jordan S. Ellenberg",
-    "Dion Gijswijt"
-   ],
-   "download": false,
-   "fixture": false,
-   "id": "1605_09223",
-   "licenseClass": "unknown",
-   "nClassA": 0,
-   "nClassB": 7,
-   "nClassC": 0,
-   "nDeclarations": 7,
-   "posture": "demo",
-   "probeOk": true,
-   "stubDensity": 0.6666666666666666,
-   "title": "On large subsets of with no three-term arithmetic progression"
-  },
-  {
-   "arxivId": "1606.09412",
-   "auditWilsonLb": null,
-   "authors": [
-    "Karim A.~Adiprasito",
-    "Raman Sanyal"
-   ],
-   "download": false,
-   "fixture": false,
-   "id": "1606_09412",
-   "licenseClass": "unknown",
-   "nClassA": 0,
-   "nClassB": 9,
-   "nClassC": 0,
-   "nDeclarations": 9,
-   "posture": "demo",
-   "probeOk": true,
-   "stubDensity": 0.8888888888888888,
-   "title": "1606.09412"
-  },
-  {
-   "arxivId": "1706.04537",
-   "auditWilsonLb": null,
-   "authors": [
-    "Jared Culbertson",
-    "Dan P. Guralnik",
-    "Peter F. Stiller"
-   ],
-   "download": false,
-   "fixture": false,
-   "id": "1706_04537",
-   "licenseClass": "cc0",
-   "nClassA": 0,
-   "nClassB": 11,
-   "nClassC": 0,
-   "nDeclarations": 11,
-   "posture": "commission",
-   "probeOk": true,
-   "stubDensity": 0.9,
-   "title": "Edge erasures and chordal graphs"
-  },
-  {
-   "arxivId": "1712.02095",
-   "auditWilsonLb": null,
-   "authors": [
-    "Darij Grinberg"
-   ],
-   "download": false,
-   "fixture": false,
-   "id": "1712_02095",
-   "licenseClass": "cc0",
-   "nClassA": 15,
-   "nClassB": 0,
-   "nClassC": 0,
-   "nDeclarations": 15,
-   "posture": "commission",
-   "probeOk": true,
-   "stubDensity": 0.0,
-   "title": "The Lucas and Babbage congruences"
   },
   {
    "arxivId": "1804.02385",
@@ -286,26 +342,6 @@
    "title": "Avoiding Monotone Arithmetic Progressions in Permutations of Integers"
   },
   {
-   "arxivId": "2306.03473",
-   "auditWilsonLb": null,
-   "authors": [
-    "Yang Huang",
-    "Yuejian Peng"
-   ],
-   "download": true,
-   "fixture": false,
-   "id": "2306_03473",
-   "licenseClass": "cc-by",
-   "nClassA": 0,
-   "nClassB": 15,
-   "nClassC": 0,
-   "nDeclarations": 15,
-   "posture": "public_download",
-   "probeOk": true,
-   "stubDensity": 0.9166666666666666,
-   "title": "Non-empty pairwise cross-intersecting families"
-  },
-  {
    "arxivId": "2308.11434",
    "auditWilsonLb": null,
    "authors": [
@@ -345,42 +381,6 @@
    "probeOk": true,
    "stubDensity": 1.0,
    "title": "Enhanced Lieb-Robinson bounds for commuting long-range interactions"
-  },
-  {
-   "arxivId": "2505.08560",
-   "auditWilsonLb": null,
-   "authors": [],
-   "download": false,
-   "fixture": false,
-   "id": "2505_08560",
-   "licenseClass": "unknown",
-   "nClassA": 3,
-   "nClassB": 2,
-   "nClassC": 0,
-   "nDeclarations": 5,
-   "posture": "demo",
-   "probeOk": true,
-   "stubDensity": 0.4,
-   "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
-  },
-  {
-   "arxivId": "2604.20962",
-   "auditWilsonLb": null,
-   "authors": [
-    "Veronica Bitonti"
-   ],
-   "download": false,
-   "fixture": false,
-   "id": "2604_20962",
-   "licenseClass": "arxiv_nonexclusive",
-   "nClassA": 1,
-   "nClassB": 6,
-   "nClassC": 0,
-   "nDeclarations": 7,
-   "posture": "demo",
-   "probeOk": true,
-   "stubDensity": 0.5714285714285714,
-   "title": "Sharp bounds for covering with large cliques and independent sets"
   },
   {
    "arxivId": "2605.21718",

@@ -4,16 +4,16 @@
   "arxivId": "1606.09412",
   "arxivUrl": "https://arxiv.org/abs/1606.09412",
   "authors": [
-   "Karim A.~Adiprasito",
+   "Karim A. Adiprasito",
    "Raman Sanyal"
   ],
   "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
   "licenseClass": "unknown",
-  "title": "1606.09412"
+  "title": "Whitney numbers of arrangements via measure concentration of intrinsic volumes"
  },
  "audit": null,
  "authors": [
-  "Karim A.~Adiprasito",
+  "Karim A. Adiprasito",
   "Raman Sanyal"
  ],
  "blocksStub": [
@@ -429,7 +429,7 @@
  },
  "schema": "proofsite.paper/1",
  "stubDensity": 0.8888888888888888,
- "title": "1606.09412",
+ "title": "Whitney numbers of arrangements via measure concentration of intrinsic volumes",
  "verdict": {
   "nClassA": 0,
   "nClassB": 9,

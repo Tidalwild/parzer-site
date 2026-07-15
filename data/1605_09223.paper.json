@@ -9,7 +9,7 @@
   ],
   "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
   "licenseClass": "unknown",
-  "title": "On large subsets of with no three-term arithmetic progression"
+  "title": "On large subsets of F_q^n with no three-term arithmetic progression"
  },
  "audit": null,
  "authors": [
@@ -318,7 +318,7 @@
  },
  "schema": "proofsite.paper/1",
  "stubDensity": 0.6666666666666666,
- "title": "On large subsets of with no three-term arithmetic progression",
+ "title": "On large subsets of F_q^n with no three-term arithmetic progression",
  "verdict": {
   "nClassA": 0,
   "nClassB": 7,
