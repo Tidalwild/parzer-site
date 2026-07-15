@@ -27,13 +27,13 @@
    "fixture": false,
    "id": "2505_08560",
    "licenseClass": "unknown",
-   "nClassA": 3,
-   "nClassB": 2,
+   "nClassA": 5,
+   "nClassB": 0,
    "nClassC": 0,
    "nDeclarations": 5,
    "posture": "demo",
    "probeOk": true,
-   "stubDensity": 0.4,
+   "stubDensity": 0.0,
    "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
   },
   {

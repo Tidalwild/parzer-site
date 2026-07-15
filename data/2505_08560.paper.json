@@ -4,7 +4,7 @@
   "arxivId": "2505.08560",
   "arxivUrl": "https://arxiv.org/abs/2505.08560",
   "authors": [],
-  "changes": "Statements formalized (translated) into Lean 4 by parZer; proofs are conditional on the disclosed sorry-stubs.",
+  "changes": "Statements formalized into Lean 4 by parZer; every declaration is kernel-checked under the trusted axioms (no sorryAx).",
   "licenseClass": "unknown",
   "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number"
  },
@@ -43,36 +43,33 @@
   },
   {
    "blockId": "lem_no_subquad_n2",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_lem_no_subquad_n2",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   },
   {
    "blockId": "thm_no_subquad",
-   "finalKind": "skipped_block",
-   "nSteps": 0,
+   "finalKind": "theorem",
+   "nSteps": 1,
    "name": "thm_thm_no_subquad",
    "stepsCite": 0,
-   "stepsTactic": 0,
-   "stubbed": true,
-   "verdict": "b"
+   "stepsTactic": 1,
+   "stubbed": false,
+   "verdict": "a"
   }
  ],
- "conditions": [
-  "thm_lem_no_subquad_n2",
-  "thm_thm_no_subquad"
- ],
+ "conditions": [],
  "fixture": false,
  "fixtureSource": null,
  "funnel": {
-  "blocksEmitted": 3,
+  "blocksEmitted": 5,
   "blocksTotal": 5,
-  "classA": 3,
-  "classB": 2,
+  "classA": 5,
+  "classB": 0,
   "classC": 0,
   "curated": 5,
   "customLemmas": 0,
@@ -115,7 +112,7 @@
    "id": "thm_lem_sylvester",
    "kind": "theorem",
    "label": "thm_lem_sylvester",
-   "lean": "theorem thm_lem_sylvester : ∀ (a b : ℕ), 1 < a → 1 < b → Nat.Coprime a b → FrobeniusNumber (a * b - a - b) {a, b} := by\n  intro a b ha hb hcop; exact frobeniusNumber_pair hcop ha hb",
+   "lean": "theorem thm_lem_sylvester :\n    ∀ (a b : ℕ), 1 < a → 1 < b → Nat.Coprime a b →\n      FrobeniusNumber (a * b - a - b) {a, b} := by\n  intro a b ha hb hcop\n  exact frobeniusNumber_pair hcop ha hb\n",
    "source": null,
    "status": "kernel",
    "stubDensity": {
@@ -123,7 +120,8 @@
     "stepsCite": 1,
     "stepsTactic": 0
    },
-   "verdictClass": "a"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -142,7 +140,7 @@
    "id": "thm_frob_8_32_59",
    "kind": "theorem",
    "label": "thm_frob_8_32_59",
-   "lean": "theorem thm_frob_8_32_59 : FrobeniusNumber 405 {8, 32, 59} := by\n  have hpair : FrobeniusNumber 405 {8, 59} := (by have h := frobeniusNumber_pair (by decide : Nat.Coprime 8 59) (by norm_num : (1 : ℕ) < 8) (by norm_num : (1 : ℕ) < 59); norm_num at h; exact h); have h8 : (8 : ℕ) ∈ AddSubmonoid.closure ({8, 59} : Set ℕ) := AddSubmonoid.subset_closure (by simp); have hcl : AddSubmonoid.closure ({8, 32, 59} : Set ℕ) = AddSubmonoid.closure ({8, 59} : Set ℕ) := le_antisymm (AddSubmonoid.closure_le.mpr (by intro z hz; simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz; rcases hz with rfl | rfl | rfl; exact AddSubmonoid.subset_closure (by simp); rw [(by norm_num : (32 : ℕ) = 8 + 8 + 8 + 8)]; exact add_mem (add_mem (add_mem h8 h8) h8) h8; exact AddSubmonoid.subset_closure (by simp))) (AddSubmonoid.closure_mono (by intro z hz; simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz ⊢; tauto)); unfold FrobeniusNumber at hpair ⊢; simp only [hcl]; exact hpair",
+   "lean": "theorem thm_frob_8_32_59 : FrobeniusNumber 405 {8, 32, 59} := by\n  have hpair : FrobeniusNumber 405 {8, 59} := by\n    have h := frobeniusNumber_pair (by decide : Nat.Coprime 8 59)\n      (by norm_num : (1 : ℕ) < 8) (by norm_num : (1 : ℕ) < 59)\n    norm_num at h\n    exact h\n  have h8 : (8 : ℕ) ∈ AddSubmonoid.closure ({8, 59} : Set ℕ) :=\n    AddSubmonoid.subset_closure (by simp)\n  have hcl :\n      AddSubmonoid.closure ({8, 32, 59} : Set ℕ) =\n        AddSubmonoid.closure ({8, 59} : Set ℕ) := by\n    refine le_antisymm (AddSubmonoid.closure_le.mpr ?_) (AddSubmonoid.closure_mono ?_)\n    · intro z hz\n      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz\n      rcases hz with rfl | rfl | rfl\n      · exact AddSubmonoid.subset_closure (by simp)\n      · rw [(by norm_num : (32 : ℕ) = 8 + 8 + 8 + 8)]\n        exact add_mem (add_mem (add_mem h8 h8) h8) h8\n      · exact AddSubmonoid.subset_closure (by simp)\n    · intro z hz\n      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hz ⊢\n      tauto\n  unfold FrobeniusNumber at hpair ⊢\n  simpa [hcl] using hpair\n",
    "source": null,
    "status": "kernel",
    "stubDensity": {
@@ -150,7 +148,8 @@
     "stepsCite": 1,
     "stepsTactic": 0
    },
-   "verdictClass": "a"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
@@ -173,7 +172,7 @@
    "id": "thm_prop_selmer_fails",
    "kind": "theorem",
    "label": "thm_prop_selmer_fails",
-   "lean": "theorem thm_prop_selmer_fails : ∃ (a b c F : ℕ), (0 < a ∧ a ≤ b ∧ b ≤ c) ∧ Nat.gcd a (Nat.gcd b c) = 1 ∧ ¬ (Nat.gcd a b = 1 ∧ Nat.gcd a c = 1 ∧ Nat.gcd b c = 1) ∧ FrobeniusNumber F {a, b, c} ∧ ¬ (F ≤ 2 * c * (a / 3) - a) := by\n  exact ⟨8, 32, 59, 405, by decide, by decide, by decide, thm_frob_8_32_59, by decide⟩",
+   "lean": "theorem thm_prop_selmer_fails :\n    ∃ (a b c F : ℕ),\n      (0 < a ∧ a ≤ b ∧ b ≤ c) ∧\n      Nat.gcd a (Nat.gcd b c) = 1 ∧\n      ¬ (Nat.gcd a b = 1 ∧ Nat.gcd a c = 1 ∧ Nat.gcd b c = 1) ∧\n      FrobeniusNumber F {a, b, c} ∧\n      ¬ (F ≤ 2 * c * (a / 3) - a) := by\n  exact ⟨8, 32, 59, 405, by decide, by decide, by decide, thm_frob_8_32_59, by decide⟩\n\n/-! ## Algebraic helpers -/\n",
    "source": null,
    "status": "kernel",
    "stubDensity": {
@@ -181,67 +180,64 @@
     "stepsCite": 1,
     "stepsTactic": 0
    },
-   "verdictClass": "a"
+   "verdictClass": "a",
+   "stage": 1
   },
   {
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_lem_no_subquad_n2"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_lem_no_subquad_n2",
    "kind": "theorem",
    "label": "thm_lem_no_subquad_n2",
-   "lean": "theorem thm_lem_no_subquad_n2 : ∀ (ε : ℝ), 0 < ε → ¬ ∃ (C : ℝ), 0 < C ∧ ∀ (a b F : ℕ), 0 < a → a ≤ b → Nat.Coprime a b → FrobeniusNumber F {a, b} → (F : ℝ) ≤ C * ((a : ℝ) * (b : ℝ)) ^ (1 - ε) := by sorry",
+   "lean": "lemma consecutive_frob_value (n : ℕ) (hn : 2 ≤ n) :\n    n * (n + 1) - n - (n + 1) = n * n - n - 1 := by\n  -- n(n+1) - n - (n+1) = n² + n - n - n - 1 = n² - n - 1\n  have h1 : 1 < n := Nat.lt_of_lt_of_le (by decide : 1 < 2) hn\n  have h2 : 1 < n + 1 := by omega\n  have hle : n + (n + 1) ≤ n * (n + 1) := add_le_mul h1 h2\n  have hle' : n + 1 + n ≤ n * (n + 1) := by\n    convert hle using 1; ac_rfl\n  have hle_n : n ≤ n * (n + 1) := Nat.le_mul_of_pos_right n (Nat.succ_pos n)\n  have hle_np : n + 1 ≤ n * (n + 1) - n := Nat.le_sub_of_add_le (by\n    convert hle using 1; ac_rfl)\n  have hle_nn : n ≤ n * n := Nat.le_mul_of_pos_right n (by omega)\n  have hle_1 : 1 ≤ n * n - n := by\n    have : 1 + n ≤ n * n := by\n      have := Nat.mul_le_mul_right n hn  -- 2*n ≤ n*n\n      omega\n    exact Nat.le_sub_of_add_le this\n  apply Int.ofNat.inj\n  calc\n    ((n * (n + 1) - n - (n + 1) : ℕ) : ℤ)\n        = (n : ℤ) * (n + 1) - n - (n + 1) := by\n          rw [Int.natCast_sub hle_np, Int.natCast_sub hle_n]; push_cast; ring\n    _ = (n : ℤ) * n - n - 1 := by ring\n    _ = ((n * n - n - 1 : ℕ) : ℤ) := by\n          rw [Int.natCast_sub hle_1, Int.natCast_sub hle_nn]; push_cast; ring\n\nlemma frobenius_consecutive (n : ℕ) (hn : 2 ≤ n) :\n    FrobeniusNumber (n * n - n - 1) ({n, n + 1} : Set ℕ) := by\n  have h1n : 1 < n := Nat.lt_of_lt_of_le (by decide : 1 < 2) hn\n  have h1np : 1 < n + 1 := by omega\n  have hcop : Nat.Coprime n (n + 1) := Nat.coprime_self_add_right.mpr n.coprime_one_right\n  have h := frobeniusNumber_pair hcop h1n h1np\n  rwa [consecutive_frob_value n hn] at h\n\nlemma cast_frob_val (n : ℕ) (hn : 2 ≤ n) :\n    ((n * n - n - 1 : ℕ) : ℝ) = (n : ℝ) * n - n - 1 := by\n  have hle_nn : n ≤ n * n := Nat.le_mul_of_pos_right n (by omega)\n  have hle_1 : 1 ≤ n * n - n := by\n    have : 1 + n ≤ n * n := by\n      have := Nat.mul_le_mul_right n hn\n      omega\n    exact Nat.le_sub_of_add_le this\n  rw [Nat.cast_sub hle_1, Nat.cast_sub hle_nn, Nat.cast_mul]\n  ring\n\nlemma half_sq_le_frob (n : ℕ) (hn : 3 ≤ n) :\n    ((n : ℝ) * n) / 2 ≤ ((n * n - n - 1 : ℕ) : ℝ) := by\n  have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn\n  rw [cast_frob_val n hn2]\n  have hnR : (3 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn\n  nlinarith\n\nlemma prod_le_two_sq (n : ℕ) (hn : 1 ≤ n) :\n    (n : ℝ) * (n + 1) ≤ 2 * ((n : ℝ) * n) := by\n  have hnR : (1 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn\n  nlinarith\n\nlemma two_sq_rpow (n : ℕ) (hn : 0 < n) (p : ℝ) :\n    (2 * ((n : ℝ) * n)) ^ p = (2 : ℝ) ^ p * (n : ℝ) ^ (2 * p) := by\n  have h2 : (0 : ℝ) ≤ 2 := by norm_num\n  have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast hn\n  have hn0 : (0 : ℝ) ≤ (n : ℝ) := hnpos.le\n  rw [mul_rpow h2 (mul_self_nonneg _), mul_rpow hn0 hn0, ← rpow_add hnpos]\n  ring_nf\n\nlemma prod_rpow_bound (n : ℕ) (hn : 1 ≤ n) (ε : ℝ) (hεle : 0 ≤ 1 - ε) :\n    ((n : ℝ) * (n + 1)) ^ (1 - ε) ≤ (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε)) := by\n  have hbase : (0 : ℝ) ≤ (n : ℝ) * (n + 1) := by\n    exact mul_nonneg (Nat.cast_nonneg _) (by positivity)\n  have hmono := Real.rpow_le_rpow hbase (prod_le_two_sq n hn) hεle\n  exact hmono.trans (le_of_eq (two_sq_rpow n (lt_of_lt_of_le (by decide : 0 < 1) hn) (1 - ε)))\n\nlemma tendsto_nat_neg_rpow (ε : ℝ) (hε : 0 < ε) :\n    Tendsto (fun n : ℕ => (n : ℝ) ^ (-(2 * ε))) atTop (nhds 0) :=\n  (tendsto_rpow_neg_atTop (mul_pos (by norm_num : (0 : ℝ) < 2) hε)).comp\n    tendsto_natCast_atTop_atTop\n\nlemma exists_large_neg_rpow (ε : ℝ) (hε : 0 < ε) (K : ℝ) (hK : 0 < K) :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → (n : ℝ) ^ (-(2 * ε)) < K :=\n  eventually_atTop.1 ((tendsto_nat_neg_rpow ε hε).eventually (gt_mem_nhds hK))\n\nlemma rpow_two_mul_neg (n : ℕ) (hn : 0 < n) (ε : ℝ) :\n    (n : ℝ) ^ (2 * (1 - ε)) = ((n : ℝ) * n) * (n : ℝ) ^ (-(2 * ε)) := by\n  have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast hn\n  have heq : 2 * (1 - ε) = (2 : ℝ) + (-(2 * ε)) := by ring\n  rw [heq, rpow_add hnpos, rpow_two, pow_two]\n\nlemma cancel_half_sq (n C t : ℝ) (hn : 0 < n) (h : (n * n) / 2 ≤ C * (n * n * t)) :\n    (1 : ℝ) / 2 ≤ C * t := by\n  have hn2 : 0 < n * n := mul_pos hn hn\n  have h' : (n * n) / 2 ≤ (C * t) * (n * n) := by convert h using 1; ring\n  calc\n    (1 : ℝ) / 2 = ((n * n) / 2) / (n * n) := by field_simp\n    _ ≤ ((C * t) * (n * n)) / (n * n) := div_le_div_of_nonneg_right h' hn2.le\n    _ = C * t := by field_simp [ne_of_gt hn2]\n\n/-! ## Core contradiction for the consecutive family -/\n\n/-- Explicit inequality we will violate. -/\n\ndef boundHolds (C ε : ℝ) (n : ℕ) : Prop :=\n  ((n * n - n - 1 : ℕ) : ℝ) ≤ C * (((n : ℝ) * (n + 1)) ^ (1 - ε))\n\nlemma consecutive_violates (C ε : ℝ) (hC : 0 < C) (hε : 0 < ε) :\n    ∃ n : ℕ, 3 ≤ n ∧ ¬ boundHolds C ε n := by\n  by_cases hExp : 0 ≤ 1 - ε\n  · -- 0 < ε ≤ 1\n    have h2pos : 0 < (2 : ℝ) ^ (1 - ε) := Real.rpow_pos_of_pos (by norm_num) _\n    have hKpos : 0 < (1 : ℝ) / 2 / (C * (2 : ℝ) ^ (1 - ε)) := by positivity\n    obtain ⟨N, hN⟩ := exists_large_neg_rpow ε hε _ hKpos\n    let n : ℕ := max N 3\n    refine ⟨n, le_max_right N 3, ?_⟩\n    intro hle\n    have hnN : N ≤ n := le_max_left N 3\n    have hn3 : 3 ≤ n := le_max_right N 3\n    have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn3\n    have hn1 : 1 ≤ n := le_trans (by decide : 1 ≤ 2) hn2\n    have hL := half_sq_le_frob n hn3\n    have hRbound := prod_rpow_bound n hn1 ε hExp\n    unfold boundHolds at hle\n    have hR : ((n * n - n - 1 : ℕ) : ℝ) ≤\n        C * ((2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε))) :=\n      hle.trans (mul_le_mul_of_nonneg_left hRbound hC.le)\n    have hmain : ((n : ℝ) * n) / 2 ≤\n        C * ((2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε))) := hL.trans hR\n    have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast (lt_of_lt_of_le (by decide : 0 < 3) hn3)\n    rw [rpow_two_mul_neg n (by exact_mod_cast hnpos) ε] at hmain\n    have hdiv : (1 : ℝ) / 2 ≤ C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε)) := by\n      have h' : ((n : ℝ) * n) / 2 ≤\n          (C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε))) * ((n : ℝ) * n) := by\n        convert hmain using 1; ring\n      exact cancel_half_sq (n : ℝ) (C * (2 : ℝ) ^ (1 - ε)) ((n : ℝ) ^ (-(2 * ε)))\n        hnpos (by convert h' using 1; ring)\n    have hsmall := hN n hnN\n    have hC2 : 0 < C * (2 : ℝ) ^ (1 - ε) := mul_pos hC h2pos\n    have hlt : C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε)) < (1 : ℝ) / 2 := by\n      have := mul_lt_mul_of_pos_left hsmall hC2\n      convert this using 1\n      field_simp [ne_of_gt hC2]\n    linarith\n  · -- ε > 1\n    have hα : 0 < ε - 1 := by linarith [lt_of_not_ge hExp]\n    have hprod : Tendsto (fun n : ℕ => (n : ℝ) * (n + 1)) atTop atTop := by\n      refine tendsto_atTop_mono (fun n : ℕ => ?_) tendsto_natCast_atTop_atTop\n      cases n with\n      | zero => simp\n      | succ n =>\n        exact_mod_cast (Nat.le_mul_of_pos_right n.succ (Nat.succ_pos _))\n    have hpow : Tendsto (fun x : ℝ => x ^ (-(ε - 1))) atTop (nhds 0) :=\n      tendsto_rpow_neg_atTop hα\n    have htend : Tendsto (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (1 - ε)) atTop (nhds 0) := by\n      have hfun : (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (1 - ε)) =\n          (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (-(ε - 1))) := by\n        funext n; congr 1; ring\n      rw [hfun]\n      exact hpow.comp hprod\n    have hK : 0 < (1 : ℝ) / (2 * C) := by positivity\n    obtain ⟨N₀, hN₀⟩ := eventually_atTop.1 (htend.eventually (gt_mem_nhds hK))\n    let n : ℕ := max N₀ 3\n    refine ⟨n, le_max_right N₀ 3, ?_⟩\n    intro hle\n    have hn3 : 3 ≤ n := le_max_right N₀ 3\n    have hL := half_sq_le_frob n hn3\n    have hFge : (1 : ℝ) ≤ ((n * n - n - 1 : ℕ) : ℝ) := by\n      have : (1 : ℝ) ≤ ((n : ℝ) * n) / 2 := by\n        have hnR : (3 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn3\n        nlinarith\n      exact this.trans hL\n    have hsmall : ((n : ℝ) * (n + 1)) ^ (1 - ε) < 1 / (2 * C) := hN₀ n (le_max_left N₀ 3)\n    have hR : C * (((n : ℝ) * (n + 1)) ^ (1 - ε)) < (1 : ℝ) / 2 := by\n      have := mul_lt_mul_of_pos_left hsmall hC\n      convert this using 1\n      field_simp [ne_of_gt hC]\n    unfold boundHolds at hle\n    linarith\n\n/-! ## Class (b) — 2-generator lemma -/\n\ndef padPair (k n : ℕ) : Fin (k + 2) → ℕ := fun i =>\n  if (i : ℕ) = k + 1 then n + 1 else n\n\nlemma padPair_zero (k n : ℕ) : padPair k n 0 = n := by\n  simp [padPair]\n\nlemma padPair_last (k n : ℕ) : padPair k n (Fin.last (k + 1)) = n + 1 := by\n  simp [padPair, Fin.val_last]\n\nlemma padPair_monotone (k n : ℕ) : Monotone (padPair k n) := by\n  intro i j hij\n  simp only [padPair]\n  split_ifs with hi hj\n  · exact le_rfl\n  · have : (i : ℕ) ≤ (j : ℕ) := hij\n    have : (j : ℕ) < k + 2 := j.isLt\n    omega\n  · exact Nat.le_succ n\n  · exact le_rfl\n\nlemma padPair_pos (k n : ℕ) (hn : 0 < n) : ∀ i, 0 < padPair k n i := by\n  intro i; simp only [padPair]; split_ifs <;> omega\n\nlemma padPair_gcd (k n : ℕ) : Finset.univ.gcd (padPair k n) = 1 := by\n  let g := Finset.univ.gcd (padPair k n)\n  have d0 : g ∣ padPair k n 0 := Finset.gcd_dvd (Finset.mem_univ (0 : Fin (k + 2)))\n  have dL : g ∣ padPair k n (Fin.last (k + 1)) :=\n    Finset.gcd_dvd (Finset.mem_univ (Fin.last (k + 1)))\n  rw [padPair_zero k n] at d0\n  rw [padPair_last k n] at dL\n  have h1 : g ∣ 1 := by\n    have : g ∣ (n + 1) - n := Nat.dvd_sub dL d0\n    simpa using this\n  exact Nat.dvd_one.mp h1\n\nlemma padPair_range (k n : ℕ) :\n    Set.range (padPair k n) = ({n, n + 1} : Set ℕ) := by\n  ext x\n  constructor\n  · rintro ⟨i, rfl⟩\n    simp only [padPair, Set.mem_insert_iff, Set.mem_singleton_iff]\n    split_ifs <;> simp\n  · intro hx\n    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hx\n    rcases hx with h | h\n    · refine ⟨0, ?_⟩\n      simp [padPair_zero, h]\n    · refine ⟨Fin.last (k + 1), ?_⟩\n      simp [padPair_last, h]\n\nlemma frobenius_pad (k n : ℕ) (hn : 2 ≤ n) :\n    FrobeniusNumber (n * n - n - 1) (Set.range (padPair k n)) := by\n  simpa [padPair_range k n] using frobenius_consecutive n hn\n\n/-! ## Class (b) — general dimension theorem -/\n\ntheorem thm_lem_no_subquad_n2 :\n    ∀ (ε : ℝ), 0 < ε →\n      ¬ ∃ (C : ℝ), 0 < C ∧\n        ∀ (a b F : ℕ), 0 < a → a ≤ b → Nat.Coprime a b →\n          FrobeniusNumber F {a, b} →\n          (F : ℝ) ≤ C * ((a : ℝ) * (b : ℝ)) ^ (1 - ε) := by\n  intro ε hε ⟨C, hC, hBound⟩\n  obtain ⟨n, hn3, hviol⟩ := consecutive_violates C ε hC hε\n  have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn3\n  have hF := frobenius_consecutive n hn2\n  have hcop : Nat.Coprime n (n + 1) := Nat.coprime_self_add_right.mpr n.coprime_one_right\n  have happl := hBound n (n + 1) (n * n - n - 1)\n    (lt_of_lt_of_le (by decide : 0 < 3) hn3) (Nat.le_succ n) hcop hF\n  exact hviol (by simpa [boundHolds] using happl)\n\n/-! ## Padding for higher arity -/\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 2
   },
   {
    "axioms": [
     "Classical.choice",
     "Quot.sound",
-    "propext",
-    "sorryAx"
+    "propext"
    ],
    "citation": null,
    "closure": [],
-   "conditionCount": 1,
-   "conditions": [
-    "thm_thm_no_subquad"
-   ],
+   "conditionCount": 0,
+   "conditions": [],
    "demoted": false,
    "dependsOn": [],
-   "finalKind": "skipped_block",
+   "finalKind": "theorem",
    "hasReceipt": true,
    "id": "thm_thm_no_subquad",
    "kind": "theorem",
    "label": "thm_thm_no_subquad",
-   "lean": "theorem thm_thm_no_subquad : ∀ (n : ℕ), ∀ (ε : ℝ), 0 < ε → ¬ ∃ (C : ℝ), 0 < C ∧ ∀ (a : Fin (n + 2) → ℕ) (F : ℕ), (∀ i, 0 < a i) → Monotone a → Finset.univ.gcd a = 1 → FrobeniusNumber F (Set.range a) → (F : ℝ) ≤ C * ((a 0 : ℝ) * (a (Fin.last (n + 1)) : ℝ)) ^ (1 - ε) := by sorry",
+   "lean": "lemma consecutive_frob_value (n : ℕ) (hn : 2 ≤ n) :\n    n * (n + 1) - n - (n + 1) = n * n - n - 1 := by\n  -- n(n+1) - n - (n+1) = n² + n - n - n - 1 = n² - n - 1\n  have h1 : 1 < n := Nat.lt_of_lt_of_le (by decide : 1 < 2) hn\n  have h2 : 1 < n + 1 := by omega\n  have hle : n + (n + 1) ≤ n * (n + 1) := add_le_mul h1 h2\n  have hle' : n + 1 + n ≤ n * (n + 1) := by\n    convert hle using 1; ac_rfl\n  have hle_n : n ≤ n * (n + 1) := Nat.le_mul_of_pos_right n (Nat.succ_pos n)\n  have hle_np : n + 1 ≤ n * (n + 1) - n := Nat.le_sub_of_add_le (by\n    convert hle using 1; ac_rfl)\n  have hle_nn : n ≤ n * n := Nat.le_mul_of_pos_right n (by omega)\n  have hle_1 : 1 ≤ n * n - n := by\n    have : 1 + n ≤ n * n := by\n      have := Nat.mul_le_mul_right n hn  -- 2*n ≤ n*n\n      omega\n    exact Nat.le_sub_of_add_le this\n  apply Int.ofNat.inj\n  calc\n    ((n * (n + 1) - n - (n + 1) : ℕ) : ℤ)\n        = (n : ℤ) * (n + 1) - n - (n + 1) := by\n          rw [Int.natCast_sub hle_np, Int.natCast_sub hle_n]; push_cast; ring\n    _ = (n : ℤ) * n - n - 1 := by ring\n    _ = ((n * n - n - 1 : ℕ) : ℤ) := by\n          rw [Int.natCast_sub hle_1, Int.natCast_sub hle_nn]; push_cast; ring\n\nlemma frobenius_consecutive (n : ℕ) (hn : 2 ≤ n) :\n    FrobeniusNumber (n * n - n - 1) ({n, n + 1} : Set ℕ) := by\n  have h1n : 1 < n := Nat.lt_of_lt_of_le (by decide : 1 < 2) hn\n  have h1np : 1 < n + 1 := by omega\n  have hcop : Nat.Coprime n (n + 1) := Nat.coprime_self_add_right.mpr n.coprime_one_right\n  have h := frobeniusNumber_pair hcop h1n h1np\n  rwa [consecutive_frob_value n hn] at h\n\nlemma cast_frob_val (n : ℕ) (hn : 2 ≤ n) :\n    ((n * n - n - 1 : ℕ) : ℝ) = (n : ℝ) * n - n - 1 := by\n  have hle_nn : n ≤ n * n := Nat.le_mul_of_pos_right n (by omega)\n  have hle_1 : 1 ≤ n * n - n := by\n    have : 1 + n ≤ n * n := by\n      have := Nat.mul_le_mul_right n hn\n      omega\n    exact Nat.le_sub_of_add_le this\n  rw [Nat.cast_sub hle_1, Nat.cast_sub hle_nn, Nat.cast_mul]\n  ring\n\nlemma half_sq_le_frob (n : ℕ) (hn : 3 ≤ n) :\n    ((n : ℝ) * n) / 2 ≤ ((n * n - n - 1 : ℕ) : ℝ) := by\n  have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn\n  rw [cast_frob_val n hn2]\n  have hnR : (3 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn\n  nlinarith\n\nlemma prod_le_two_sq (n : ℕ) (hn : 1 ≤ n) :\n    (n : ℝ) * (n + 1) ≤ 2 * ((n : ℝ) * n) := by\n  have hnR : (1 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn\n  nlinarith\n\nlemma two_sq_rpow (n : ℕ) (hn : 0 < n) (p : ℝ) :\n    (2 * ((n : ℝ) * n)) ^ p = (2 : ℝ) ^ p * (n : ℝ) ^ (2 * p) := by\n  have h2 : (0 : ℝ) ≤ 2 := by norm_num\n  have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast hn\n  have hn0 : (0 : ℝ) ≤ (n : ℝ) := hnpos.le\n  rw [mul_rpow h2 (mul_self_nonneg _), mul_rpow hn0 hn0, ← rpow_add hnpos]\n  ring_nf\n\nlemma prod_rpow_bound (n : ℕ) (hn : 1 ≤ n) (ε : ℝ) (hεle : 0 ≤ 1 - ε) :\n    ((n : ℝ) * (n + 1)) ^ (1 - ε) ≤ (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε)) := by\n  have hbase : (0 : ℝ) ≤ (n : ℝ) * (n + 1) := by\n    exact mul_nonneg (Nat.cast_nonneg _) (by positivity)\n  have hmono := Real.rpow_le_rpow hbase (prod_le_two_sq n hn) hεle\n  exact hmono.trans (le_of_eq (two_sq_rpow n (lt_of_lt_of_le (by decide : 0 < 1) hn) (1 - ε)))\n\nlemma tendsto_nat_neg_rpow (ε : ℝ) (hε : 0 < ε) :\n    Tendsto (fun n : ℕ => (n : ℝ) ^ (-(2 * ε))) atTop (nhds 0) :=\n  (tendsto_rpow_neg_atTop (mul_pos (by norm_num : (0 : ℝ) < 2) hε)).comp\n    tendsto_natCast_atTop_atTop\n\nlemma exists_large_neg_rpow (ε : ℝ) (hε : 0 < ε) (K : ℝ) (hK : 0 < K) :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → (n : ℝ) ^ (-(2 * ε)) < K :=\n  eventually_atTop.1 ((tendsto_nat_neg_rpow ε hε).eventually (gt_mem_nhds hK))\n\nlemma rpow_two_mul_neg (n : ℕ) (hn : 0 < n) (ε : ℝ) :\n    (n : ℝ) ^ (2 * (1 - ε)) = ((n : ℝ) * n) * (n : ℝ) ^ (-(2 * ε)) := by\n  have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast hn\n  have heq : 2 * (1 - ε) = (2 : ℝ) + (-(2 * ε)) := by ring\n  rw [heq, rpow_add hnpos, rpow_two, pow_two]\n\nlemma cancel_half_sq (n C t : ℝ) (hn : 0 < n) (h : (n * n) / 2 ≤ C * (n * n * t)) :\n    (1 : ℝ) / 2 ≤ C * t := by\n  have hn2 : 0 < n * n := mul_pos hn hn\n  have h' : (n * n) / 2 ≤ (C * t) * (n * n) := by convert h using 1; ring\n  calc\n    (1 : ℝ) / 2 = ((n * n) / 2) / (n * n) := by field_simp\n    _ ≤ ((C * t) * (n * n)) / (n * n) := div_le_div_of_nonneg_right h' hn2.le\n    _ = C * t := by field_simp [ne_of_gt hn2]\n\n/-! ## Core contradiction for the consecutive family -/\n\n/-- Explicit inequality we will violate. -/\n\ndef boundHolds (C ε : ℝ) (n : ℕ) : Prop :=\n  ((n * n - n - 1 : ℕ) : ℝ) ≤ C * (((n : ℝ) * (n + 1)) ^ (1 - ε))\n\nlemma consecutive_violates (C ε : ℝ) (hC : 0 < C) (hε : 0 < ε) :\n    ∃ n : ℕ, 3 ≤ n ∧ ¬ boundHolds C ε n := by\n  by_cases hExp : 0 ≤ 1 - ε\n  · -- 0 < ε ≤ 1\n    have h2pos : 0 < (2 : ℝ) ^ (1 - ε) := Real.rpow_pos_of_pos (by norm_num) _\n    have hKpos : 0 < (1 : ℝ) / 2 / (C * (2 : ℝ) ^ (1 - ε)) := by positivity\n    obtain ⟨N, hN⟩ := exists_large_neg_rpow ε hε _ hKpos\n    let n : ℕ := max N 3\n    refine ⟨n, le_max_right N 3, ?_⟩\n    intro hle\n    have hnN : N ≤ n := le_max_left N 3\n    have hn3 : 3 ≤ n := le_max_right N 3\n    have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn3\n    have hn1 : 1 ≤ n := le_trans (by decide : 1 ≤ 2) hn2\n    have hL := half_sq_le_frob n hn3\n    have hRbound := prod_rpow_bound n hn1 ε hExp\n    unfold boundHolds at hle\n    have hR : ((n * n - n - 1 : ℕ) : ℝ) ≤\n        C * ((2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε))) :=\n      hle.trans (mul_le_mul_of_nonneg_left hRbound hC.le)\n    have hmain : ((n : ℝ) * n) / 2 ≤\n        C * ((2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (2 * (1 - ε))) := hL.trans hR\n    have hnpos : (0 : ℝ) < (n : ℝ) := by exact_mod_cast (lt_of_lt_of_le (by decide : 0 < 3) hn3)\n    rw [rpow_two_mul_neg n (by exact_mod_cast hnpos) ε] at hmain\n    have hdiv : (1 : ℝ) / 2 ≤ C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε)) := by\n      have h' : ((n : ℝ) * n) / 2 ≤\n          (C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε))) * ((n : ℝ) * n) := by\n        convert hmain using 1; ring\n      exact cancel_half_sq (n : ℝ) (C * (2 : ℝ) ^ (1 - ε)) ((n : ℝ) ^ (-(2 * ε)))\n        hnpos (by convert h' using 1; ring)\n    have hsmall := hN n hnN\n    have hC2 : 0 < C * (2 : ℝ) ^ (1 - ε) := mul_pos hC h2pos\n    have hlt : C * (2 : ℝ) ^ (1 - ε) * (n : ℝ) ^ (-(2 * ε)) < (1 : ℝ) / 2 := by\n      have := mul_lt_mul_of_pos_left hsmall hC2\n      convert this using 1\n      field_simp [ne_of_gt hC2]\n    linarith\n  · -- ε > 1\n    have hα : 0 < ε - 1 := by linarith [lt_of_not_ge hExp]\n    have hprod : Tendsto (fun n : ℕ => (n : ℝ) * (n + 1)) atTop atTop := by\n      refine tendsto_atTop_mono (fun n : ℕ => ?_) tendsto_natCast_atTop_atTop\n      cases n with\n      | zero => simp\n      | succ n =>\n        exact_mod_cast (Nat.le_mul_of_pos_right n.succ (Nat.succ_pos _))\n    have hpow : Tendsto (fun x : ℝ => x ^ (-(ε - 1))) atTop (nhds 0) :=\n      tendsto_rpow_neg_atTop hα\n    have htend : Tendsto (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (1 - ε)) atTop (nhds 0) := by\n      have hfun : (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (1 - ε)) =\n          (fun n : ℕ => ((n : ℝ) * (n + 1)) ^ (-(ε - 1))) := by\n        funext n; congr 1; ring\n      rw [hfun]\n      exact hpow.comp hprod\n    have hK : 0 < (1 : ℝ) / (2 * C) := by positivity\n    obtain ⟨N₀, hN₀⟩ := eventually_atTop.1 (htend.eventually (gt_mem_nhds hK))\n    let n : ℕ := max N₀ 3\n    refine ⟨n, le_max_right N₀ 3, ?_⟩\n    intro hle\n    have hn3 : 3 ≤ n := le_max_right N₀ 3\n    have hL := half_sq_le_frob n hn3\n    have hFge : (1 : ℝ) ≤ ((n * n - n - 1 : ℕ) : ℝ) := by\n      have : (1 : ℝ) ≤ ((n : ℝ) * n) / 2 := by\n        have hnR : (3 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn3\n        nlinarith\n      exact this.trans hL\n    have hsmall : ((n : ℝ) * (n + 1)) ^ (1 - ε) < 1 / (2 * C) := hN₀ n (le_max_left N₀ 3)\n    have hR : C * (((n : ℝ) * (n + 1)) ^ (1 - ε)) < (1 : ℝ) / 2 := by\n      have := mul_lt_mul_of_pos_left hsmall hC\n      convert this using 1\n      field_simp [ne_of_gt hC]\n    unfold boundHolds at hle\n    linarith\n\n/-! ## Class (b) — 2-generator lemma -/\n\ndef padPair (k n : ℕ) : Fin (k + 2) → ℕ := fun i =>\n  if (i : ℕ) = k + 1 then n + 1 else n\n\nlemma padPair_zero (k n : ℕ) : padPair k n 0 = n := by\n  simp [padPair]\n\nlemma padPair_last (k n : ℕ) : padPair k n (Fin.last (k + 1)) = n + 1 := by\n  simp [padPair, Fin.val_last]\n\nlemma padPair_monotone (k n : ℕ) : Monotone (padPair k n) := by\n  intro i j hij\n  simp only [padPair]\n  split_ifs with hi hj\n  · exact le_rfl\n  · have : (i : ℕ) ≤ (j : ℕ) := hij\n    have : (j : ℕ) < k + 2 := j.isLt\n    omega\n  · exact Nat.le_succ n\n  · exact le_rfl\n\nlemma padPair_pos (k n : ℕ) (hn : 0 < n) : ∀ i, 0 < padPair k n i := by\n  intro i; simp only [padPair]; split_ifs <;> omega\n\nlemma padPair_gcd (k n : ℕ) : Finset.univ.gcd (padPair k n) = 1 := by\n  let g := Finset.univ.gcd (padPair k n)\n  have d0 : g ∣ padPair k n 0 := Finset.gcd_dvd (Finset.mem_univ (0 : Fin (k + 2)))\n  have dL : g ∣ padPair k n (Fin.last (k + 1)) :=\n    Finset.gcd_dvd (Finset.mem_univ (Fin.last (k + 1)))\n  rw [padPair_zero k n] at d0\n  rw [padPair_last k n] at dL\n  have h1 : g ∣ 1 := by\n    have : g ∣ (n + 1) - n := Nat.dvd_sub dL d0\n    simpa using this\n  exact Nat.dvd_one.mp h1\n\nlemma padPair_range (k n : ℕ) :\n    Set.range (padPair k n) = ({n, n + 1} : Set ℕ) := by\n  ext x\n  constructor\n  · rintro ⟨i, rfl⟩\n    simp only [padPair, Set.mem_insert_iff, Set.mem_singleton_iff]\n    split_ifs <;> simp\n  · intro hx\n    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hx\n    rcases hx with h | h\n    · refine ⟨0, ?_⟩\n      simp [padPair_zero, h]\n    · refine ⟨Fin.last (k + 1), ?_⟩\n      simp [padPair_last, h]\n\nlemma frobenius_pad (k n : ℕ) (hn : 2 ≤ n) :\n    FrobeniusNumber (n * n - n - 1) (Set.range (padPair k n)) := by\n  simpa [padPair_range k n] using frobenius_consecutive n hn\n\n/-! ## Class (b) — general dimension theorem -/\n\ntheorem thm_thm_no_subquad :\n    ∀ (m : ℕ), ∀ (ε : ℝ), 0 < ε →\n      ¬ ∃ (C : ℝ), 0 < C ∧\n        ∀ (a : Fin (m + 2) → ℕ) (F : ℕ),\n          (∀ i, 0 < a i) → Monotone a → Finset.univ.gcd a = 1 →\n          FrobeniusNumber F (Set.range a) →\n          (F : ℝ) ≤ C * ((a 0 : ℝ) * (a (Fin.last (m + 1)) : ℝ)) ^ (1 - ε) := by\n  intro m ε hε ⟨C, hC, hBound⟩\n  obtain ⟨n, hn3, hviol⟩ := consecutive_violates C ε hC hε\n  have hn2 : 2 ≤ n := le_trans (by decide : 2 ≤ 3) hn3\n  let a := padPair m n\n  have happl := hBound a (n * n - n - 1)\n    (padPair_pos m n (lt_of_lt_of_le (by decide : 0 < 3) hn3))\n    (padPair_monotone m n)\n    (padPair_gcd m n)\n    (frobenius_pad m n hn2)\n  have h0 : a 0 = n := padPair_zero m n\n  have hL : a (Fin.last (m + 1)) = n + 1 := padPair_last m n\n  rw [h0, hL] at happl\n  exact hviol (by simpa [boundHolds] using happl)\n",
    "source": null,
-   "status": "conditional_kernel",
+   "status": "kernel",
    "stubDensity": {
-    "nSteps": 0,
+    "nSteps": 1,
     "stepsCite": 0,
-    "stepsTactic": 0
+    "stepsTactic": 1
    },
-   "verdictClass": "b"
+   "verdictClass": "a",
+   "stage": 2
   }
  ],
  "probe": {
@@ -257,15 +253,36 @@
   "validator": "VALID"
  },
  "schema": "proofsite.paper/1",
- "stubDensity": 0.4,
+ "stubDensity": 0.0,
  "title": "Evaluating the Sharpness and Limitations of Bounds on the Frobenius Number",
  "verdict": {
-  "nClassA": 3,
-  "nClassB": 2,
+  "nClassA": 5,
+  "nClassB": 0,
   "nClassC": 0,
   "nDeclarations": 5,
   "quarantineRounds": 0,
   "truncated": false,
   "verifiedTreeDepth": 2
- }
+ },
+ "stages": [
+  {
+   "id": "stage1",
+   "label": "Stage 1 — base results",
+   "blurb": "Pair formula, concrete witness, and the Selmer-type counterexample — each closed under the trusted axioms.",
+   "nodeIds": [
+    "thm_lem_sylvester",
+    "thm_frob_8_32_59",
+    "thm_prop_selmer_fails"
+   ]
+  },
+  {
+   "id": "stage2",
+   "label": "Stage 2 — asymptotic limits",
+   "blurb": "No uniform sub-(a₁·aₙ) bound in two generators, then the same obstruction in every higher arity.",
+   "nodeIds": [
+    "thm_lem_no_subquad_n2",
+    "thm_thm_no_subquad"
+   ]
+  }
+ ]
 }
